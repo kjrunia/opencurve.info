@@ -12,7 +12,7 @@ lang: nl
 
 ::: {.column-margin}
 ::: {.author-sidebar}
-![](../../../IMG_0597_200kb.png){.author-photo}
+![](../../../kj_photo.png){.author-photo}
 
 ::: {.author-name}
 [**KJ Runia, BSc (Hons) MInstP AMIMA**](../../over.qmd)
