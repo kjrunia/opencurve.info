@@ -1,7 +1,7 @@
 project:
   type: website
   output-dir: _site
-  resources:
+  #resources:
     # - CNAME
 
 website:
