@@ -1,0 +1,202 @@
+/* ==========================================================================
+   1. FONTS & GLOBALE TYPOGRAFIE / UI
+   ========================================================================== */
+
+/* Laad Merriweather en een bijpassend koppenfont van Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+/* Broodtekst (Quanta-stijl) */
+body, 
+#quarto-document-content p {
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1.125rem;    /* ca. 18px */
+  line-height: 1.8;       /* Royale regelafstand voor rustige leesbaarheid */
+  color: #222222;         /* Donkergrijs in plaats van hard zwart */
+}
+
+/* Koppen (Noe Display-achtige look) */
+h1, h2, h3, .title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* UI & Navigatie behoudt een strakke sans-serif */
+.navbar, .sidebar, nav, .toc {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Logo & Menubalk ruim en groot afstellen */
+.navbar {
+  min-height: 100px !important;    /* Geeft de hele menubalk de nodige hoogte */
+}
+
+.navbar .container-fluid {
+  align-items: center !important; /* Centreert menu-items verticaal t.o.v. het grotere logo */
+}
+
+.navbar-brand-container,
+.navbar-brand {
+  height: auto !important;
+  max-height: none !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-top: 0.4rem !important;
+  padding-bottom: 0.4rem !important;
+}
+
+/* Dwing het formaat af op alle Quarto-logo selectors */
+.navbar-brand img,
+.navbar-brand-logo,
+.navbar-brand-logo img,
+.navbar-brand > img,
+nav.navbar img {
+  height: 100px !important;       /* Pas hier naar wens aan (bijv. 64px - 85px) */
+  width: auto !important;        /* Schaal breedte proportioneel mee */
+  max-height: none !important;   /* Schakelt Quarto's knip-limiet uit */
+  min-height: 60px !important;   /* Voorkomt dat Bootstrap hem weer inkrimpt */
+  display: block !important;
+}
+
+
+/* ==========================================================================
+   2. ARTIKELWEERGAVE & TOOLTIPS
+   ========================================================================== */
+
+/* Voetnoot-hover popup (Tippy.js) compacter maken */
+.tippy-box {
+  font-size: 0.85rem !important;     /* Kleiner lettertype (ca. 13-14px) */
+  line-height: 1.45 !important;      /* Iets compactere regelafstand */
+}
+
+.tippy-box .tippy-content p {
+  font-size: 0.85rem !important;     /* Overschrijft de algemene 1.125rem p-regel */
+  line-height: 1.45 !important;
+  margin-bottom: 0 !important;       /* Verwijdert overbodige witruimte onderaan */
+}
+
+
+/* ==========================================================================
+   3. AUTEURSBLOK IN DE ZIJBALK
+   ========================================================================== */
+
+.author-sidebar {
+  font-family: 'Merriweather', Georgia, serif;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Pas de tekstgrootte en regelafstand aan binnen het blokje */
+.author-sidebar p {
+  font-family: 'Merriweather', Georgia, serif !important;
+  font-size: 0.88rem !important;
+  line-height: 1.55 !important;
+  margin-bottom: 0.35rem;
+}
+
+/* Gecentreerde ronde pasfoto */
+.author-sidebar .author-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.85rem;
+}
+
+/* Auteursnaam in de stijl van de artikelkoppen */
+.author-sidebar .author-name {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.15rem;
+  color: #111;
+  border-bottom: 1px solid #e0e0e0; /* Subtiel scheidingslijntje */
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.author-sidebar .author-name a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.author-sidebar .author-name a:hover {
+  text-decoration: underline;
+}
+
+/* Rol subtiel gecursiveerd in Merriweather */
+.author-sidebar .author-role {
+  font-style: italic;
+  font-size: 0.82rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.author-sidebar .author-bio {
+  color: #444;
+  font-size: 0.82rem;
+}
+
+
+/* ==========================================================================
+   4. OVERZICHTSPAGINA'S (LISTING GRID)
+   ========================================================================== */
+
+/* Titels van artikelen in het grid compacter maken */
+.quarto-grid-item .card-title,
+.quarto-grid-item .listing-title {
+  font-size: 1.15rem !important;
+  line-height: 1.35 !important;
+  margin-top: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Zorg dat de link in de titel strak blijft */
+.quarto-grid-item .card-title a,
+.quarto-grid-item .listing-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.quarto-grid-item .card-title a:hover,
+.quarto-grid-item .listing-title a:hover {
+  text-decoration: underline;
+}
+
+/* Beschrijving van artikelen in het grid compacter maken */
+#quarto-document-content .quarto-grid-item .card-text,
+#quarto-document-content .quarto-grid-item .listing-description,
+#quarto-document-content .quarto-grid-item .card-text p,
+#quarto-document-content .quarto-grid-item .listing-description p {
+  font-size: 0.88rem !important;
+  line-height: 1.5 !important;
+  color: #555555 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+
+/* ==========================================================================
+   5. RESPONDENTIE & MOBIEL (SCHERMEN SMALLER DAN 992PX)
+   ========================================================================== */
+
+@media (max-width: 991px) {
+  /* Comfortabele ademruimte vanaf de glasrand van het scherm */
+  #quarto-document-content,
+  main.content {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Verplaats het marge-auteursblok naar het einde van het artikel */
+  .column-margin {
+    order: 99;              /* Plaatst het helemaal onderaan */
+    margin-top: 3rem;       /* Voldoende afstand na de laatste alinea */
+    border-top: 1px solid #e5e5e5;
+    padding-top: 1.5rem;
+  }
+}
