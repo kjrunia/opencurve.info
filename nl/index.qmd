@@ -1,0 +1,12 @@
+---
+title: "Artikelen"
+lang: nl
+listing:
+  contents: posts
+  type: grid
+  grid-columns: 2
+  sort: "date desc"
+  categories: true
+---
+
+Hier vind je alle Nederlandstalige explainers over wiskunde en natuurkunde.

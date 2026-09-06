@@ -1,0 +1,34 @@
+---
+title: "OpenCurve"
+subtitle: "A bit of maths and physics for everyone."
+page-layout: article
+anchor-sections: false
+---
+
+::: {.lead}
+Welkom op **OpenCurve** — een verzameling conceptuele explainers en wiskundige afleidingen binnen de wiskunde en theoretische natuurkunde.
+
+Welcome to **OpenCurve** — a collection of conceptual explainers and mathematical derivations across mathematics and physics.
+:::
+
+---
+
+::: {.grid style="margin-top: 2rem;"}
+
+::: {.g-col-12 .g-col-md-6}
+### 🇳🇱 Nederlands
+
+Verdiepende artikelen in het Nederlands over mechanica, veldentheorie en analyse, met uitgewerkte wiskunde en figuren.
+
+[Naar de Nederlandse artikelen &rarr;](nl/index.qmd){.btn .btn-primary role="button"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+### 🇬🇧 English
+
+Deep dives in English on classical mechanics, field theory, and calculus, featuring complete derivations and visual models.
+
+[Browse articles in English &rarr;](en/index.qmd){.btn .btn-outline-primary role="button"}
+:::
+
+:::

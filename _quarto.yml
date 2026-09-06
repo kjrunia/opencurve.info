@@ -1,0 +1,48 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - CNAME
+
+website:
+  # title: "OpenCurve"
+  description: "A bit of maths and physics for everyone"
+  favicon: OpenCurveFavicon.png
+  navbar:
+    logo: logo.png
+    logo-alt: OpenCurve A bit of maths and physics for everyone
+    left:
+      - href: index.qmd
+        text: Home
+      - text: "Nederlands"
+        menu:
+          - href: nl/index.qmd
+            text: "Artikelen"
+          - href: nl/over.qmd
+            text: "Privacybeleid / Over ons"
+      - text: "English"
+        menu:
+          - href: en/index.qmd
+            text: "Articles"
+          - href: en/about.qmd
+            text: "Privacy policy / About"
+    right:
+      - text: "Taal / Language"
+        menu:
+          - href: nl/index.qmd
+            text: "🇳🇱 Nederlands"
+          - href: en/index.qmd
+            text: "🇬🇧 English"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+    html-math-method: mathjax
+    grid: 
+      body-width: 720px
+      sidebar-width: 200px
+      margin-width: 260px
