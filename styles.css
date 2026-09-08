@@ -26,58 +26,161 @@ h1, h2, h3, .title {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Logo & Menubalk ruim en groot afstellen */
+
+/* ==========================================================================
+   2. GECENTREERDE HEADER & NAVIGATIE
+   ========================================================================== */
+
+/* Navbar als geheel */
 .navbar {
-  min-height: 100px !important;    /* Geeft de hele menubalk de nodige hoogte */
+  min-height: unset !important;
+  padding-top: 1.25rem !important;
+  padding-bottom: 1rem !important;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #000000;
 }
 
+/* Navbar container: logo breekt af naar rij 1, menu + search vullen rij 2 */
 .navbar .container-fluid {
-  align-items: center !important; /* Centreert menu-items verticaal t.o.v. het grotere logo */
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding-top: 1.25rem !important;
+  padding-bottom: 1rem !important;
 }
 
+/* 1. Logo vult 100% van de breedte op de eerste rij */
 .navbar-brand-container,
 .navbar-brand {
+  flex: 0 0 100% !important;
+  width: 100% !important;
   height: auto !important;
   max-height: none !important;
+  margin-right: 0 !important;
+  margin-bottom: 0.85rem !important;
   display: flex !important;
+  justify-content: center !important;
   align-items: center !important;
-  padding-top: 0.4rem !important;
-  padding-bottom: 0.4rem !important;
+  padding: 0 !important;
 }
 
-/* Dwing het formaat af op alle Quarto-logo selectors */
 .navbar-brand img,
 .navbar-brand-logo,
 .navbar-brand-logo img,
 .navbar-brand > img,
 nav.navbar img {
-  height: 100px !important;       /* Pas hier naar wens aan (bijv. 64px - 85px) */
-  width: auto !important;        /* Schaal breedte proportioneel mee */
-  max-height: none !important;   /* Schakelt Quarto's knip-limiet uit */
-  min-height: 60px !important;   /* Voorkomt dat Bootstrap hem weer inkrimpt */
+  height: 150px !important;
+  width: auto !important;
+  max-height: none !important;
+  min-height: 60px !important;
   display: block !important;
+  margin: 0 auto !important;
+}
+
+/* 2. Menu-container sluit aan op rij 2 */
+.navbar-collapse {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 !important;
+}
+
+.navbar-nav {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 1.25rem !important;
+  margin: 0 !important;
+}
+
+.navbar-nav.me-auto,
+.navbar-nav.ms-auto {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* 3. Zoekicoon sluit direct aan achter het menu op rij 2 */
+#quarto-search,
+.quarto-search-trigger,
+.navbar .search-trigger {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  margin: 0 0 0 1.25rem !important;
+  padding: 0 !important;
 }
 
 
 /* ==========================================================================
-   2. ARTIKELWEERGAVE & TOOLTIPS
+   3. ARTIKELWEERGAVE & TOOLTIPS
    ========================================================================== */
+
+/* Artikeltitel bovenaan pagina vergroten */
+header.quarto-title-block h1.title,
+.quarto-title-block .title {
+  font-size: 3.2rem !important;
+  line-height: 1.15 !important;
+  margin-bottom: 0.6rem !important;
+}
+
+/* Artikelondertitel / description cursief maken */
+.quarto-title-block .description,
+header.quarto-title-block p.subtitle {
+  font-style: italic !important;
+  color: #444444;
+}
 
 /* Voetnoot-hover popup (Tippy.js) compacter maken */
 .tippy-box {
-  font-size: 0.85rem !important;     /* Kleiner lettertype (ca. 13-14px) */
-  line-height: 1.45 !important;      /* Iets compactere regelafstand */
+  font-size: 0.85rem !important;
+  line-height: 1.45 !important;
 }
 
 .tippy-box .tippy-content p {
-  font-size: 0.85rem !important;     /* Overschrijft de algemene 1.125rem p-regel */
+  font-size: 0.85rem !important;
   line-height: 1.45 !important;
-  margin-bottom: 0 !important;       /* Verwijdert overbodige witruimte onderaan */
+  margin-bottom: 0 !important;
+}
+
+/* Drop Cap (Beginkapitaal) desktop - over 3 regels */
+.lead-in::first-letter,
+.drop-cap::first-letter {
+  font-family: 'DM Serif Display', Georgia, serif;
+  float: left;
+  font-size: 7.2rem;
+  line-height: 0.73;
+  padding-top: 6px;
+  padding-right: 0.75rem;
+  padding-bottom: 2px;
+  color: #111111;
+}
+
+/* Zorg dat de figuurcontainer mee krimpt met de afbeelding */
+figure.figure,
+.quarto-figure-center {
+  display: table !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Laat het bijschrift linksuitgelijnd staan tegen de linkerrand van de foto */
+figure.figure > figcaption,
+.quarto-figure-center > figcaption {
+  display: table-caption !important;
+  caption-side: bottom !important;
+  text-align: left !important;
+  font-size: 0.88rem;
+  color: #666666;
+  padding-top: 0.5rem;
 }
 
 
 /* ==========================================================================
-   3. AUTEURSBLOK IN DE ZIJBALK
+   4. AUTEURSBLOK IN DE ZIJBALK
    ========================================================================== */
 
 .author-sidebar {
@@ -87,7 +190,6 @@ nav.navbar img {
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* Pas de tekstgrootte en regelafstand aan binnen het blokje */
 .author-sidebar p {
   font-family: 'Merriweather', Georgia, serif !important;
   font-size: 0.88rem !important;
@@ -112,7 +214,7 @@ nav.navbar img {
   font-family: 'DM Serif Display', Georgia, serif;
   font-size: 1.15rem;
   color: #111;
-  border-bottom: 1px solid #e0e0e0; /* Subtiel scheidingslijntje */
+  border-bottom: 1px solid #e0e0e0;
   padding-bottom: 0.6rem;
   margin-bottom: 0.6rem;
 }
@@ -141,7 +243,7 @@ nav.navbar img {
 
 
 /* ==========================================================================
-   4. OVERZICHTSPAGINA'S (LISTING GRID)
+   5. OVERZICHTSPAGINA'S (LISTING GRID) & HOMEPAGE KNOPPEN
    ========================================================================== */
 
 /* Titels van artikelen in het grid compacter maken */
@@ -153,7 +255,6 @@ nav.navbar img {
   margin-bottom: 0.5rem;
 }
 
-/* Zorg dat de link in de titel strak blijft */
 .quarto-grid-item .card-title a,
 .quarto-grid-item .listing-title a {
   text-decoration: none;
@@ -176,9 +277,37 @@ nav.navbar img {
   margin-bottom: 0.5rem !important;
 }
 
+/* Gevulde knop (bijv. "Naar de Nederlandse artikelen") */
+.btn-primary {
+  background-color: #407CBF !important;
+  color: #ffffff !important;
+  border-color: #1a365d !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #0f2341 !important;
+  color: #ffffff !important;
+  border-color: #0f2341 !important;
+}
+
+/* Omlijnde knop (bijv. "Browse articles in English") */
+.btn-outline-primary {
+  background-color: transparent !important;
+  color: #1a365d !important;
+  border-color: #1a365d !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: #1a365d !important;
+  color: #ffffff !important;
+  border-color: #1a365d !important;
+}
+
 
 /* ==========================================================================
-   5. RESPONDENTIE & MOBIEL (SCHERMEN SMALLER DAN 992PX)
+   6. RESPONSIVITEIT & MOBIEL (SCHERMEN SMALLER DAN 992PX)
    ========================================================================== */
 
 @media (max-width: 991px) {
@@ -192,11 +321,32 @@ nav.navbar img {
     flex-direction: column;
   }
 
+  /* Artikeltitel op mobiel */
+  header.quarto-title-block h1.title,
+  .quarto-title-block .title {
+    font-size: 2.2rem !important;
+  }
+
   /* Verplaats het marge-auteursblok naar het einde van het artikel */
   .column-margin {
-    order: 99;              /* Plaatst het helemaal onderaan */
-    margin-top: 3rem;       /* Voldoende afstand na de laatste alinea */
+    order: 99;
+    margin-top: 3rem;
     border-top: 1px solid #e5e5e5;
     padding-top: 1.5rem;
+  }
+
+  /* Drop Cap op mobiel */
+  .lead-in::first-letter,
+  .drop-cap::first-letter {
+    font-size: 4.2rem;
+    line-height: 0.85;
+    padding-top: 3px;
+    padding-right: 0.5rem;
+  }
+
+  /* Zorg dat op mobiele breedtes de navigatie-items netjes meebreken */
+  .navbar-nav {
+    flex-wrap: wrap !important;
+    gap: 0.75rem 1rem !important;
   }
 }

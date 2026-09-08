@@ -24,7 +24,7 @@ Initiatiefnemer & auteur. Heeft een Bachelor of Science (Honours) in wiskunde en
 :::
 :::
 
-::: {.lead}
+::: {.lead-in}
 Afgelopen kerst vroegen mijn vader en een van mijn twee broers hoe een zwaartekrachtsslinger van een ruimteschip bij een planeet precies werkt, waarbij het ruimteschip een extra zwieper meekrijgt terwijl het langs een planeet scheert. Ze realiseerden zich dat als een ruimtevaartuig door de zwaartekracht van een planeet wordt aangetrokken dat het een extra impuls krijgt, maar zodra het weer van de planeet wegvliegt, wordt door diezelfde zwaartekracht die impuls dan niet weer teruggenomen? Goede vraag natuurlijk, dus laten we snel bekijken hoe zo'n planetair duwtje in elkaar zit.
 :::
 

@@ -28,7 +28,7 @@ Verdiepende artikelen in het Nederlands over mechanica, veldentheorie en analyse
 
 Deep dives in English on classical mechanics, field theory, and calculus, featuring complete derivations and visual models.
 
-[Browse articles in English &rarr;](en/index.qmd){.btn .btn-outline-primary role="button"}
+[Browse articles in English &rarr;](en/index.qmd){.btn .btn-primary role="button"}
 :::
 
 :::

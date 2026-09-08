@@ -1,5 +1,5 @@
 ---
-title: "Gravity Assist"
+title: "Gravity assist"
 description: "How does a planetary push actually work?"
 date: "2021-12-26"
 categories: [physics]
@@ -24,7 +24,7 @@ Founder & author. Holds a Bachelor of Science (Honours) degree in Mathematics an
 :::
 :::
 
-::: {.lead}
+::: {.lead-in}
 Last Christmas, my father and one of my brothers wondered how a spacecraft's planetary slingshot works. It's a well-known manoeuvre to get a big swing forward by passing by a planet. They realized that if the craft falls toward the planet due to its gravitational pull, it will gain momentum. However, as soon as it has flung around the planet, wouldn't that same gravitation slow down the craft just as much? Great question, of course, so, let's dive into this gravity assist short and simple.
 :::
 
@@ -41,6 +41,8 @@ And you're right, this also means that the train lost a bit of its momentum due 
 The same goes for the planet. A spacecraft doing a gravity slingshot, or, enjoying a gravity assist, as it's also called, will decrease the orbital velocity of the planet, meaning that the planet's orbit will get closer to the Sun. Of course, given the ratio between the spacecraft's mass and the planet's mass, this amount is negligible.
 
 Two of the most famous instances of gravity assists are the voyages of Voyager [1](https://en.wikipedia.org/wiki/Voyager_1) and [2](https://en.wikipedia.org/wiki/Voyager_2). In the animation below, made by [Phoenix7777](https://commons.wikimedia.org/wiki/User:Phoenix7777), published under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en), you can see the trajectory of Voyager 2, where it gained assists from several of our solar system's planets. Earth is the fast-orbiting blue dot. Jupiter is green, Saturn is cyan, Uranus is yellow, and orange is Neptune. And while the Voyager spacecrafts flew by the planets, they sent some of the [best postcards](https://voyager.jpl.nasa.gov/galleries/images-voyager-took/) back to Earth.
+
+![](Animation_of_Voyager_2_trajectory.gif)
 
 # Deceleration
 
