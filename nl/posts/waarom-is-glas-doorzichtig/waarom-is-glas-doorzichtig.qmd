@@ -10,19 +10,7 @@ lang: nl
 ![](aquarium-725798.jpg){width="100%"}
 :::
 
-::: {.column-margin}
-::: {.author-sidebar}
-![](../../../kj_photo.png){.author-photo}
-
-::: {.author-name}
-[**KJ Runia, BSc (Hons) MInstP AMIMA**](../../about.qmd)
-:::
-
-::: {.author-bio}
-Initiatiefnemer & auteur. Heeft een Bachelor of Science (Honours) in wiskunde en natuurkunde van de School of Mathematics and Statistics en de School of Physical Sciences van de Britse universiteit The Open University, Walton Hall, Milton Keynes. Studeert momenteel voor een MPhys (Master of Physics). Is een Member van het Institute of Physics (IOP) en een Associate Member van het Institute of Mathematics and its Applications (IMA).
-:::
-:::
-:::
+{{< include ../../includes/author-sidebar.qmd >}}
 
 ::: {.lead-in}
 Stel je eens voor dat doorzichtige materialen niet bestonden. Hoe zouden auto's er dan uit zien? Hoe zou je vanuit je slaapkamer naar de koude wintermaan kunnen kijken zonder dat je het zelf koud kreeg? Zou lucht dan ook ondoorzichtig zijn? En hoe zit het dan met de lenzen van onze ogen? En als alle materialen uit moleculen bestaan, hoe kan het dan dat de moleculen van glas doorzichtig zijn en andere niet? Deze laatste vraag werd afgelopen week aan mij gesteld door de oudste[^1] zoon van één van mijn beste vrienden.

@@ -46,3 +46,4 @@ format:
       body-width: 720px
       sidebar-width: 200px
       margin-width: 260px
+    lightbox: true

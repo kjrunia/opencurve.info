@@ -10,19 +10,7 @@ lang: en
 ![](satellite.jpg){width="100%"}
 :::
 
-::: {.column-margin}
-::: {.author-sidebar}
-![](../../../kj_photo.png){.author-photo}
-
-::: {.author-name}
-[**KJ Runia, BSc (Hons) MInstP AMIMA**](../../about.qmd)
-:::
-
-::: {.author-bio}
-Founder & author. Holds a Bachelor of Science (Honours) degree in Mathematics and Physics from the School of Mathematics and Statistics and the School of Physical Sciences at The Open University, Walton Hall, Milton Keynes. Studies currently for an MPhys (Master of Physics). Is a Member of the Institute of Physics (IOP) and an Associate Member of the Institute of Mathematics and its Applications (IMA).
-:::
-:::
-:::
+{{< include ../../includes/author-sidebar.qmd >}}
 
 ::: {.lead-in}
 Last Christmas, my father and one of my brothers wondered how a spacecraft's planetary slingshot works. It's a well-known manoeuvre to get a big swing forward by passing by a planet. They realized that if the craft falls toward the planet due to its gravitational pull, it will gain momentum. However, as soon as it has flung around the planet, wouldn't that same gravitation slow down the craft just as much? Great question, of course, so, let's dive into this gravity assist short and simple.

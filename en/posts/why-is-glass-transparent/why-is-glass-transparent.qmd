@@ -10,19 +10,7 @@ lang: en
 ![](aquarium-725798.jpg){width="100%"}
 :::
 
-::: {.column-margin}
-::: {.author-sidebar}
-![](../../../kj_photo.png){.author-photo}
-
-::: {.author-name}
-[**KJ Runia, BSc (Hons) MInstP AMIMA**](../../about.qmd)
-:::
-
-::: {.author-bio}
-Founder & author. Holds a Bachelor of Science (Honours) degree in Mathematics and Physics from the School of Mathematics and Statistics and the School of Physical Sciences at The Open University, Walton Hall, Milton Keynes. Studies currently for an MPhys (Master of Physics). Is a Member of the Institute of Physics (IOP) and an Associate Member of the Institute of Mathematics and its Applications (IMA).
-:::
-:::
-:::
+{{< include ../../includes/author-sidebar.qmd >}}
 
 ::: {.lead-in}
 Imagine transparent materials didn't exist. What would cars look like? How would you be able to look at the cold Winter Moon from your bedroom window without getting cold yourself? Would air be opaque too? What about the lenses in our eyes? And if all materials consist of molecules, how is it that the molecules of glass are transparent while others aren't? This last question was asked by the oldest[^1] son of one of my best friends last week.

@@ -1,0 +1,13 @@
+::: {.column-margin}
+::: {.author-sidebar}
+![](../../../kj_photo.png){.author-photo}
+
+::: {.author-name}
+[**KJ Runia, BSc (Hons) MInstP AMIMA**](../../about.qmd)
+:::
+
+::: {.author-bio}
+Initiatiefnemer & auteur. Heeft een Bachelor of Science (Honours) in wiskunde en natuurkunde van de School of Mathematics and Statistics en de School of Physical Sciences van de Britse universiteit The Open University, Walton Hall, Milton Keynes. Studeert momenteel voor een MPhys (Master of Physics). Is een Member van het Institute of Physics (IOP) en een Associate Member van het Institute of Mathematics and its Applications (IMA).
+:::
+:::
+:::

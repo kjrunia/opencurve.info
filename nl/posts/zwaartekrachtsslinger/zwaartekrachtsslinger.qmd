@@ -10,19 +10,7 @@ lang: nl
 ![](satellite.jpg){width="100%"}
 :::
 
-::: {.column-margin}
-::: {.author-sidebar}
-![](../../../kj_photo.png){.author-photo}
-
-::: {.author-name}
-[**KJ Runia, BSc (Hons) MInstP AMIMA**](../../over.qmd)
-:::
-
-::: {.author-bio}
-Initiatiefnemer & auteur. Heeft een Bachelor of Science (Honours) in wiskunde en natuurkunde van de School of Mathematics and Statistics en de School of Physical Sciences van de Britse universiteit The Open University, Walton Hall, Milton Keynes. Studeert momenteel voor een MPhys (Master of Physics). Is een Member van het Institute of Physics (IOP) en een Associate Member van het Institute of Mathematics and its Applications (IMA).
-:::
-:::
-:::
+{{< include ../../includes/author-sidebar.qmd >}}
 
 ::: {.lead-in}
 Afgelopen kerst vroegen mijn vader en een van mijn twee broers hoe een zwaartekrachtsslinger van een ruimteschip bij een planeet precies werkt, waarbij het ruimteschip een extra zwieper meekrijgt terwijl het langs een planeet scheert. Ze realiseerden zich dat als een ruimtevaartuig door de zwaartekracht van een planeet wordt aangetrokken dat het een extra impuls krijgt, maar zodra het weer van de planeet wegvliegt, wordt door diezelfde zwaartekracht die impuls dan niet weer teruggenomen? Goede vraag natuurlijk, dus laten we snel bekijken hoe zo'n planetair duwtje in elkaar zit.

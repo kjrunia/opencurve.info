@@ -1,0 +1,13 @@
+::: {.column-margin}
+::: {.author-sidebar}
+![](../../../kj_photo.png){.author-photo}
+
+::: {.author-name}
+[**KJ Runia, BSc (Hons) MInstP AMIMA**](../../about.qmd)
+:::
+
+::: {.author-bio}
+Founder & author. Holds a Bachelor of Science (Honours) degree in Mathematics and Physics from the School of Mathematics and Statistics and the School of Physical Sciences at The Open University, Walton Hall, Milton Keynes. Studies currently for an MPhys (Master of Physics). Is a Member of the Institute of Physics (IOP) and an Associate Member of the Institute of Mathematics and its Applications (IMA).
+:::
+:::
+:::
