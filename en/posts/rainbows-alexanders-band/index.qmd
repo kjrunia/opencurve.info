@@ -1,0 +1,51 @@
+---
+title: "Rainbows: Alexander's band"
+description: "Why the sky between primary and secondary rainbows is noticeably darker"
+date: "2019-08-13"
+categories: [physics]
+lang: en
+---
+
+::: {.column-screen}
+<img src="canim-lake-50095.webp" class="nolightbox" alt="A double rainbow over a landscape, showing the distinct dark sky between the primary and secondary arcs known as Alexander's band." style="width: 100%;">
+:::
+
+{{< include ../../includes/author-sidebar.qmd >}}
+
+::: {.lead-in}
+If you haven't yet seen it, next time you see a rainbow, you will look for it: an intense difference between the inside and the outside of the primary rainbow. Also, next time you see a rainbow, you will know *why* this is. Not always as visible but certainly present if there are enough water drops to go around and the intensity of light is sufficient, there will be a secondary rainbow. The darker space between the primary and secondary is called **Alexander's (dark) band**.[^1]
+:::
+
+![Figure 1: Two rainbows. The air underneath the primary is brighter than the air in between the primary and the secondary rainbow.](398px-Alexanders_band_gnangarra.jpg)
+
+Just in case you didn't know, there are three requirements for a rainbow. The Sun should be shining behind you. There should be raindrops in front of you, be it thousands of metres up and away from you or even just a few metres (e.g., a lawn sprinkler). And there should be no clouds or anything else in the way between the Sun, the raindrops, and your eyes.
+
+# Refraction and dispersion
+
+As you may know, light bundles are refracted by any transparent material they encounter. Twice, actually, at the two surfaces they pass through. This is due to the fact that light, being an electromagnetic disturbance, changes the electric properties of the material, which in turn changes the electromagnetic field inside the material, which in turn changes the direction of the light. In a [previous article](https://opencurve.info/why-exactly-do-glass-and-liquids-refract-light/), we delved deeper into the quantum physics of the matter.
+
+![Figure 2: A computer animation of a light bundle entering a prism. At the two surfaces of the prism, where the light enters and exits, the red part of the light is bent less than the violet part of the light, effectively dispersing the light bundle into a spectrum from red to violet.](Light_dispersion_conceptual_waves.gif)
+
+It just so happens that red light gets refracted at a smaller angle than violet light, i.e. red light gets 'bent' less. Furthermore, the angle between the incident light ray and red light exiting the water drop is always *maximally* about 42°, while in the case of violet light this is *maximally* about 40°. In other words, you won't see violet light exiting the raindrop at 42° – it's all red in that region. Everything in between is yellow, green, and blue – the rest of the rainbow colours. This is depicted in Figure 3. This is the reason why the 'white' light from the Sun – which is rather a blend of all the colours of the rainbow and not at all white – gets dispersed in a specific order of different colours.
+
+![Figure 3: Maximum deflection angles for red (42°) and violet (40°) light rays exiting a raindrop after one internal reflection.](42-degrees.jpg)
+
+Now, suppose millions of tiny raindrops linger in the air in front of you. Depending on a raindrop's height relative to you, you are only able to see its outgoing light (having been refracted and reflected inside of it) at a specific angle. Some are at a height just right for you to spot only their red light refractions, while others are at a height offering you a view on their violet light refractions.
+
+In Figure 4, you can see the relation between the (order of the) colours you can see, the different angles at which different colours exit a raindrop as well as the height of the raindrop. When the raindrop is low enough, all colours are mixed again. Red, yellow, green, violet – they can all exit the raindrop at an angle smaller than 40°. This is the reason why 'white' light is being brought about 'inside' the primary rainbow.
+
+![Figure 4: The cone of light rays forming the rainbow and the brighter white region beneath the primary bow where all visible wavelengths overlap.](white-cone.jpg)
+
+The raindrops don't reflect light just once, as shown in Figure 3. Sometimes light gets reflected twice inside, as shown in the first two drops in Figure 5. This is how the inverted order of the colours of the secondary rainbow arises. Sometimes light exits the drop but never reaches your eye because they are too high. Some light is 'lost' in a sense. This is why the band between the primary and secondary rainbow is extra dark compared to the rest of the sky.
+
+![Figure 5: Internal ray paths for the primary rainbow (one internal reflection) and secondary rainbow (two internal reflections), showing the unlit Alexander's band in between.](Rainbow_principle.jpg)
+
+<div style="clear: both;"></div>
+
+---
+
+*Figure 1, photograph of Alexander's band by [Gnangarra](https://commons.wikimedia.org/wiki/File:Alexanders_band_gnangarra.jpg) under [CC BY-SA 3.0 AU](https://creativecommons.org/licenses/by/3.0/au/).*
+
+*Figure 5, primary and secondary rainbow illustration by [CMG Lee](https://commons.wikimedia.org/wiki/User:Cmglee) under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en), adapted by [@kjrunia](https://twitter.com/kjrunia).*
+
+[^1]: The Greek philosopher Alexander of Aphrodisias was the first to mention this phenomenon in one of his commentaries on Aristotle's work on meteorology.
