@@ -2,7 +2,7 @@
 title: "The Collatz Conjecture"
 description: "Why one of the simplest mathematical rules remains one of the hardest to prove"
 date: "2020-04-27"
-categories: [collatz, conjecture, featured, javascript, mathematics]
+categories: [mathematics]
 lang: en
 aliases:
   - /the-collatz-conjecture/

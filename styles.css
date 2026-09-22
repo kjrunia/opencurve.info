@@ -28,42 +28,41 @@ h1, h2, h3, .title {
 
 
 /* ==========================================================================
-   2. GECENTREERDE HEADER & NAVIGATIE
+   2. HEADER & NAVIGATIE (LOGO LINKS, MENU RECHTS UITGELIJND)
    ========================================================================== */
 
 /* Navbar als geheel */
 .navbar {
   min-height: unset !important;
-  padding-top: 1.25rem !important;
+  padding-top: 1rem !important;
   padding-bottom: 1rem !important;
   background-color: #ffffff !important;
   border-bottom: 1px solid #000000;
 }
 
-/* Navbar container: logo breekt af naar rij 1, menu + search vullen rij 2 */
+/* Navbar container: alles op één rij met maximale breedteverdeling */
 .navbar .container-fluid {
   display: flex !important;
   flex-direction: row !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important;
+  flex-wrap: nowrap !important;
+  justify-content: space-between !important;
   align-items: center !important;
-  padding-top: 1.25rem !important;
-  padding-bottom: 1rem !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
-/* 1. Logo vult 100% van de breedte op de eerste rij */
+/* 1. Logo uiterst links */
 .navbar-brand-container,
 .navbar-brand {
-  flex: 0 0 100% !important;
-  width: 100% !important;
+  flex: 0 0 auto !important;
+  width: auto !important;
   height: auto !important;
   max-height: none !important;
-  margin-right: 0 !important;
-  margin-bottom: 0.85rem !important;
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
+  margin-right: 2rem !important;
+  margin-bottom: 0 !important;
   padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 .navbar-brand img,
@@ -71,20 +70,21 @@ h1, h2, h3, .title {
 .navbar-brand-logo img,
 .navbar-brand > img,
 nav.navbar img {
-  height: 150px !important;
+  height: auto !important;
   width: auto !important;
-  max-height: none !important;
-  min-height: 60px !important;
+  max-height: 48px !important;
+  min-height: unset !important;
+  max-width: 100% !important;
   display: block !important;
-  margin: 0 auto !important;
+  margin: 0 !important;
 }
 
-/* 2. Menu-container sluit aan op rij 2 */
+/* 2. Menu-container en items helemaal naar rechts geduwd */
 .navbar-collapse {
-  flex: 0 0 auto !important;
+  flex: 1 1 auto !important;
   width: auto !important;
   display: flex !important;
-  justify-content: center !important;
+  justify-content: flex-end !important;
   align-items: center !important;
   margin: 0 !important;
 }
@@ -103,7 +103,7 @@ nav.navbar img {
   margin-right: 0 !important;
 }
 
-/* 3. Zoekicoon sluit direct aan achter het menu op rij 2 */
+/* 3. Zoekicoon sluit aan de rechterkant direct aan achter het menu */
 #quarto-search,
 .quarto-search-trigger,
 .navbar .search-trigger {

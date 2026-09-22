@@ -2,7 +2,7 @@
 title: "Waarom is glas doorzichtig?"
 description: "Een kristalhelder geval van kwantumapathie"
 date: "2020-09-22"
-categories: [physics]
+categories: [natuurkunde]
 lang: nl
 ---
 

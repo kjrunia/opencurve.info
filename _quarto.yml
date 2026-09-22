@@ -1,15 +1,17 @@
 project:
   type: website
   output-dir: _site
-  #resources:
+  resources:
     # - CNAME
+    - "**/*.mp3"
+    - "**/*.m4a"
 
 website:
   # title: "OpenCurve"
   description: "A bit of maths and physics for everyone"
   favicon: OpenCurveFavicon.png
   navbar:
-    logo: logo.png
+    logo: logo-horizontal.png
     logo-alt: OpenCurve A bit of maths and physics for everyone
     left:
       - href: index.qmd

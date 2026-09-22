@@ -3,7 +3,7 @@
 ![](../../../kj_photo.png){.author-photo}
 
 ::: {.author-name}
-[**KJ Runia, BSc (Hons) MInstP AMIMA**](../../about.qmd)
+[**KJ Runia, BSc (Hons) MInstP AMIMA**](/nl/over.html)
 :::
 
 ::: {.author-bio}

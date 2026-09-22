@@ -2,7 +2,7 @@
 title: "De zwaartekrachtsslinger"
 description: "Hoe werkt zo'n planetair duwtje eigenlijk?"
 date: "2021-12-26"
-categories: [physics]
+categories: [natuurkunde]
 lang: nl
 ---
 
