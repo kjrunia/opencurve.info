@@ -20,16 +20,16 @@ aliases:
 {{< include /author-sidebar.qmd >}}
 
 ::: {.lead-in}
-Einstein showed that the Lorentz transformations were the correct way to switch between the coordinate systems of different inertial frames of reference. He also taught us that Newton’s classical laws were not proper relativistic descriptions. For instance, Newtonian momentum $\mathbf{p} = m \mathbf{v}$ and kinetic energy $E_\text{k} = \frac{1}{2}mv^2$ lose their accuracy at velocities approaching the speed of light.
+Einstein showed that the Lorentz transformations were the correct way to switch between the coordinate systems of different inertial frames of reference. He also taught us that Newton’s classical laws were not proper relativistic descriptions. For instance, Newtonian momentum $\mathbf{p} = m \mathbf{v}$ and kinetic energy $E_\text{k} = \dfrac{1}{2}mv^2$ lose their accuracy at velocities approaching the speed of light.
 :::
 
 Instead, relativistic momentum is given by:
 
-$$\mathbf{p} = \frac{m \mathbf{v}}{\sqrt{1 - \dfrac{v^2}{c^2}}}.$$
+$$\mathbf{p} = \dfrac{m \mathbf{v}}{\sqrt{1 - \dfrac{v^2}{c^2}}}.$$
 
 And the relativistic total energy of a particle with rest mass $m$ is expressed as:
 
-$$E_{\text{tot}} = \frac{mc^2}{\sqrt{1 - \dfrac{v^2}{c^2}}}.$$
+$$E_{\text{tot}} = \dfrac{mc^2}{\sqrt{1 - \dfrac{v^2}{c^2}}}.$$
 
 In this article, we will solve three foundational problems:
 
@@ -41,19 +41,19 @@ In this article, we will solve three foundational problems:
 
 Since energy $E$ is to be expressed in terms of momentum $p$, we isolate $m$ from the scalar magnitude of momentum $p = \dfrac{mv}{\sqrt{1 - v^2/c^2}}$:
 
-$$m = \frac{p \sqrt{1 - \dfrac{v^2}{c^2}}}{v}.$$
+$$m = \dfrac{p \sqrt{1 - \dfrac{v^2}{c^2}}}{v}.$$
 
 Substituting this expression for $m$ into the equation for total relativistic energy yields:
 
-$$E_{\text{tot}} = \frac{\left(\dfrac{p \sqrt{1 - \dfrac{v^2}{c^2}}}{v}\right)c^2}{\sqrt{1 - \dfrac{v^2}{c^2}}}.$$
+$$E_{\text{tot}} = \dfrac{\left(\dfrac{p \sqrt{1 - \dfrac{v^2}{c^2}}}{v}\right)c^2}{\sqrt{1 - \dfrac{v^2}{c^2}}}.$$
 
 The Lorentz factor term $\sqrt{1 - v^2/c^2}$ cancels out directly:
 
-$$E_{\text{tot}} = \frac{pc^2}{v}.$$
+$$E_{\text{tot}} = \dfrac{pc^2}{v}.$$
 
 For a massless particle travelling at the speed of light ($v = c$), this expression simplifies immediately to:
 
-$$E_{\text{tot}} = \frac{pc^2}{c} = pc.$$
+$$E_{\text{tot}} = \dfrac{pc^2}{c} = pc.$$
 
 # Problem II
 
@@ -63,15 +63,15 @@ $$E_{\text{tot}}^2 = p^2c^2 + m^2c^4.$$
 
 To verify that this relation holds identically for any velocity $v < c$ and mass $m$, we substitute the definitions of $E_\text{tot}$ and $p$:
 
-$$\left(\frac{mc^2}{\sqrt{1 - \dfrac{v^2}{c^2}}}\right)^2 = \left(\frac{mv}{\sqrt{1 - \dfrac{v^2}{c^2}}}\right)^2 c^2 + m^2c^4.$$
+$$\left(\dfrac{mc^2}{\sqrt{1 - \dfrac{v^2}{c^2}}}\right)^2 = \left(\dfrac{mv}{\sqrt{1 - \dfrac{v^2}{c^2}}}\right)^2 c^2 + m^2c^4.$$
 
 Subtracting the right-hand terms from the left-hand side:
 
-$$\frac{m^2c^4}{1 - \dfrac{v^2}{c^2}} - \frac{m^2v^2c^2}{1 - \dfrac{v^2}{c^2}} - m^2c^4 = 0.$$
+$$\dfrac{m^2c^4}{1 - \dfrac{v^2}{c^2}} - \dfrac{m^2v^2c^2}{1 - \dfrac{v^2}{c^2}} - m^2c^4 = 0.$$
 
 Combining the terms over the common denominator $1 - v^2/c^2$:
 
-$$\frac{m^2c^4 - m^2v^2c^2}{1 - \dfrac{v^2}{c^2}} - m^2c^4 = \frac{m^2c^4\left(1 - \dfrac{v^2}{c^2}\right)}{1 - \dfrac{v^2}{c^2}} - m^2c^4 = m^2c^4 - m^2c^4 = 0.$$
+$$\dfrac{m^2c^4 - m^2v^2c^2}{1 - \dfrac{v^2}{c^2}} - m^2c^4 = \dfrac{m^2c^4\left(1 - \dfrac{v^2}{c^2}\right)}{1 - \dfrac{v^2}{c^2}} - m^2c^4 = m^2c^4 - m^2c^4 = 0.$$
 
 The equality holds identically for all permissible values of $m$ and $v$.
 
@@ -93,19 +93,19 @@ $$E_{\text{tot}} = 4E_{\text{mass}} + E_{\text{mass}} = 5E_{\text{mass}} = 5m_p 
 
 Equating this to the relativistic formula for total energy:
 
-$$\frac{m_p c^2}{\sqrt{1 - \dfrac{v^2}{c^2}}} = 5m_p c^2.$$
+$$\dfrac{m_p c^2}{\sqrt{1 - \dfrac{v^2}{c^2}}} = 5m_p c^2.$$
 
 Dividing both sides by $m_p c^2$:
 
-$$\frac{1}{\sqrt{1 - \dfrac{v^2}{c^2}}} = 5.$$
+$$\dfrac{1}{\sqrt{1 - \dfrac{v^2}{c^2}}} = 5.$$
 
 Squaring and solving for $v^2/c^2$:
 
-$$1 - \frac{v^2}{c^2} = \frac{1}{25},$$
+$$1 - \dfrac{v^2}{c^2} = \dfrac{1}{25},$$
 
-$$\frac{v^2}{c^2} = 1 - \frac{1}{25} = \frac{24}{25},$$
+$$\dfrac{v^2}{c^2} = 1 - \dfrac{1}{25} = \dfrac{24}{25},$$
 
-$$v = \frac{\sqrt{24}}{5} c = \frac{2\sqrt{6}}{5} c \approx 0.9798 c.$$
+$$v = \dfrac{\sqrt{24}}{5} c = \dfrac{2\sqrt{6}}{5} c \approx 0.9798 c.$$
 
 The proton is travelling at approximately **98% of the speed of light** relative to the laboratory frame.
 
