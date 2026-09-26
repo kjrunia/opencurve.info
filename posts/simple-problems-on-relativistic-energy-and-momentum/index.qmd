@@ -1,0 +1,118 @@
+---
+title: "Simple problems on relativistic energy and momentum"
+description: "Deriving the energy-momentum invariant, analyzing massless particles, and calculating relativistic proton speeds at high kinetic energies"
+date: "2019-03-28"
+categories: [physics]
+lang: en
+aliases:
+  - /simple-problems-on-relativistic-energy-and-momentum/
+  - /simple-problems-on-relativistic-energy-and-momentum/index.html
+  - /simple-problems-on-relativistic-energy-and-momentum-2/
+  - simple-problems-on-relativistic-energy-and-momentum-2/index.html
+  - /nl/eenvoudige-probleemstellingen-over-relativistische-energie-en-impuls/
+  - /nl/eenvoudige-probleemstellingen-over-relativistische-energie-en-impuls/index.html
+---
+
+::: {.column-screen}
+<img src="flare-666138-e1588487585282.jpg.webp" class="nolightbox" alt="Bright golden optical lens flare radiating light against a pitch-black background." style="width: 100%;">
+:::
+
+{{< include /author-sidebar.qmd >}}
+
+::: {.lead-in}
+Einstein showed that the Lorentz transformations were the correct way to switch between the coordinate systems of different inertial frames of reference. He also taught us that Newton’s classical laws were not proper relativistic descriptions. For instance, Newtonian momentum $\mathbf{p} = m \mathbf{v}$ and kinetic energy $E_\text{k} = \frac{1}{2}mv^2$ lose their accuracy at velocities approaching the speed of light.
+:::
+
+Instead, relativistic momentum is given by:
+
+$$\mathbf{p} = \frac{m \mathbf{v}}{\sqrt{1 - \dfrac{v^2}{c^2}}}.$$
+
+And the relativistic total energy of a particle with rest mass $m$ is expressed as:
+
+$$E_{\text{tot}} = \frac{mc^2}{\sqrt{1 - \dfrac{v^2}{c^2}}}.$$
+
+In this article, we will solve three foundational problems:
+
+1. Prove that for a particle travelling at $c$, the magnitude of the relativistic energy is given by $E = pc$.
+2. Demonstrate that the energy-momentum relation $E_{\text{tot}}^2 = p^2c^2 + m^2c^4$ holds universally for a particle with any invariant mass $m$ travelling at any velocity $v$.
+3. Given a proton of rest mass $m_p$, calculate its exact velocity when its relativistic translational kinetic energy equals four times its rest mass energy.
+
+# Problem I
+
+Since energy $E$ is to be expressed in terms of momentum $p$, we isolate $m$ from the scalar magnitude of momentum $p = \dfrac{mv}{\sqrt{1 - v^2/c^2}}$:
+
+$$m = \frac{p \sqrt{1 - \dfrac{v^2}{c^2}}}{v}.$$
+
+Substituting this expression for $m$ into the equation for total relativistic energy yields:
+
+$$E_{\text{tot}} = \frac{\left(\dfrac{p \sqrt{1 - \dfrac{v^2}{c^2}}}{v}\right)c^2}{\sqrt{1 - \dfrac{v^2}{c^2}}}.$$
+
+The Lorentz factor term $\sqrt{1 - v^2/c^2}$ cancels out directly:
+
+$$E_{\text{tot}} = \frac{pc^2}{v}.$$
+
+For a massless particle travelling at the speed of light ($v = c$), this expression simplifies immediately to:
+
+$$E_{\text{tot}} = \frac{pc^2}{c} = pc.$$
+
+# Problem II
+
+The fundamental relativistic energy-momentum invariant is:
+
+$$E_{\text{tot}}^2 = p^2c^2 + m^2c^4.$$
+
+To verify that this relation holds identically for any velocity $v < c$ and mass $m$, we substitute the definitions of $E_\text{tot}$ and $p$:
+
+$$\left(\frac{mc^2}{\sqrt{1 - \dfrac{v^2}{c^2}}}\right)^2 = \left(\frac{mv}{\sqrt{1 - \dfrac{v^2}{c^2}}}\right)^2 c^2 + m^2c^4.$$
+
+Subtracting the right-hand terms from the left-hand side:
+
+$$\frac{m^2c^4}{1 - \dfrac{v^2}{c^2}} - \frac{m^2v^2c^2}{1 - \dfrac{v^2}{c^2}} - m^2c^4 = 0.$$
+
+Combining the terms over the common denominator $1 - v^2/c^2$:
+
+$$\frac{m^2c^4 - m^2v^2c^2}{1 - \dfrac{v^2}{c^2}} - m^2c^4 = \frac{m^2c^4\left(1 - \dfrac{v^2}{c^2}\right)}{1 - \dfrac{v^2}{c^2}} - m^2c^4 = m^2c^4 - m^2c^4 = 0.$$
+
+The equality holds identically for all permissible values of $m$ and $v$.
+
+# Problem III
+
+![A 300 GeV proton beam interaction in the 30-inch hydrogen bubble chamber at Fermilab, creating 26 charged particles.](HD-6B-235_(11069100644).jpg){#fig-bubble fig-alt="Historical high-energy physics bubble chamber photograph showing white curved particle tracks and spirals produced by charged particles against a dark background."}
+
+The total relativistic energy is the sum of translational kinetic energy and rest mass energy:
+
+$$E_{\text{tot}} = E_{\text{k}} + E_{\text{mass}}.$$
+
+We are given that the proton's kinetic energy is four times its rest mass energy:
+
+$$E_{\text{k}} = 4E_{\text{mass}}.$$
+
+Therefore, the total energy of the proton is:
+
+$$E_{\text{tot}} = 4E_{\text{mass}} + E_{\text{mass}} = 5E_{\text{mass}} = 5m_p c^2.$$
+
+Equating this to the relativistic formula for total energy:
+
+$$\frac{m_p c^2}{\sqrt{1 - \dfrac{v^2}{c^2}}} = 5m_p c^2.$$
+
+Dividing both sides by $m_p c^2$:
+
+$$\frac{1}{\sqrt{1 - \dfrac{v^2}{c^2}}} = 5.$$
+
+Squaring and solving for $v^2/c^2$:
+
+$$1 - \frac{v^2}{c^2} = \frac{1}{25},$$
+
+$$\frac{v^2}{c^2} = 1 - \frac{1}{25} = \frac{24}{25},$$
+
+$$v = \frac{\sqrt{24}}{5} c = \frac{2\sqrt{6}}{5} c \approx 0.9798 c.$$
+
+The proton is travelling at approximately **98% of the speed of light** relative to the laboratory frame.
+
+---
+
+### Image credits and references
+
+* *Featured image: Lens flare illustration via Pixabay (CC0 Public Domain).*
+* *Fermilab bubble chamber photograph: 300 GeV proton interaction in 30-inch liquid hydrogen chamber, Fermilab / Wikimedia Commons (Public domain).*
+* Einstein, A. (1905). "Zur Elektrodynamik bewegter Körper", *Annalen der Physik*, 322(10), pp. 891–921. doi: [10.1002/andp.19053221004](https://doi.org/10.1002/andp.19053221004).
