@@ -1,0 +1,16 @@
+---
+title: "Mathematics"
+subtitle: "Articles and derivations in mathematics."
+page-layout: full
+anchor-sections: false
+listing:
+  contents: posts
+  include:
+    categories: "{mathematics,Mathematics}"
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  fields: [image, date, title, description, categories]
+---

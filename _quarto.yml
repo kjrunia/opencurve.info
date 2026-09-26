@@ -7,34 +7,24 @@ project:
     - "**/*.m4a"
 
 website:
-  # title: "OpenCurve"
+  # title: ""
   description: "A bit of maths and physics for everyone"
   favicon: OpenCurveFavicon.png
   navbar:
     logo: logo-horizontal.png
-    logo-alt: OpenCurve A bit of maths and physics for everyone
+    logo-alt: "OpenCurve: A bit of maths and physics for everyone"
     left:
       - href: index.qmd
-        text: Home
-      - text: "Nederlands"
-        menu:
-          - href: nl/index.qmd
-            text: "Artikelen"
-          - href: nl/over.qmd
-            text: "Privacybeleid / Over ons"
-      - text: "English"
-        menu:
-          - href: en/index.qmd
-            text: "Articles"
-          - href: en/about.qmd
-            text: "Privacy policy / About"
+        text: Articles
+      - href: mathematics.qmd
+        text: Mathematics
+      - href: physics.qmd
+        text: Physics
+      - href: about.qmd
+        text: About / Privacy Policy
     right:
-      - text: "Taal / Language"
-        menu:
-          - href: nl/index.qmd
-            text: "🇳🇱 Nederlands"
-          - href: en/index.qmd
-            text: "🇬🇧 English"
+      - icon: search
+        aria-label: Search
 
 format:
   html:

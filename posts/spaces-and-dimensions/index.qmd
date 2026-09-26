@@ -1,0 +1,183 @@
+---
+title: "Spaces and dimensions"
+description: "What mathematicians and physicists actually mean by dimensions"
+date: "2020-07-18"
+image: DS_Hospital_Portal.jpg
+categories: [mathematics, physics]
+lang: en
+aliases:
+  - /spaces-and-dimensions/
+---
+
+::: {.column-screen}
+<img src="DS_Hospital_Portal.jpg" class="nolightbox" alt="Movie scene from Doctor Strange showing a circular, sparking orange magical portal opening into a cluttered hospital supply room; a nurse is seen from behind as an injured Doctor Strange steps through the portal." style="width: 100%;">
+:::
+
+{{< include /author-sidebar.qmd >}}
+
+::: {.lead-in}
+As is usually the case with scientific buzz words in everyday parlance, in books, in the cinema, on TV, and on the internet – like *energy* – the meaning of the word *dimension* rarely aligns with what mathematicians and physicists understand it to be. This day and age it's rather uncommon to not have been exposed to phrases such as "higher" or "other dimensions". It's likely you've used them yourself once or twice in your life. In this episode, we'll explore what mathematicians and physicists mean when they talk about dimensions, and, more interestingly, the spaces they yield.
+:::
+
+# Dimensions are not Universes
+
+In science-fiction or even everyday lingo, the word "dimension" is often synonymous with entire worlds, or realms or (pocket) Universes. For instance, aliens may have come from another dimension. Or souls or "essences" dwelling on a "higher plane of existence" in another "dimension of reality" are spoken about.
+
+On a regular basis, portals to other dimensions are opened from which exotic forms of matter and energy are extracted to benefit either the hero or the bad guy of the story.
+
+It's also a favourite way to travel great distances within our reality. Just hop through a dimensional portal and out you come, back into our reality, only thousand kilometres away from where you started. Occasionally, you may also travel in time by flying through other dimensions.
+
+And, of course, other dimensions can be summoned into our own reality or, if the story goes that they have always been present inside our reality, they can be made visible by powerful minds. This is, again, alluding to dimensions being whole separate realms within our realm.
+
+::: {style="width: 85%; margin: 1.5rem auto;"}
+![Figure 1. Doctor Stephen Strange (Benedict Cumberbatch) is about to step into the **Mirror Dimension** as summoned within (or next to) our reality by his mentor, the Ancient One (Tilda Swinton), in the 2016 film [Doctor Strange](https://en.wikipedia.org/wiki/Doctor_Strange_(2016_film)) of the wildly popular [Marvel Cinematic Universe (MCU)](https://en.wikipedia.org/wiki/Marvel_Cinematic_Universe).](Mirror_Dimension.jpg)
+:::
+
+This whole section was just to let you know that what is meant by dimensions in most science-fiction stories is not what is meant in mathematics and physics. They are not realms, realities, worlds or pocket Universes. If we were to refer to realms, realities, worlds, and Universes, we would just say realms, realities, worlds, and Universes, but not dimensions.
+
+# Ordinary spaces and dimensions
+
+So, what do mathematicians and physicists mean when they talk about dimensions?
+
+In many cases, they pertain to the actual directions you and I are able to travel in ordinary space. I prefer to think of birds and fish as gorgeous examples of being able to travel in all directions of space all by their own.
+
+They can fly from your left to your right and vice versa (first direction). They can fly head-on towards you and whizz by over your head and fly further behind you and vice versa (second direction). And, obviously, they can fly up from underneath you and they can keep on flying to way above your face. And vice versa (third direction).
+
+In many cases, all three directions are oriented perpendicularly with respect to each other. To use another word, they are orthogonal. All motion can be described as some combination of moving in these three orthogonal directions, i.e. orthogonal dimensions.
+
+In high school we have gotten all too familiar with these three dimensions. We were tortured with finding distances between vertices of a cube along the edges, the sides, and straight through the block. Of course, this is what modern gadgets and cinematography refer to when they use the term 3D, three-dimensional. In some way or form, all three orthogonal dimensions are either taken advantage of or simulated in a virtual way.
+
+Mathematically, the capability of travelling (or "transporting") along these three orthogonal directions automatically give rise to a space, a [topology](https://en.wikipedia.org/wiki/Topology), of some shape or form. Ordinary space is the space you and I are born in and have grown very much accustomed to.
+
+So, while dimensions may give rise to spaces, they are definitely not the same. Besides, while *one* dimension by itself technically yields a topology, a space, it's still a *one*-dimensional space, meaning, no three-dimensional bodies are able to traverse this without being torn apart.
+
+::: {style="width: 75%; margin: 1.5rem auto;"}
+![Figure 2. In ordinary space, we have three dimensions in the $x$-direction, the $y$-direction, and the $z$-direction. In high school, we were to calculate the distance between points $O$ and $F,$ for instance.](3d-space-interval.png)
+:::
+
+# Euclid and Descartes
+
+A very informal definition of dimensions is the number of coordinates needed to locate an object (in a space of some kind). So, on a flat surface (a plane), such as a ceiling, you need two coordinates to locate a fly. A fly can be 2 metres away from the left wall (the first direction) and 3 metres away from the back wall (the second direction, perpendicular to the first direction). Its coordinates are therefore $(2, 3)$. Hence, a plane is two-dimensional.
+
+In ordinary, three-dimensional space, we need three coordinates to locate a fly in a room. A fly can be 2 metres away from the left wall, 3 metres away from the back wall, and 1.5 metres up from the floor. Its coordinates are therefore $(2, 3, 1.5)$.
+
+This was one of [René Descartes](https://en.wikipedia.org/wiki/René_Descartes)'s great insights while lying in bed late in the afternoon or so the story goes. Hence, these numbers are called Cartesian coordinates. Descartes was pivotal to the development of what we now call the [Cartesian coordinate system](https://en.wikipedia.org/wiki/Cartesian_coordinate_system).
+
+The space to which these type of coordinates belong is called [Euclidean space](https://en.wikipedia.org/wiki/Euclidean_space) as the great Greek mathematician [Euclid](https://en.wikipedia.org/wiki/Euclid) was the father of Euclidean or [classical geometry](https://en.wikipedia.org/wiki/Classical_geometry).
+
+I think I can safely say that Euclid and Descartes enabled mathematics teachers to torment us with a whole slew of homework in order for us to fully explore the realm of Euclidean space in both two- and three-dimensional Cartesian coordinate systems.
+
+::: {style="width: 80%; margin: 1.5rem auto;"}
+![Figure 3. Home of Descartes in Utrecht, the Netherlands, where he wrote parts of his famous [Discours de la Méthode](https://en.wikipedia.org/wiki/Discourse_on_the_Method). The house has been demolished; nowadays, the place looks very different.](instagram-post-descartes-home.jpg)
+:::
+
+# Space and time
+
+In real life, besides a position in ordinary space, you also need to specify *when*. Getting the coordinates to be inside an office located on the corner of two streets on the 24th floor (that's the three dimensions of ordinary space right there) just isn't enough. You also need a time-coordinate. *When* are you supposed to be there?
+
+::: {style="width: 35%; float: right; margin: 0 0 1rem 1.5rem;"}
+![One of my favourite books, [Slaughterhouse-Five](https://en.wikipedia.org/wiki/Slaughterhouse-Five) by Kurt Vonnegut mentions the Tralfamadorians who "were friendly", and "could see in four dimensions".](Cover-Slaughterhouse-Five.jpg)
+:::
+
+Einstein called the fact that you're inside an office at a certain time an *event*. In other words, where, in ordinary, Cartesian coordinates, we talked about some *thing* being some*where*, Einstein had the insight to now only start talking about *events* taking place in terms of *space and time*, space-time – using space-time coordinates.
+
+When Einstein introduced the [special theory of relativity](https://opencurve.info/einsteins-special-relativity-in-under-6-999-minutes-for-people-on-the-move/), the German mathematician [Hermann Minkowski](https://en.wikipedia.org/wiki/Hermann_Minkowski) realised this theory could also be understood geometrically in a four-dimensional space-time, where time is taken to be the fourth dimension. We now call this space [Minkowski space](https://en.wikipedia.org/wiki/Minkowski_space). Note that we're using the word "space" in a broader sense: it doesn't just encompass ordinary spatial dimensions but it now also includes a dimension of time (and, for technical reasons, isn't Euclidean).
+
+By the way, another word mathematicians and physicists like to use is [manifold](https://en.wikipedia.org/wiki/Manifold). A manifold is a [topological space](https://en.wikipedia.org/wiki/Topological_space) which can take many shapes – such as a two-dimensional plane, a three-dimensional Euclidean space, four-dimensional Minkowski space or any other space you can mathematically think of.
+
+In Einstein's general theory of relativity (gravity), we still work with four-dimensional space-time, except the shape of the space isn't Minkowskian any more. The shape of the space is warped, curved, and stretched. In the best theory of gravity we have to date, we work on a so-called [pseudo-Riemannian manifold](https://en.wikipedia.org/wiki/Pseudo-Riemannian_manifold), named after the great German mathematician [Bernhard Riemann](https://en.wikipedia.org/wiki/Bernhard_Riemann). The dimensions are still all the directions you can take on this manifold, i.e. the minimum amount of coordinates you need to locate an event. However, in this case, they are not necessarily oriented perpendicularly with respect to one another.
+
+::: {style="width: 80%; margin: 1.5rem auto;"}
+![Figure 4. In the film [Interstellar (2014)](https://en.wikipedia.org/wiki/Interstellar_(film)), director Christopher Nolan featured an object which had something to do with space and time.[^1]](Tesseract-Interstellar.jpg)
+:::
+
+# Four ordinary space dimensions
+
+Imagine a [Pac-Man](https://en.wikipedia.org/wiki/Pac-Man) living on the surface of a sphere. To them, the world is flat. If they were to travel straight on – and on and on and on – eventually, they would be quite surprised to find themselves returning to the point where they started.
+
+::: {style="width: 80%; margin: 1.5rem auto;"}
+![Figure 5. Imagine being as flat as a Pac-Man, travelling on what seems to be a flat surface. You might be surprised to find you'd eventually end up where you started. Could our Universe be some kind of hypersphere[^2]?](rail.jpg)
+:::
+
+We, the three-dimensional beings most of us are, see them as a little surface, a shape, because we can see them "from above", from the third dimension. We can also see how they're travelling around the surface of a sphere. They don't know what a sphere is. They only think of flat surfaces. To us, however, it's quite logical they would eventually return to their point of origin.
+
+Okay, so, back to our 3D world. Imagine we travelled in a spaceship, always in a straight line through the Universe. Now imagine, after billions of years, we end up where we started: Earth. What happened? Could our Universe be some kind of sphere, only four-dimensional?
+
+::: {style="width: 35%; float: right; margin: 0 0 1rem 1.5rem;"}
+![I can recommend reading [The Fourth Dimension](https://en.wikipedia.org/wiki/The_Fourth_Dimension_(book)) by Rudy Rucker, and the classic [Flatland](https://en.wikipedia.org/wiki/Flatland).](The_Fourth_Dimension_Rudy_Rucker_book_-_cover_art.jpg)
+:::
+
+While no experiment has proven the existence of a fourth spatial dimension (let alone five or six etc.), it is a wonderfully entertaining world for the mind to ponder about.
+
+Just to be absolutely sure: time is not the fourth dimension we're talking about here. We were talking space – spatial dimensions. Quite often these two get confused: four-dimensional space-time is three spatial dimensions plus one time-dimension while four-dimensional space is four spatial dimensions without time.
+
+# Abstract spaces
+
+There's another way in which dimensions and spaces are used by mathematicians and physicists. Imagine an object having several properties at once: a position (in ordinary space), motion, direction of that motion, temperature, colour. To describe the state of this object, you need more than just four space-time coordinates. Suppose its space-time coordinates are $(0, 1, 1, 1)$. In other words, it exists at time $t = 0$ at position $(x = 1; y = 1; z = 1)$.
+
+Did we describe the state of the whole object? No, we're still missing some key properties here. It is in motion, so it has a speed, say $10\text{ m/s}$. That speed has a direction – this is why we say it has a velocity, which is speed and direction. Let's say its velocity $v = -10\text{ m/s}$, in other words, it has a speed of $10\text{ m/s}$ to the left.
+
+Let's say its temperature is $273.15\text{ K}$ ($0\text{ \textdegree C}$). And its colour is pure white. So, how many numbers do we need to describe the object's state fully? Exactly, seven numbers (we count "white" as a number).
+
+The coordinates $(0, 1, 1, 1, -10, 273.15, \text{white})$ are said to live in [phase space](https://en.wikipedia.org/wiki/Phase_space), an abstract space where the properties of the object form the dimensions of that space. This particular phase space is seven-dimensional. Of course, that's impossible to imagine, but mathematically, you can work very well with it.
+
+We gave an unusual example to emphasise that dimensions needn't be related to spatial and temporal positions. However, usually, phase spaces are indeed used in the context of position and momentum.
+
+::: {style="width: 45%; float: right; margin: 0 0 1rem 1.5rem;"}
+![Figure 6. A sample trajectory through phase space plotted near a [Lorenz attractor](https://en.wikipedia.org/wiki/Lorenz_system), which Edward Lorenz developed to model atmospheric convection.](A_Trajectory_Through_Phase_Space_in_a_Lorenz_Attractor.gif)
+:::
+
+Another example of an abstract space is a so-called [vector space](https://en.wikipedia.org/wiki/Vector_space) where each coordinate does not just occupy a point in that space but that point also has a direction. An example of such a space is the velocity of wind. Each point in that space does not just have a value pertaining to the speed of the air and its location in ordinary space, it has a direction too.
+
+In the previous post, [Complex numbers: an introduction](https://opencurve.info/complex-numbers-an-introduction/), an entirely new kind of number line was introduced. All the spaces we just mentioned could very well contain complex dimensions. In fact, most of the time, they do. Especially in quantum mechanics. Complex numbers make up abstract complex vector spaces where wave functions thrive. [Hilbert space](https://en.wikipedia.org/wiki/Hilbert_space) is where it's at, most of the time.
+
+The [Standard Model](https://en.wikipedia.org/wiki/Standard_Model) is based on groups of symmetrical transformations in complex space, called $\text{SU}(3) \times \text{SU}(2) \times \text{U}(1)$. The 'S' stands for special and denotes all possible transformations in complex space except for one particular kind. $\text{U}(1)$ refers to a one-dimensional unitary circle group in the complex plane. The dimension of the real Lie algebra corresponding to a unitary group such as $\text{SU}(3)$ is $3^2 - 1 = 8$. As you can see, compared to street corner vernacular, dimensions are very different in scientific context.
+
+::: {.callout-note appearance="minimal"}
+In general, we can say that every manifold is a space. This needn't pertain to spatial space. The minimum amount of dimensions needed to construct a path to a point on that manifold is the dimensionality of that space.
+:::
+
+# String theories
+
+An interesting beast among all of this is [string theory](https://en.wikipedia.org/wiki/String_theory). If you accept the premise that an elementary particle such as an electron is actually a spatially one-dimensional string vibrating in specific ways corresponding to the collection of properties of an electron, then more dimensions are automatically needed in order to describe all the particles in this way. Strings need a sufficient amount of freedom, [degrees of freedom](https://en.wikipedia.org/wiki/Degrees_of_freedom), to vibrate in unique ways to be able to encompass the entire zoo of elementary particles and their properties.
+
+::: {style="width: 35%; float: right; margin: 0 0 1rem 1.5rem;"}
+![Figure 7. Open and closed strings as fundamental building blocks in string theory.](Open_and_closed_strings.png)
+:::
+
+In various versions of string theories, a varying number of dimensions are needed. These dimensions are spatial and invisible. Since we don't experience these dimensions, it is hypothesised that they are extremely small and curled up. They're not stretched out like our ordinary three spatial dimensions.
+
+Or they are so large that they don't affect us in any noticeable way. Just as the curvature of Earth did not affect us when we were little, as the Earth is so big compared to our movements.
+
+Unfortunately, the theory cannot be tested yet. For now it's purely a mathematical exercise. Although many discoveries have been made in pure mathematics, no experiment has proven string theory to be true (including [superstring theories](https://en.wikipedia.org/wiki/Superstring_theory) and [M-theory](https://en.wikipedia.org/wiki/M-theory)). No extra dimensions have been found yet.
+
+There's one honourable mention that I'd like to make: the [Calabi-Yau manifold](https://en.wikipedia.org/wiki/Calabi–Yau_manifold). In superstring theory the manifold is hypothesised to encompass six invisible extra dimensions for the theory to work. The manifold is three-[complex](https://opencurve.info/complex-numbers-an-introduction/)-dimensional or six-[real](https://opencurve.info/complex-numbers-an-introduction/)-dimensional. I like it because it looks cool.
+
+None of this is proven; we seem to be stuck in this three-dimensional space with one direction of time. And, if you ask me, it's likely that our three-dimensional space turns out to be a side product of something quantum.
+
+::: {style="width: 80%; margin: 1.5rem auto;"}
+![Figure 8. Two-dimensional cross-section of a [Calabi-Yau manifold](https://en.wikipedia.org/wiki/Calabi–Yau_manifold), named after [Eugenio Calabi](https://en.wikipedia.org/wiki/Eugenio_Calabi) and [Shing-Tung Yau](https://en.wikipedia.org/wiki/Shing-Tung_Yau).](Calabi-Yau.png)
+:::
+
+# What can we take away?
+
+::: {.callout-note appearance="minimal"}
+* **Dimensions are not realms:** In ordinary space, they are the directions in which objects can freely be transported (three in our world).
+* **Space-time:** If you *model* time as a dimension, then we live in a four-dimensional space-time world (except that you can't freely move in time as there's only one direction).[^3]
+* **No evidence for extra dimensions:** The largest experiment humankind has undertaken, the [Large Hadron Collider](https://en.wikipedia.org/wiki/Large_Hadron_Collider) at [CERN](https://en.wikipedia.org/wiki/CERN), has not found a shred of evidence for them. The [Standard Model](https://en.wikipedia.org/wiki/Standard_Model) *without* extra dimensions remains solid.
+* **Abstract mathematical tools:** To describe complex phenomena, mathematicians and physicists model properties (like velocity, momentum, or temperature) as extra dimensions in abstract spaces.
+:::
+
+<div style="clear: both;"></div>
+
+---
+
+### Licenses and notes
+
+* *The featured image in the title and Figure 1 are still images from Marvel Studios' Doctor Strange (2016) and Figure 4 from Interstellar (2014). These images are exhibited under the **[fair use](http://en.wikipedia.org/wiki/fair_use)** provision of United States copyright law.*
+* *Figure 6. Lorenz attractor animation by Dan Quinn under [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.en).*
+* *Figure 8. Calabi-Yau manifold by Lunch under [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/deed.en), created in [Mathematica](https://en.wikipedia.org/wiki/Wolfram_Mathematica).*
+
+[^1]: Astronaut Joseph Cooper (Matthew McConaughey) finds himself in this spatial representation of space-time. All four dimensions of particular *events* in the past, present, and future of a room in his house, chopped up into manageable time chunks, are mapped onto an object (called a Tesseract) inside of a black hole (where the roles of space and time are reversed) through which Cooper can transport himself freely. This enables him to trickle information into the events of his choosing.
+[^2]: Yes, technically, it's a glome, or an n-sphere, where $n=3,$ and the space it's embedded in is $n+1$, not a hypersphere.
+[^3]: Time is definitely going to be a whole separate set of posts.

@@ -14,7 +14,7 @@ body,
   color: #222222;         /* Donkergrijs in plaats van hard zwart */
 }
 
-/* Koppen (Noe Display-achtige look) */
+/* Koppen */
 h1, h2, h3, .title {
   font-family: 'DM Serif Display', Georgia, serif;
   font-weight: 400;
@@ -179,13 +179,13 @@ figure.figure > figcaption,
 }
 
 /* Kader om een afbeelding of container */
-/* Kader om een afbeelding of container */
 img.img-border,
 .img-border img,
 figure.img-border img {
   border: 1px solid #c1c1c1;
   border-radius: 4px;
 }
+
 
 /* ==========================================================================
    4. AUTEURSBLOK IN DE ZIJBALK
@@ -251,7 +251,7 @@ figure.img-border img {
 
 
 /* ==========================================================================
-   5. OVERZICHTSPAGINA'S (LISTING GRID) & HOMEPAGE KNOPPEN
+   5. OVERZICHTSPAGINA'S (LISTING GRID)
    ========================================================================== */
 
 /* Titels van artikelen in het grid compacter maken */
@@ -285,41 +285,12 @@ figure.img-border img {
   margin-bottom: 0.5rem !important;
 }
 
-/* Gevulde knop (bijv. "Naar de Nederlandse artikelen") */
-.btn-primary {
-  background-color: #407CBF !important;
-  color: #ffffff !important;
-  border-color: #1a365d !important;
-}
-
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: #0f2341 !important;
-  color: #ffffff !important;
-  border-color: #0f2341 !important;
-}
-
-/* Omlijnde knop (bijv. "Browse articles in English") */
-.btn-outline-primary {
-  background-color: transparent !important;
-  color: #1a365d !important;
-  border-color: #1a365d !important;
-}
-
-.btn-outline-primary:hover,
-.btn-outline-primary:focus {
-  background-color: #1a365d !important;
-  color: #ffffff !important;
-  border-color: #1a365d !important;
-}
-
 
 /* ==========================================================================
    6. RESPONSIVITEIT & MOBIEL (SCHERMEN SMALLER DAN 992PX)
    ========================================================================== */
 
 @media (max-width: 991px) {
-  /* Comfortabele ademruimte vanaf de glasrand van het scherm */
   #quarto-document-content,
   main.content {
     padding-left: 1.25rem !important;
@@ -329,13 +300,11 @@ figure.img-border img {
     flex-direction: column;
   }
 
-  /* Artikeltitel op mobiel */
   header.quarto-title-block h1.title,
   .quarto-title-block .title {
     font-size: 2.2rem !important;
   }
 
-  /* Verplaats het marge-auteursblok naar het einde van het artikel */
   .column-margin {
     order: 99;
     margin-top: 3rem;
@@ -343,7 +312,6 @@ figure.img-border img {
     padding-top: 1.5rem;
   }
 
-  /* Drop Cap op mobiel */
   .lead-in::first-letter,
   .drop-cap::first-letter {
     font-size: 4.2rem;
@@ -352,7 +320,6 @@ figure.img-border img {
     padding-right: 0.5rem;
   }
 
-  /* Zorg dat op mobiele breedtes de navigatie-items netjes meebreken */
   .navbar-nav {
     flex-wrap: wrap !important;
     gap: 0.75rem 1rem !important;
