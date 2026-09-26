@@ -103,13 +103,13 @@ As you can see, it has become difficult to pinpoint the exact frequency of our w
 
 So, while the "time window" of the sound wave has become more exact, the frequency has now become "less certain".
 
-::: {style="width: 32%; float: right; margin: 0 0 1rem 1.5rem;"}
+::: {style="width: 50%; margin: 1.5rem auto;"}
 ![Portrait of Joseph Fourier](Portrait of Joseph Fourier.jpg){fig-alt="Engraved historic portrait of French mathematician and physicist Joseph Fourier in an elegant coat with embroidered collar."}
 :::
 
 The brilliant mathematician Joseph Fourier discovered that a wavelet such as in @fig-wavelet-time can actually be constructed by adding many infinite waves at many frequencies. Put differently, Fourier analysis shows that our wavelet is the culmination of a superposition of many waves at many frequencies.
 
-![The wavelet at the bottom is constructed by many infinite waves at many different frequencies superposed onto each other. This automatically means that the wavelet's exact frequency is fundamentally harder to determine than the frequency of the sound wave in @fig-sine-time.](Morlet-wavelet-Fourier-analysis.jpg){#fig-wavelet-fourier .img-border fig-alt="Stack of sinusoidal waves with increasing frequencies aligned on a grid, summing at the bottom into a single localized wavelet packet."}
+![The wavelet at the bottom is constructed by many infinite waves at many different frequencies superposed onto each other. This automatically means that the wavelet's exact frequency is fundamentally harder to determine than the frequency of the sound wave in @fig-sine-time.](Morlet-wavelet-Fourier-analysis.png){#fig-wavelet-fourier .img-border fig-alt="Stack of sinusoidal waves with increasing frequencies aligned on a grid, summing at the bottom into a single localized wavelet packet."}
 
 Now you see why the frequency-amplitude plot has changed from a very specific value in @fig-sine-freq to the wider set of frequencies in @fig-wavelet-freq. In the latter case, the wavelet "contains" multiple waves at *multiple* frequencies, so when you *Fourier transform* its time-amplitude plot to its frequency-amplitude plot, the frequency has become "uncertain".
 
@@ -151,7 +151,7 @@ What we've done in @fig-bound-electron is making $\Delta x$ smaller than it was 
 
 To construct a limited wave function such as the one in @fig-bound-electron, Fourier analysis shows that you need – again – a bunch of waves at different frequencies in superposition (added on top of each other).
 
-![A Fourier deconstruction of the wave function in @fig-bound-electron. Many waves, many frequencies. Hence, the momentum is less well-defined.](Electron-wave-function-Fourier-analysis.jpg){#fig-bound-electron-fourier .img-border fig-alt="Multiple sine waves of different frequencies stacked on a grid, combining at the bottom into a spatially confined wave pulse."}
+![A Fourier deconstruction of the wave function in @fig-bound-electron. Many waves, many frequencies. Hence, the momentum is less well-defined.](Electron-wave-function-Fourier-analysis.png){#fig-bound-electron-fourier .img-border fig-alt="Multiple sine waves of different frequencies stacked on a grid, combining at the bottom into a spatially confined wave pulse."}
 
 ::: {.callout-note appearance="minimal"}
 So, when it comes to quanta, Heisenberg's uncertainty principle states that there's a fundamental trade-off between information on position and momentum.[^6] This is due to the fact that they are a Fourier transform pair or conjugate variables.
