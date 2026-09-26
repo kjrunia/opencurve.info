@@ -178,6 +178,14 @@ figure.figure > figcaption,
   padding-top: 0.5rem;
 }
 
+/* Kader om een afbeelding of container */
+/* Kader om een afbeelding of container */
+img.img-border,
+.img-border img,
+figure.img-border img {
+  border: 1px solid #c1c1c1;
+  border-radius: 4px;
+}
 
 /* ==========================================================================
    4. AUTEURSBLOK IN DE ZIJBALK
