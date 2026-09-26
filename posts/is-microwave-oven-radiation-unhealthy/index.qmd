@@ -23,7 +23,9 @@ Some say that the radiation inside a microwave oven is bad for our health. And t
 
 # The word 'radiation'
 
-![Pripyat, near Chernobyl, Ukraine. When we hear "radiation", we may associate it with the [Chernobyl disaster](https://en.wikipedia.org/wiki/Chernobyl_disaster). That is absolutely not at all what microwave oven radiation is.](pripyat-1366159_1280.jpg){#fig-pripyat fig-alt="Overgrown and abandoned apartment buildings in the ghost town of Pripyat near Chernobyl under an overcast sky."}
+::: {style="width: 80%; margin: 1.5rem auto;"}
+![Pripyat, near Chernobyl, Ukraine. When we hear "radiation", we may associate it with the [Chernobyl disaster](https://en.wikipedia.org/wiki/Chernobyl_disaster). That is absolutely not at all what microwave oven radiation is.](pripyat-1366159_1280.jpg){#fig-pripyat fig-alt="Eerie interior view of an abandoned hospital hallway in Pripyat near Chernobyl with peeling paint, debris on the floor, and open window frames."}
+:::
 
 In physics, "radiation" is the emission or transmission of energy in the form of waves or "particles". Not all radiation is a health hazard to our species, as we have evolved to be immune in most cases. Radiation emitted by nuclear reactors is dangerous. However, it may not surprise you that we have evolved to withstand the radiation of tea lights.
 
@@ -34,7 +36,7 @@ Radiation is **not always dangerous**. There are more things in everyday life th
 :::
 
 ::: {style="width: 45%; float: right; margin: 0 0 1rem 1.5rem;"}
-![Bananas naturally possess radioactivity. Our species can easily handle this background radiation. (Photo by Pixabay).](accident-994009_1280.jpg){fig-alt="Yellow banana peel lying discarded on an asphalt road surface."}
+![Bananas naturally possess radioactivity. Our species can easily handle this background radiation. (Photo by Pixabay).](accident-994009_1280.jpg){fig-alt="A heavy black leather boot about to step on a discarded yellow banana peel lying on a concrete floor."}
 :::
 
 Some examples of sources of radiation: bananas (which are naturally radioactive), magnets, candlesticks, central heating, club and stage lights, any light source for that matter, including your bathroom light, human bodies, microwave ovens, the Sun, the uranium and plutonium rods of a nuclear plant, and furthermore, *anything* you can see with your eyes either emits or reflects radiation, right here, right now.
@@ -51,6 +53,10 @@ The dangerous form of radiation is called ionising radiation. This is the type o
 
 ::: {.callout-note appearance="minimal"}
 If incoming radiation has so much energy that it strips one or more electrons away from their nucleus, we call this **ionising radiation**. An atom which has lost one or more electrons is considered to be ionised, and so, we call it an ion.
+:::
+
+::: {style="width: 80%; margin: 1.5rem auto;"}
+![The process of ionisation: an intact neutral atom (1) is struck by high-energy radiation (2), stripping away its orbital electrons and leaving behind a bare ion or nucleus (3).](ionisation%20diagram.jpg){#fig-ionisation fig-alt="Diagram in three steps showing an orange circular atom, high-energy purple particles stripping away its electron shell, and leaving a bare positive nucleus behind."}
 :::
 
 Why is this dangerous? Well, our bodies are made of large strings and knots of intertwined atoms. Our skin, organs, cells, DNA—it's all made up of trillions of atoms. Those atoms are only able to form these large chains and knots because their electrons keep them together this way.
@@ -86,14 +92,16 @@ Electrons influence the electromagnetic field. The latter influences electrons i
 Photons, or the electromagnetic field disturbances caused by a microwave oven, do not have the required energy value to ionise the atoms in our body.
 :::
 
-![A schematic depiction of two fields pervading the entire observable Universe. Here, they look like two-dimensional planes hovering over one another, but in reality, they are three-dimensional fields pervading all of space. Electrons are specific oscillations in the electron field (yellow), while photons are oscillations in the electromagnetic field (green).](EN-Fields-a.jpg){#fig-fields fig-alt="Schematic diagram illustrating two intertwined horizontal field sheets: a yellow electron field and a green electromagnetic field with energy oscillations."}
+::: {style="width: 80%; margin: 1.5rem auto;"}
+![A schematic depiction of two fields pervading the entire observable Universe. Here, they look like two-dimensional planes hovering over one another, but in reality, they are three-dimensional fields pervading all of space. Electrons are specific oscillations in the electron field (yellow), while photons are oscillations in the electromagnetic field (green).](EN-Fields-a.jpg){#fig-fields fig-alt="Schematic diagram showing two parallel planes: an upper yellow sheet representing the electron field and a lower green sheet representing the electromagnetic field with wave fluctuations."}
+:::
 
 # How do we know?
 
 Max Planck, the German theoretical physicist (1858–1947), found a way to calculate the energy values for photons. Einstein subsequently used Planck's formula to come up with another formula allowing us to calculate whether atoms would become ionised by certain forms of radiation.
 
-::: {style="width: 50%; margin: 1.5rem auto;"}
-![Max Planck in 1933. Nobel laureate and one of the founding fathers of quantum mechanics.](Max_Planck_1933.jpg){#fig-planck fig-alt="Black and white portrait photograph of German physicist Max Planck wearing spectacles and a formal dark suit."}
+::: {style="width: 45%; margin: 1.5rem auto;"}
+![Max Planck in 1933. Nobel laureate and one of the founding fathers of quantum mechanics.](Max_Planck_1933.jpg){#fig-planck fig-alt="Historical sepia photographic portrait of German theoretical physicist Max Planck wearing round eyeglasses, a wing collar, and a bow tie."}
 :::
 
 After many more contributions by brilliant minds, the branch of science arose through which we are now able to harness the power of electromagnetic radiation, including that of the microwave oven, radio signals, TV broadcasts, Wi-Fi, and mobile phone signals.
@@ -123,7 +131,7 @@ Does microwave oven radiation destroy vitamins? As stated before, the radiation 
 The longer food is exposed to heat, the more vitamins are broken down. Therefore, if food is heated quickly, fewer vitamins are lost. Heating vegetables quickly inside an efficient microwave oven often spares more vitamins than a long boil on the stove.
 
 ::: {style="width: 80%; margin: 1.5rem auto;"}
-![Vitamins are broken down by heat, not by microwave radiation itself.](flame-871136_1280.jpg){#fig-flame fig-alt="Close-up photograph of bright blue gas flames heating the steel bottom of a cooking pot on a stove."}
+![Vitamins are broken down by heat, not by microwave radiation itself.](flame-871136_1280.jpg){#fig-flame fig-alt="Macro close-up photograph of vivid blue gas stove flames licking against the metallic base of a cooking pan."}
 :::
 
 Moreover, boiling vegetables in water and discarding the cooking water means pouring the dissolved water-soluble vitamins down the sink. In a microwave oven, minimal water is needed, so nutrients stay on your plate.
@@ -139,12 +147,14 @@ Courtesy of quantum physics, microwave oven radiation is not unhealthy and does 
 If someone tells you that microwave ovens are unhealthy, ask them for the exact quantum-mechanical equations supporting their claim. If quantum mechanics weren't correct, computers wouldn't work, mobile phones would be fancy paperweights, and the internet wouldn't exist.
 
 ::: {style="width: 45%; float: right; margin: 0 0 1rem 1.5rem;"}
-![Protect yourself against solar UV rays with sunscreen; high-energy ultraviolet light is genuinely ionising.](canoeing-1185309_1280.jpg){fig-alt="Man paddling a red canoe across open water on a sunny day without a shirt."}
+![Protect yourself against solar UV rays with sunscreen; high-energy ultraviolet light is genuinely ionising.](canoeing-1185309_1280.jpg){fig-alt="Rear-angle perspective photograph of a shirtless man rowing an aluminium canoe down a wide, sunlit river flanked by lush green trees."}
 :::
 
 By that same physics, however, do watch out for the Sun's UV light in the summer. Avoid unshielded exposure to cosmic rays, gamma rays, and high-energy particle beams.[^7] So, whatever you do, do not take a walk outside the International Space Station without a spacesuit.
 
 Instead, warm up some broccoli in a microwave oven, eat a banana, and enjoy the maths and physics of everyday life.
+
+<div style="clear: both;"></div>
 
 ---
 
@@ -153,7 +163,7 @@ Instead, warm up some broccoli in a microwave oven, eat a banana, and enjoy the 
 * *Featured image: Modern kitchen interior via Pixnio (CC0 Public Domain).*
 * *Photo of Pripyat by Denys Reznik via Pixabay (CC0).*
 * *Max Planck portrait (1933), German Federal Archives (Bundesarchiv, Bild 183-R01144 / CC-BY-SA 3.0).*
-* *Cooking flame and canoeing photographs via Pixabay (CC0).*
+* *Cooking flame, banana peel, and canoeing photographs via Pixabay (CC0).*
 
 [^1]: Early models were originally marketed as "electronic ovens".
 [^2]: Infrared radiation, mostly. Our bodies are also slightly radioactive: roughly 4,000 to 5,000 atomic nuclei (mainly potassium-40 and carbon-14) decay in our tissues every second (4,000–5,000 Bq).
