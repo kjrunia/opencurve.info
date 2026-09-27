@@ -1,0 +1,109 @@
+---
+title: "Minus minus and negative times negative"
+description: "Simple algebraic proofs demonstrating why subtracting a negative yields a positive and why multiplying two negatives results in a positive"
+date: "2019-02-25"
+categories: [mathematics]
+lang: en
+aliases:
+  - /minus-minus-and-negative-times-negative/
+  - /minus-minus-and-negative-times-negative/index.html
+  - /nl/min-en-min-en-min-keer-min/
+  - /nl/min-en-min-en-min-keer-min/index.html
+---
+
+::: {.column-screen}
+<img src="featureimage.jpg" class="nolightbox" alt="Conceptual artwork showing hands holding a central blue sphere with a white plus sign, surrounded by floating white spheres bearing minus signs." style="width: 100%;">
+:::
+
+{{< include /author-sidebar.qmd >}}
+
+::: {.lead-in}
+Minus minus is plus. And negative times negative is positive. Two negatives make a positive. You may have heard or uttered these expressions many times. Even though you will know this already, here you will find an algebraic proof, just for your reference. Requirements: simple algebra from secondary school.
+:::
+
+# Minus minus is plus
+
+We all learnt in school that subtracting a negative number is equivalent to adding the positive counterpart of that number. For example:
+
+$$1 - (-2) = 1 + 2 = 3.$$
+
+Using variables instead of specific numbers, we can state this generally as:
+
+$$a - (-b) = a + b,$$
+
+where $a$ and $b$ are arbitrary real numbers.
+
+Let us prove this by contradiction. Suppose, instead, that the opposite were true:
+
+$$a - (-b) = a - b.$$
+
+Subtracting $a$ from both sides:
+
+$$-(-b) = -b.$$
+
+Placing brackets around $-b$ on the right-hand side makes the structure clearer:
+
+$$-(-b) = (-b).$$
+
+Let $c = (-b)$. Substituting $c$ into the equation gives:
+
+$$-c = c,$$
+
+which is absurd for any non-zero real number (for instance, $-1 = 1$). Because the assumption leads directly to an impossible contradiction, the original statement must hold:
+
+$$a - (-b) = a + b.$$
+
+# Negative times negative is positive
+
+We also learnt that multiplying two negative numbers yields a positive product. We will prove that:
+
+$$(-a)(-b) = ab,$$
+
+for any real numbers $a$ and $b$.
+
+We begin with the basic identity:
+
+$$(-a)(-b) = (-a)(-b).$$
+
+Adding zero does not alter the value of an expression:
+
+$$(-a)(-b) = (-a)(-b) + 0.$$
+
+Since any real number multiplied by zero equals zero ($a \times 0 = 0$), we rewrite zero as $a(0)$:
+
+$$(-a)(-b) = (-a)(-b) + a(0).$$
+
+Now, we express $0$ as the difference $(b - b)$:
+
+$$(-a)(-b) = (-a)(-b) + a(b - b).$$
+
+Expanding the brackets using the distributive property ($a(b - b) = ab + a(-b)$):
+
+$$(-a)(-b) = (-a)(-b) + ab + a(-b).$$
+
+Commuting the second and third terms:
+
+$$(-a)(-b) = (-a)(-b) + a(-b) + ab.$$
+
+Now look at the first two terms on the right-hand side:
+
+$$(-a)(-b) = \Big[ (-a)(-b) + a(-b) \Big] + ab.$$
+
+Factoring out the common factor $(-b)$ from the bracketed terms:
+
+$$(-a)(-b) = (-b)\Big[(-a) + a\Big] + ab.$$
+
+Because $(-a) + a = 0$, the first term vanishes completely:
+
+$$(-a)(-b) = (-b)(0) + ab = 0 + ab = ab.$$
+
+Therefore:
+
+$$(-a)(-b) = ab. \quad \blacksquare$$
+
+---
+
+### Image credits and references
+
+* *Featured image: Conceptual 3D spheres illustration via Pixabay (CC0 Public Domain).*
+* *Algebraic proofs and derivations by KJ Runia.*
