@@ -39,3 +39,6 @@ format:
       sidebar-width: 200px
       margin-width: 260px
     lightbox: true
+
+execute: 
+  freeze: auto
