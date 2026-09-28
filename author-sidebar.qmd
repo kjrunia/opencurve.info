@@ -1,6 +1,6 @@
 ::: {.column-margin}
 ::: {.author-sidebar}
-![](kj_photo.png){.author-photo}
+![](/kj_photo.png){.author-photo}
 
 ::: {.author-name}
 [**KJ Runia, BSc (Hons) MInstP AMIMA**](/en/about.html)
