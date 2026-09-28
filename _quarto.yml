@@ -7,7 +7,7 @@ project:
     - "**/*.m4a"
 
 render:
-  parellel: true
+  parallel: true
   jobs: 8
 
 website:
@@ -46,3 +46,4 @@ format:
 
 execute: 
   freeze: auto
+  eval: false
