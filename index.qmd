@@ -32,7 +32,7 @@ Welcome to **OpenCurve** — A bit of maths and physics *for everyone*. This is 
 
 ---
 
-{{< include /posts/gravity-assist/lead.qmd >}}
+{{< include /posts/gravity-assist/_lead.qmd >}}
 
 ---
 
