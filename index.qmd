@@ -1,8 +1,9 @@
 ---
-title: "OpenCurve"
-subtitle: "A bit of maths and physics for everyone."
+title: ""
+subtitle: ""
 page-layout: full
 anchor-sections: false
+toc: false
 aliases:
   - /nl/
   - /nl/index.html
@@ -11,23 +12,31 @@ aliases:
   - /nl/posts/
   - /en/posts/
 listing:
-  contents: posts
-  sort: "date desc"
-  type: grid
-  categories: true
-  sort-ui: false
-  filter-ui: false
-  fields: [image, date, title, description, categories]
+  - id: all-articles
+    contents: 
+      - "posts/*/*.qmd"
+      - "posts/*.qmd"
+      - "!posts/gravity-assist/**" # Sla dit feature article over in het grid
+    sort: "date desc"
+    type: grid
+    grid-columns: 2
+    categories: true
+    sort-ui: false
+    filter-ui: false
+    fields: [image, date, title, description, categories]
 ---
 
-::: {.lead style="max-width: 820px; margin-bottom: 2rem;"}
-Welcome to **OpenCurve** — a collection of conceptual explainers and mathematical derivations across mathematics and theoretical physics.
-:::
-
-::: {style="max-width: 820px; margin-bottom: 2.5rem; font-size: 1.05rem; color: #444;"}
-Deep dives on classical mechanics, field theory, calculus, and quantum physics, featuring complete derivations and visual models.
+::: {.lead style="max-width: 820px; margin-bottom: 1.5rem;"}
+Welcome to **OpenCurve** — A bit of maths and physics *for everyone*. This is a collection of conceptual explainers across mathematics and theoretical physics. We do deep dives on classical mechanics, relativity, quantum physics, calculus, deterministic and stochastic dynamics, featuring complete derivations and visual models.
 :::
 
 ---
 
-## Articles
+{{< include /posts/gravity-assist/lead.qmd >}}
+
+---
+
+## All Articles
+
+::: {#all-articles}
+:::

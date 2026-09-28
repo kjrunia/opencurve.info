@@ -1,0 +1,21 @@
+::: {.featured-story}
+
+# [Gravity assist](/posts/gravity-assist/)
+
+[PHYSICS]{.featured-badge}
+
+[How does a planetary push actually work?]{.featured-desc}
+
+[PUBLISHED &mdash; December 26, 2021]{.featured-date}
+
+::: {.column-screen}
+[![](/posts/gravity-assist/satellite.jpg){.nolightbox alt="Spacecraft performing a planetary gravity assist manoeuvre around Earth."}](/posts/gravity-assist/)
+:::
+
+::: {.lead-in}
+Last Christmas, my father and one of my brothers wondered how a spacecraft's planetary slingshot works. It's a well-known manoeuvre to get a big swing forward by passing by a planet. They realized that if the craft falls toward the planet due to its gravitational pull, it will gain momentum. However, as soon as it has flung around the planet, wouldn't that same gravitation slow down the craft just as much? Great question, of course, so, let's dive into this gravity assist short and simple.
+:::
+
+[Read full article &rarr;](/posts/gravity-assist/){.btn-read-more}
+
+:::

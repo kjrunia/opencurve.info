@@ -2,8 +2,8 @@
    1. FONTS & GLOBALE TYPOGRAFIE / UI
    ========================================================================== */
 
-/* Laad Merriweather en een bijpassend koppenfont van Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+/* Laad Merriweather van Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
 
 /* Broodtekst (Quanta-stijl) */
 body, 
@@ -14,11 +14,12 @@ body,
   color: #222222;         /* Donkergrijs in plaats van hard zwart */
 }
 
-/* Koppen */
-h1, h2, h3, .title {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-weight: 400;
-  letter-spacing: -0.01em;
+/* Koppen globaal over de hele site */
+h1, h2, h3, h4, h5, h6, .title {
+  font-family: 'Haettenschweiler', 'Impact', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  color: #407CBF;
 }
 
 /* UI & Navigatie behoudt een strakke sans-serif */
@@ -119,12 +120,15 @@ nav.navbar img {
    3. ARTIKELWEERGAVE & TOOLTIPS
    ========================================================================== */
 
-/* Artikeltitel bovenaan pagina vergroten */
+/* Artikeltitel bovenaan pagina vergroten en Haettenschweiler forceren */
 header.quarto-title-block h1.title,
 .quarto-title-block .title {
-  font-size: 3.2rem !important;
+  font-family: 'Haettenschweiler', 'Impact', sans-serif !important;
+  font-size: 3.4rem !important;
   line-height: 1.15 !important;
   margin-bottom: 0.6rem !important;
+  color: #407CBF !important;
+  letter-spacing: 0.02em;
 }
 
 /* Artikelondertitel / description cursief maken */
@@ -149,14 +153,14 @@ header.quarto-title-block p.subtitle {
 /* Drop Cap (Beginkapitaal) desktop - over 3 regels */
 .lead-in::first-letter,
 .drop-cap::first-letter {
-  font-family: 'DM Serif Display', Georgia, serif;
+  font-family: 'Haettenschweiler', 'Impact', sans-serif;
   float: left;
   font-size: 7.2rem;
   line-height: 0.73;
   padding-top: 6px;
   padding-right: 0.75rem;
   padding-bottom: 2px;
-  color: #111111;
+  color: #407CBF;
 }
 
 /* Zorg dat de figuurcontainer mee krimpt met de afbeelding */
@@ -219,12 +223,13 @@ figure.img-border img {
 
 /* Auteursnaam in de stijl van de artikelkoppen */
 .author-sidebar .author-name {
-  font-family: 'DM Serif Display', Georgia, serif;
-  font-size: 1.15rem;
-  color: #111;
+  font-family: 'Haettenschweiler', 'Impact', sans-serif;
+  font-size: 1.35rem;
+  color: #407CBF;
   border-bottom: 1px solid #e0e0e0;
   padding-bottom: 0.6rem;
   margin-bottom: 0.6rem;
+  letter-spacing: 0.02em;
 }
 
 .author-sidebar .author-name a {
@@ -254,13 +259,16 @@ figure.img-border img {
    5. OVERZICHTSPAGINA'S (LISTING GRID)
    ========================================================================== */
 
-/* Titels van artikelen in het grid compacter maken */
+/* Titels van artikelen in het grid */
 .quarto-grid-item .card-title,
 .quarto-grid-item .listing-title {
-  font-size: 1.15rem !important;
-  line-height: 1.35 !important;
+  font-family: 'Haettenschweiler', 'Impact', sans-serif !important;
+  font-size: 1.35rem !important;
+  line-height: 1.25 !important;
   margin-top: 0.35rem;
   margin-bottom: 0.5rem;
+  color: #407CBF !important;
+  letter-spacing: 0.02em;
 }
 
 .quarto-grid-item .card-title a,
@@ -274,7 +282,7 @@ figure.img-border img {
   text-decoration: underline;
 }
 
-/* Beschrijving van artikelen in het grid compacter maken */
+/* Beschrijving van artikelen in het grid */
 #quarto-document-content .quarto-grid-item .card-text,
 #quarto-document-content .quarto-grid-item .listing-description,
 #quarto-document-content .quarto-grid-item .card-text p,
@@ -287,7 +295,98 @@ figure.img-border img {
 
 
 /* ==========================================================================
-   6. RESPONSIVITEIT & MOBIEL (SCHERMEN SMALLER DAN 992PX)
+   6. FEATURED HERO ARTICLE (SHOWCASE COMPACT & CLEAN)
+   ========================================================================== */
+
+.featured-story {
+  margin-bottom: 3.5rem;
+}
+
+/* Titel in Haettenschweiler */
+.featured-story h1,
+.featured-story h1 a {
+  font-family: 'Haettenschweiler', 'Impact', sans-serif !important;
+  font-size: 3.8rem !important;
+  line-height: 1.1 !important;
+  color: #407CBF !important;
+  text-decoration: none !important;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.5rem !important;
+}
+
+.featured-story h1 a:hover {
+  text-decoration: underline !important;
+}
+
+/* Categoriebadge */
+.featured-story .featured-badge {
+  display: inline-block;
+  background-color: #f0f5fa;
+  color: #407CBF;
+  border: 1px solid #d2e3f3;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 3px;
+  margin-bottom: 0.75rem;
+}
+
+/* Ondertitel / description */
+.featured-story .featured-desc {
+  display: block;
+  font-style: italic;
+  color: #444444;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Publicatiedatum */
+.featured-story .featured-date {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+}
+
+/* Hero-banner over de breedte van het scherm */
+.featured-story .column-screen {
+  margin-bottom: 2rem;
+}
+
+.featured-story .column-screen img {
+  width: 100%;
+  display: block;
+}
+
+/* Knop 'Read full article' */
+.featured-story .btn-read-more {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #407CBF !important;
+  text-decoration: none !important;
+  border: 1px solid #407CBF;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  margin-top: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.featured-story .btn-read-more:hover {
+  background-color: #407CBF !important;
+  color: #ffffff !important;
+}
+
+
+/* ==========================================================================
+   7. RESPONSIVITEIT & MOBIEL (SCHERMEN SMALLER DAN 992PX)
    ========================================================================== */
 
 @media (max-width: 991px) {
@@ -302,7 +401,7 @@ figure.img-border img {
 
   header.quarto-title-block h1.title,
   .quarto-title-block .title {
-    font-size: 2.2rem !important;
+    font-size: 2.4rem !important;
   }
 
   .column-margin {
@@ -314,7 +413,7 @@ figure.img-border img {
 
   .lead-in::first-letter,
   .drop-cap::first-letter {
-    font-size: 4.2rem;
+    font-size: 4.5rem;
     line-height: 0.85;
     padding-top: 3px;
     padding-right: 0.5rem;
@@ -323,5 +422,11 @@ figure.img-border img {
   .navbar-nav {
     flex-wrap: wrap !important;
     gap: 0.75rem 1rem !important;
+  }
+
+  /* Hero-titel op mobiel */
+  .featured-story h1,
+  .featured-story h1 a {
+    font-size: 2.5rem !important;
   }
 }
