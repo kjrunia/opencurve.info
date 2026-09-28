@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2020-06-10">
+<meta name="description" content="How Einstein, Podolsky, and Rosen challenged quantum mechanics, and how John Bell devised a theorem to test local realism">
+
+<title>Quantum entanglement: the EPR paradox and Bell’s Theorem</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../OpenCurveFavicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-fabf1179f7e22e0c8c747f2ec0e30e3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo-horizontal.png" alt="OpenCurve: A bit of maths and physics for everyone" class="navbar-logo light-content">
+    <img src="../../logo-horizontal.png" alt="OpenCurve: A bit of maths and physics for everyone" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Articles</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../mathematics.html"> 
+<span class="menu-text">Mathematics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../physics.html"> 
+<span class="menu-text">Physics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About / Privacy Policy</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#quick-summary" id="toc-quick-summary" class="nav-link active" data-scroll-target="#quick-summary">Quick summary</a></li>
+  <li><a href="#epr-paradox" id="toc-epr-paradox" class="nav-link" data-scroll-target="#epr-paradox">EPR paradox</a></li>
+  <li><a href="#bells-inequalities" id="toc-bells-inequalities" class="nav-link" data-scroll-target="#bells-inequalities">Bell’s inequalities</a></li>
+  <li><a href="#bells-theorem" id="toc-bells-theorem" class="nav-link" data-scroll-target="#bells-theorem">Bell’s theorem</a></li>
+  <li><a href="#experimental-outcomes" id="toc-experimental-outcomes" class="nav-link" data-scroll-target="#experimental-outcomes">Experimental outcomes</a></li>
+  <li><a href="#conclusions" id="toc-conclusions" class="nav-link" data-scroll-target="#conclusions">Conclusions</a>
+  <ul class="collapse">
+  <li><a href="#image-credits-and-references" id="toc-image-credits-and-references" class="nav-link" data-scroll-target="#image-credits-and-references">Image credits and references</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Quantum entanglement: the EPR paradox and Bell’s Theorem</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">physics</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    How Einstein, Podolsky, and Rosen challenged quantum mechanics, and how John Bell devised a theorem to test local realism
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 10, 2020</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="column-screen">
+<p><img src="John_bell_2.jpg" class="nolightbox" alt="Black and white photograph of theoretical physicist John Stewart Bell smiling with hands on his hips in front of a chalkboard covered in physics equations at CERN." style="width: 100%;"></p>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="author-sidebar">
+<p><a href="../../../kj_photo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../../../kj_photo.png" class="author-photo img-fluid"></a></p>
+<div class="author-name">
+<p><a href="../../en/about.html"><strong>KJ Runia, BSc (Hons) MInstP AMIMA</strong></a></p>
+</div>
+<div class="author-bio">
+<p>Holds a Bachelor of Science (Honours) degree in Mathematics and Physics from the School of Mathematics and Statistics and the School of Physical Sciences at The Open University, Walton Hall, Milton Keynes in the United Kingdom. Studies currently for an MPhys (Master of Physics). Is a Member of the Institute of Physics (IOP) and an Associate Member of the Institute of Mathematics and its Applications (IMA).</p>
+</div>
+</div>
+</div></div><div class="lead-in">
+<p>When the state of a subatomic particle cannot be described by a wave function without taking the state of another subatomic particle into account, we speak of quantum entanglement. It’s the special case where both particles can only be described by one and the same wave function. No longer are they separate entities nor do they have separate wave functions. The astonishing consequence is that performing a measurement on one particle has an immediate effect on the measurement of the other particle, no matter how far apart they are from each other. In this article, the second part of our mini-series on quantum entanglement, we will discuss the EPR paradox which Einstein and colleagues put forward. After that, we will discuss Bell’s Theorem which allowed physicists to test Einstein’s proposal. Was Einstein correct?</p>
+</div>
+<div style="width: 80%; margin: 1.5rem auto;">
+<div id="fig-spins" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Drawing of a fuzzy blue sphere with an arrow indicating clockwise spin alongside three-dimensional axes x, y, and z on a textured background.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Spins-EN.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: A representation of an electron’s spin – do note that this is not what an electron actually looks like nor is it what its spin looks like. The quantum world is simply too strange to depict accurately using “classical” notions as done here. Here we drew a vague ball-like thing which seemingly spins around, which it isn’t and it doesn’t. But it’s the best we’ve got. Although, the best we’ve got is actually something else: a mathematical expression, the wave function."><img src="Spins-EN.jpg" class="img-fluid figure-img" alt="Drawing of a fuzzy blue sphere with an arrow indicating clockwise spin alongside three-dimensional axes x, y, and z on a textured background."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A representation of an electron’s spin – do note that this is not what an electron actually looks like nor is it what its spin looks like. The quantum world is simply too strange to depict accurately using “classical” notions as done here. Here we drew a vague ball-like thing which seemingly spins around, which it isn’t and it doesn’t. But it’s the best we’ve got. Although, the best we’ve got is actually something else: a mathematical expression, the wave function.
+</figcaption>
+</figure>
+</div>
+</div>
+<section id="quick-summary" class="level1">
+<h1>Quick summary</h1>
+<p>Firstly, let me give a quick summary of the <a href="../quantum-entanglement-non-locality-and-the-state-of-a-two-particle-system/">previous post</a>:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<ol type="1">
+<li>We used the property of spin as a way of distinguishing between the two entangled electrons;</li>
+<li>The orientation of an electron’s spin is expressed as spin up (anticlockwise) or spin down (clockwise) along the axis of measurement;</li>
+<li>You can arbitrarily choose along which axis you want to measure its spin, in three dimensions;</li>
+<li>No matter which axis you choose, the result is always going to be a spin up or spin down (there is no spin-a-bit-to-the-right, for instance);</li>
+<li>We are able to entangle particles in such a way that they will either always yield opposite spin or they always yield identical spin; once prepared this way, they will never deviate from this correlation when measured;</li>
+<li>We used the opposite-spin entanglement in our example and we will do so again here;</li>
+<li>Quantum mechanics states that before measurement neither electron has a specific spin: the wave function contains all possible measurement outcomes, in this case pertaining to both spin up and spin down (which can be characterised as having no definite spin yet);<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></li>
+<li>As soon as you measure one electron’s spin along a certain axis, the other electron’s spin immediately snaps to the opposite orientation along that same axis, regardless of spatial distance between the two entangled particles.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="epr-paradox" class="level1">
+<h1>EPR paradox</h1>
+<p>Even though Einstein understood quantum mechanics like few others, and while accepting these predictions and results, he didn’t quite like the non-local implications brought forth by quantum entanglement. He didn’t like point 8 of the previous section. There seems to be zero time delay between influencing a particle in Amsterdam (through measuring its spin) and influencing its entangled particle in Boston. It violates a pivotal consequence of Einstein’s theory of special relativity: no signal or piece of information – anything within this universe, really – can exceed the speed of light<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> or else <em>causality would not exist</em>. In other words, if information or signals were able to travel faster than light, an effect could occur before its cause had taken place. To put it mildly, this doesn’t seem to be the universe you and I are living in.</p>
+<p>So, Einstein, Podolsky, and Rosen (EPR) hypothesised that something else, something secretive was going on in nature – well out of sight for theoretical and experimental physicists. Quantum mechanics as it was known then had to be <em>incomplete</em>. Obviously, they acknowledged its successes, but when it came to quantum entanglement, they asserted something was missing in the theory of describing nature through wave functions.</p>
+<p>To solve for the seemingly faster-than-light signal, they proposed that what <em>really</em> was going on was that the particles have always been in a specific state. <em>When the electron pair were separated from each other, they have always had either spin up or spin down from the start from the moment of their creation.</em></p>
+<p>Suppose a pair of gloves were made. Like all pairs of gloves, they always were each other’s opposite with respect to “handedness”.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> One has always been left-handed, the other has always been right-handed. And if the first one happened to be right-handed, then the other was left-handed. (Or else you’re holding a glove from another pair.)</p>
+<p>Suppose the machine which had made the pair put each glove in a separate box. We can’t see which glove went in which box until we open the box. The boxes were sent to Amsterdam and Boston. The experimental physicists then open the box in Amsterdam: it’s the right-handed one! And so, we now <em>instantly</em> know the one in Boston is left-handed. No magic, no non-locality, no lightspeed-breaking shenanigans.</p>
+<div id="fig-gloves" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Illustration of a globe with transparent boxes in Boston and Amsterdam, each containing a single glove separated across the ocean.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gloves-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Gloves.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: A pair of gloves in separate boxes illustrates Einstein’s intuitive classical view of hidden variables."><img src="Gloves.jpg" class="img-fluid figure-img" alt="Illustration of a globe with transparent boxes in Boston and Amsterdam, each containing a single glove separated across the ocean."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gloves-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: A pair of gloves in separate boxes illustrates Einstein’s intuitive classical view of hidden variables.
+</figcaption>
+</figure>
+</div>
+<p>This is what Einstein and friends said was happening in the case of electrons. An electron pair always had specific spins to start with. It’s only in Amsterdam and Boston that we “open the box” aka measure their spin. It’s only logical now that as soon as you know which spin the Amsterdam electron has, you <em>immediately</em> know which spin the Boston electron has.</p>
+<p>So, said Einstein, non-locality is an illusion. It’s all just normal local laws of nature and a bit of logical thinking. For one, spin orientation is merely hidden from us and not principally uncertain. Secondly, there’s no spooky action at a distance,<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> as he famously described it.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>In everyday parlance, physicists call this a local version of the “hidden variables” theory. “Hidden variables” pertain to the stuff that we can’t see yet (such as spin orientation or other variables influencing this) because our quantum mechanical description (the wave function) is incomplete; however, they are there, they do exist – they do not <em>not</em> exist yet, according to the hidden variables theory.</p>
+</section>
+<section id="bells-inequalities" class="level1">
+<h1>Bell’s inequalities</h1>
+<p>Unfortunately, Albert Einstein passed away in 1955. And Niels Bohr, the other great physicist with whom he used to debate the fundamental nature of quantum mechanics, passed away in 1962. In both cases too soon for them to be able to read John Stuart Bell’s 1964 paper called “On the Einstein Podolsky Rosen Paradox”.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> Bell realised that Einstein’s proposal was in principle testable. It yielded a clear prediction, called Bell’s inequality.</p>
+<p>At this point, we must note that over the years, more than one Bell’s inequality has been put forward by physicists.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> To explain Bell’s inequality, we will apply a version of <a href="https://en.wikipedia.org/wiki/N._David_Mermin">David Mermin’s</a> original version as mentioned in his fantastic <em>Boojums All the Way Through: Communicating Science in a Prosaic Age</em>.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<p>Recall from point 3 before that we can measure an electron’s spin orientation along any axis. We’re going to be measuring along <em>three</em> axes. These axes will be at an angle of 120° relative to each other.</p>
+<div id="fig-spin-axes" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Illustration of a central fuzzy particle with three linear measurement axes labeled axis 1, axis 2, and axis 3 arranged at 120-degree angles.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-spin-axes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Spin-axes-EN.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: Three measurement axes separated by angles of 120 degrees."><img src="Spin-axes-EN.jpg" class="img-fluid figure-img" alt="Illustration of a central fuzzy particle with three linear measurement axes labeled axis 1, axis 2, and axis 3 arranged at 120-degree angles."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spin-axes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Three measurement axes separated by angles of 120 degrees.
+</figcaption>
+</figure>
+</div>
+<p>The first axis will be the spin orientation along the vertical axis, which we will denote with the following symbols for spin up and spin down:</p>
+<p><span class="math display">\[\uparrow \quad \downarrow\]</span></p>
+<p>The spin orientations up and down will also be measured along this second axis:</p>
+<p><span class="math display">\[\nwarrow \quad \searrow\]</span></p>
+<p>And the spin orientations along the third axis will be denoted by:</p>
+<p><span class="math display">\[\nearrow \quad \swarrow\]</span></p>
+<p>So, imagine two entangled electrons being separated in space from each other. The usual quantum-mechanical description of each electron is that they are in a superposition of spins up and spins down for all three axes.</p>
+<p>Except, Einstein says, no, no, not really: hidden behind the “veil of superposition” they are in fact already in definite, specific spin orientations for each of the three axes. We just don’t yet know which until we measure them!</p>
+<p>He says the electron in Amsterdam <em>may already be in the specific spin states as follows:</em></p>
+<p><span class="math display">\[\left( \uparrow \searrow \swarrow \right)_A\]</span></p>
+<p>So, along axis 1 it’s spin up, along axis 2 it’s spin down, and along axis 3 it’s also spin down.</p>
+<p>Einstein continues and says that the entangled electron in Boston <em>has to already be in the opposite states:</em></p>
+<p><span class="math display">\[\left( \downarrow \nwarrow \nearrow \right)_B\]</span></p>
+<p>And so, Einstein concludes, as soon as you actually perform a measurement in Amsterdam along the first axis, <em>of course, you get the opposite spin</em> in Boston. Only logical!</p>
+<p>Bell’s insight was that if you would work out this entire argument for all possible combinations, you could actually get a prediction of a ratio of outcomes. Here’s how that goes.</p>
+<p>First of all, if you measure along axis 1 in Amsterdam, that doesn’t mean you have to measure along that same axis in Boston. You could just choose to measure along axis 3. So, with the two examples above, your results would simply be that in Amsterdam you get spin up and in Boston you also get spin up:</p>
+<p><span class="math display">\[\left( \uparrow \right)_A \text{ and } \left( \nearrow \right)_B\]</span></p>
+<p>Bell then argued: if you would count the number of times you would get the combinations up-up, down-down, and of course up-down and down-up like this, you should get ratios of these combinations which should match experiment. If, however, these ratios don’t appear in the experiments, then Einstein’s hypothesis is incorrect. In that case, something entirely different is going on. The electrons were <em>not</em> already in a specific state, which in turn means that <em>the non-local measurement effect in quantum entanglement does exist!</em></p>
+</section>
+<section id="bells-theorem" class="level1">
+<h1>Bell’s theorem</h1>
+<p>So, let’s put them all together. Let’s first take our example above:</p>
+<p><span class="math display">\[\left( \uparrow \searrow \swarrow \right)_A \quad \text{and} \quad \left( \downarrow \nwarrow \nearrow \right)_B\]</span></p>
+<p>If you measure along axis 1 in Amsterdam and along axis 1 in Boston, you get spin up, spin down. If you measure along axis 1 in Amsterdam and along axis 2 in Boston, you get spin up, spin up. And so on, and so forth! We’ve put it in a table:</p>
+<div style="width: 60%; margin: 1.5rem auto;">
+<div id="fig-combinations" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Handwritten 3 by 3 grid showing detector combinations for observers A and B across three measurement axes.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-combinations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Spin-combinations-EN-01.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;4: All nine measurement axis combinations between Amsterdam (A) and Boston (B)."><img src="Spin-combinations-EN-01.jpg" class="img-fluid figure-img" alt="Handwritten 3 by 3 grid showing detector combinations for observers A and B across three measurement axes."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-combinations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: All nine measurement axis combinations between Amsterdam (A) and Boston (B).
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Here you can see all the possible combinations of measurement outcomes along the three possible axes of the electrons in Amsterdam (A) and Boston (B). We used U for spin up and D for spin down.</p>
+<p>Bell then says that if Einstein was correct, and the states of the spin orientations along these three axes were already there, then these are the expected outcomes.</p>
+<p>Let’s focus on the number of UD or DU combinations, in other words, let’s focus on the number of times we find opposite spin orientations, irrespective of the axes along which they are measured. We’ve marked them yellow.</p>
+<div style="width: 60%; margin: 1.5rem auto;">
+<div id="fig-comb-02" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A 3 by 3 grid with five cells highlighted in yellow, indicating combinations where spin measurements yield opposite results (UD or DU).">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-comb-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Spin-combinations-EN-02.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: Opposite spin outcomes highlighted in yellow for the first state configuration."><img src="Spin-combinations-EN-02.jpg" class="img-fluid figure-img" alt="A 3 by 3 grid with five cells highlighted in yellow, indicating combinations where spin measurements yield opposite results (UD or DU)."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-comb-02-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Opposite spin outcomes highlighted in yellow for the first state configuration.
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Exactly five out of nine times you will find opposite spin directions.</p>
+<p>Let’s check for other spin combinations. Suppose the electron in Amsterdam is secretly in the following spin states, <span class="math inline">\(\left( \downarrow \nwarrow \swarrow \right)_A\)</span>, and the electron in Boston is then the opposite, <span class="math inline">\(\left( \uparrow \searrow \nearrow \right)_B\)</span>. If we count again the number of times we get opposite spins, we find, again, five out of nine.</p>
+<div style="width: 60%; margin: 1.5rem auto;">
+<div id="fig-comb-03" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A 3 by 3 grid for a different spin assignment with five cells highlighted in yellow for opposite spin outcomes.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-comb-03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Spin-combinations-EN-03.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;6: Opposite spin outcomes highlighted in yellow for an alternative state configuration."><img src="Spin-combinations-EN-03.jpg" class="img-fluid figure-img" alt="A 3 by 3 grid for a different spin assignment with five cells highlighted in yellow for opposite spin outcomes."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-comb-03-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Opposite spin outcomes highlighted in yellow for an alternative state configuration.
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Suppose, just for completeness, that the one in Amsterdam is all spin down, <span class="math inline">\(\left( \downarrow \searrow \swarrow \right)_A\)</span>, and the Boston one is its opposite, <span class="math inline">\(\left( \uparrow \nwarrow \nearrow \right)_B\)</span>. In that case, we would get opposite spins in nine out of nine times.</p>
+<div style="width: 60%; margin: 1.5rem auto;">
+<div id="fig-comb-04" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A 3 by 3 grid with all nine cells highlighted in yellow, representing 100 percent opposite spin outcomes.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-comb-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Spin-combinations-EN-04.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;7: All nine outcomes yielding opposite spins when initial states are completely uniform."><img src="Spin-combinations-EN-04.jpg" class="img-fluid figure-img" alt="A 3 by 3 grid with all nine cells highlighted in yellow, representing 100 percent opposite spin outcomes."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-comb-04-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: All nine outcomes yielding opposite spins when initial states are completely uniform.
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>And so, this particular Bell inequality states that the probability (<span class="math inline">\(P\)</span>) of finding opposite spins along all three axes is at least <span class="math inline">\(\dfrac{5}{9}\)</span> or ~55.6% (and at most 1 or 100%). In other words:</p>
+<p><span class="math display">\[P(\text{opposite}) \geq \dfrac{5}{9}.\]</span></p>
+<p>If this inequality were violated by experiment, the underlying local hidden-variable theory will have been proven to be incorrect.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="experimental-outcomes" class="level1">
+<h1>Experimental outcomes</h1>
+<p>Over the past decades, many experiments were carried out to test multiple versions of Bell’s inequality. Usually, these tests involved photons rather than electrons and pertained to measurements of polarisation rather than spin.</p>
+<p>Stuart Freedman and John Clauser carried out the first experimental Bell test in 1972, testing a version of the so-called CH74 inequality.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
+<p>The most celebrated test was performed in 1982 by Alain Aspect and colleagues. As Bell had originally proposed, they were able to have the two detectors randomly switch measurement orientations while the entangled photons were in flight, preventing any slower-than-light communication between the detectors.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></p>
+<p>In all tests, Bell’s inequalities were unequivocally violated. Instead, the statistical outcome was entirely congruent with the predictions of quantum mechanics. The conclusion is unavoidable: Einstein’s local hidden-variable theory was incorrect. There is nothing local about measuring entangled particles.</p>
+<p>In our specific three-axis setup at 120° angles, quantum mechanics predicts that the probability of measuring opposite spins across randomly chosen axes is:</p>
+<p><span class="math display">\[P(\text{opposite}) = \cos^2\left(\frac{120^\circ}{2}\right) = \cos^2(60^\circ) = \left(\frac{1}{2}\right)^2 = 0.25 \quad (25\%),\]</span></p>
+<p>or 50% across matching and non-matching subsets, distinctly violating the classical lower bound of <span class="math inline">\(\dfrac{5}{9} \approx 55.6\%\)</span>.</p>
+</section>
+<section id="conclusions" class="level1">
+<h1>Conclusions</h1>
+<p>In quantum mechanics, particles which have not been measured yet don’t have a definite, specific state. Instead, they are best described by a wave function which incorporates all possible future states they can assume once measured.</p>
+<p>When a particle can only be described in tandem with another particle, i.e.&nbsp;both particles can only be described by one and the same wave function, they are maximally quantum entangled.<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a></p>
+<p>If their entanglement entails their spins will always correlate in a certain way – be it identical spins or opposite spins – a measurement on one particle, causing it to snap into one of the possible definite states, has an <em>immediate</em> effect on the state of the other particle: it instantly collapses into the correlating, definite state.</p>
+<p>Einstein disliked this because it seemed to imply that signals were travelling faster than light between particles. He postulated that particles have always been in definite states from the moment they separated, with nature simply keeping those values hidden from us.</p>
+<p>John Bell showed that Einstein’s hypothesis leads to measurable statistical bounds. Decades of experimental tests confirmed that nature violates these bounds. Particles do not carry predetermined local properties before observation.</p>
+<p>And if that is true, then non-locality is an inherent feature of quantum mechanics.</p>
+<p>Nobody knows the ultimate physical mechanism behind this. Theoretical models exploring this include non-local hidden variables (such as De Broglie–Bohm pilot wave theory) and modern geometric conjectures like ER=EPR by Juan Maldacena and Leonard Susskind.</p>
+<p>Einstein’s discomfort with this intrinsic indeterminacy prompted his famous remark: “God does not play dice.”</p>
+<p>Yet all experiments to date suggest that nature does indeed play dice – and tosses them where classical intuition cannot follow.</p>
+<hr>
+<section id="image-credits-and-references" class="level3">
+<h3 class="anchored" data-anchor-id="image-credits-and-references">Image credits and references</h3>
+<ul>
+<li><em>Featured image: Theoretical physicist John Stewart Bell at CERN, June 1982. Photo: CERN (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>).</em></li>
+<li><em>Spin illustration and glove diagram by KJ Runia.</em></li>
+</ul>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Analogously, the <a href="../the-double-slit-experiment/">double-slit experiment</a> showed that before measurement, particles don’t have a specific location yet.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Or, if their entanglement were prepared in such a way that they always have identical spin, the other electron would then immediately snap to the identical spin orientation along the same axis of measurement.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>In a vacuum.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>“Handedness” in this context is a form of the more generalised term <a href="https://en.wikipedia.org/wiki/Chirality">chirality</a>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>In German, he wrote <em>spukhafte Fernwirkung</em>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Einstein, A., Podolsky, B. and Rosen, N. (1935) “Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?”, <em>Physical Review</em>, 47(10), pp.&nbsp;777–780. doi: <a href="https://doi.org/10.1103/PhysRev.47.777">10.1103/PhysRev.47.777</a>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Bell, J. S. (1964) “On the Einstein Podolsky Rosen Paradox”, <em>Physics Physique Fizika</em>, 1(3), pp.&nbsp;195–200. doi: <a href="https://doi.org/10.1103/PhysicsPhysiqueFizika.1.195">10.1103/PhysicsPhysiqueFizika.1.195</a>.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Besides his <a href="https://en.wikipedia.org/wiki/Bell's_theorem#Original_Bell's_inequality">original inequality</a>, there is the widely applied <a href="https://en.wikipedia.org/wiki/CHSH_inequality">CHSH inequality</a>, for instance.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Mermin, N. D. (1990) <em>Boojums all the way through: communicating science in a prosaic age</em>. Cambridge: Cambridge University Press.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>Freedman, S. J. and Clauser, J. F. (1972) “Experimental Test of Local Hidden-Variable Theories”, <em>Physical Review Letters</em>, 28(14), pp.&nbsp;938–941. doi: <a href="https://doi.org/10.1103/PhysRevLett.28.938">10.1103/PhysRevLett.28.938</a>.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>Aspect, A., Dalibard, J. and Gérard, R. (1982) “Experimental Test of Bell’s Inequalities Using Time-Varying Analyzers”, <em>Physical Review Letters</em>, 49(25), pp.&nbsp;1804–1807. doi: <a href="https://doi.org/10.1103/PhysRevLett.49.1804">10.1103/PhysRevLett.49.1804</a>.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>In real-world environments, macroscopic bodies interact continuously with trillions of surrounding particles, causing instantaneous quantum decoherence that prevents macroscopic systems from maintaining entangled states.<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/opencurve\.info");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

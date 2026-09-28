@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2019-03-03">
+<meta name="description" content="Why mirrors do not reverse left and right, and how geometric reflection differs fundamentally from rotational transformation">
+
+<title>Mirror, mirror, what’s up with the mirror writing?</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../OpenCurveFavicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-fabf1179f7e22e0c8c747f2ec0e30e3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo-horizontal.png" alt="OpenCurve: A bit of maths and physics for everyone" class="navbar-logo light-content">
+    <img src="../../logo-horizontal.png" alt="OpenCurve: A bit of maths and physics for everyone" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Articles</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../mathematics.html"> 
+<span class="menu-text">Mathematics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../physics.html"> 
+<span class="menu-text">Physics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About / Privacy Policy</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#mirror-guy" id="toc-mirror-guy" class="nav-link active" data-scroll-target="#mirror-guy">Mirror Guy</a></li>
+  <li><a href="#transformation" id="toc-transformation" class="nav-link" data-scroll-target="#transformation">Transformation</a></li>
+  <li><a href="#why-mirrored-letters-look-weird" id="toc-why-mirrored-letters-look-weird" class="nav-link" data-scroll-target="#why-mirrored-letters-look-weird">Why mirrored letters look weird</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a>
+  <ul class="collapse">
+  <li><a href="#image-credits-and-references" id="toc-image-credits-and-references" class="nav-link" data-scroll-target="#image-credits-and-references">Image credits and references</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Mirror, mirror, what’s up with the mirror writing?</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">mathematics</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Why mirrors do not reverse left and right, and how geometric reflection differs fundamentally from rotational transformation
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 3, 2019</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="column-screen">
+<p><img src="monkeymirror.webp" class="nolightbox" alt="Close-up of a small macaque monkey looking curiously at its own reflection in a round motorcycle wing mirror held in its hand." style="width: 100%;"></p>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="author-sidebar">
+<p><a href="../../../kj_photo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../../../kj_photo.png" class="author-photo img-fluid"></a></p>
+<div class="author-name">
+<p><a href="../../en/about.html"><strong>KJ Runia, BSc (Hons) MInstP AMIMA</strong></a></p>
+</div>
+<div class="author-bio">
+<p>Holds a Bachelor of Science (Honours) degree in Mathematics and Physics from the School of Mathematics and Statistics and the School of Physical Sciences at The Open University, Walton Hall, Milton Keynes in the United Kingdom. Studies currently for an MPhys (Master of Physics). Is a Member of the Institute of Physics (IOP) and an Associate Member of the Institute of Mathematics and its Applications (IMA).</p>
+</div>
+</div>
+</div></div><div class="lead-in">
+<p>Ever wondered why sentences, words, and letters always exclusively seem to have their left and right reversed in the looking glass, while mirror writing is almost never projected upside down? Things are happening which may not be obvious. For starters, mirrors do <em>not</em> reverse left and right.</p>
+</div>
+<p>We are intelligent types with (sometimes too much) self-awareness. We look in the mirror, and we know it is our reflection and not someone else staring back at us. However, if you were ever under the impression that, for instance, the left and right sides of your face are reversed, you might want to re-evaluate the depth of this appreciation. You are probably still mistaking your mirror image for a real other person facing you. Even though the situations look similar, they are not equal—not just in the metaphysical sense but, more relevantly, in the <em>mathematical</em> sense. This relates to why letters, words, and sentences seem left-right-reversed by the mirror and almost never projected upside down, but we will get to that later.</p>
+<section id="mirror-guy" class="level1">
+<h1>Mirror Guy</h1>
+<p>Let’s reflect on the photo below for a moment. The Tie Guy in front of the mirror, trying to tie his tie for a white tie dinner, is looking at <em>himself</em> in the mirror. Who knew? I know, but bear with me, because both peculiarly and crucially, it is important to acknowledge that it is, in fact, himself, <em>and not someone else</em>.</p>
+<div id="fig-obama" class="quarto-float quarto-figure quarto-figure-center anchored" alt="President Barack Obama viewed from behind as he looks into an oval gilded wall mirror adjusting his white bow tie, with his clear frontal reflection looking directly back.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-obama-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Barack_Obama_ties_his_tie.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: Barack Obama tying his bow tie in front of a mirror. (Photo by Pete Souza)."><img src="Barack_Obama_ties_his_tie.jpg" class="img-fluid figure-img" alt="President Barack Obama viewed from behind as he looks into an oval gilded wall mirror adjusting his white bow tie, with his clear frontal reflection looking directly back."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-obama-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Barack Obama tying his bow tie in front of a mirror. (Photo by Pete Souza).
+</figcaption>
+</figure>
+</div>
+<p>Let’s perform a thought experiment. Imagine Tie Guy drawing a big L on the palm of his left hand and a big R on that of his right:</p>
+<ol type="1">
+<li>Tie Guy has an L on the palm of his left hand and an R on the palm of his right hand;</li>
+<li>Mirror Guy is not someone else: Mirror Guy <em>is</em> Tie Guy;</li>
+<li>Tie Guy presses his <em>left</em> hand with an L against the mirror;</li>
+<li>If a mirror were to reverse Tie Guy’s left and right, Mirror Guy should use the hand with an R, since that is Tie Guy’s <em>right</em> hand;</li>
+<li>Mirror Guy does not: he uses the hand with an L;</li>
+<li>Hence, Tie Guy’s <em>left</em> hand with an L <em>is</em> Mirror Guy’s <em>left</em> hand with an L;</li>
+<li>Therefore, a mirror <em>does not</em> reverse left and right.</li>
+</ol>
+<p>Point 6 is probably hardest to grasp at first. Clearly, the Ls of both Guys are up against the mirror. Yet, we still think a mirror reverses left and right. The cognitive hurdle is perhaps that while we accept our mirror image to be us, we are hardwired to continue to treat it as though it were <em>someone else</em> facing us. On a daily basis, chances are we interact more with people facing us than we do with our mirrored selves.</p>
+<p>We have grown accustomed to mentally reversing left and right, which evidently has proven to be useful during our interactions with everyday humans. We were taught already at an early age that “your left is her right” or “her left is your right”. Similarly, a mathematical physics professor, upon <em>turning around</em> to face the audience in the lecture hall again, knows all too well that the strings of equations on the blackboard on her left are in fact on her students’ right.</p>
+<p>Ironically, left and right get reversed <em>in the real world</em> and not in mirrors. Our left hand is simply our mirror image’s left hand and not “their right”—that is just how the Mirror Universe works.</p>
+</section>
+<section id="transformation" class="level1">
+<h1>Transformation</h1>
+<p>Wait, did I just write “turning around” in italics for a particular reason? Indeed, I did. Turns out, rotations, reflections, and symmetries are tricky. Hence, what follows is an important distinction:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Mathematically, someone facing you—be it your biological clone—has been <em>rotated</em> (180 degrees) with respect to your position and direction, whereas your mirrored self is <em>not</em>. Instead, your mirror image is a <em>reflection</em>. Rotation and reflection are distinct geometrical transformations. Stating that a mirror reverses left and right is simply confusing rotation with reflection.</p>
+</div>
+</div>
+</div>
+<div id="fig-rotation-reflection" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Diagram comparing geometric transformations with green and blue triangles: top row shows a planar reflection across a horizontal axis, while dashed circular arrows demonstrate a 180-degree rotation.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rotation-reflection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="rotationreflection.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: Rotation and reflection are not the same geometric transformations."><img src="rotationreflection.jpg" class="img-fluid figure-img" alt="Diagram comparing geometric transformations with green and blue triangles: top row shows a planar reflection across a horizontal axis, while dashed circular arrows demonstrate a 180-degree rotation."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rotation-reflection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Rotation and reflection are not the same geometric transformations.
+</figcaption>
+</figure>
+</div>
+<p>After a rotation of 180°, we need to use the antonym of “left” or “right”, which is not needed in the case of a reflection. However, it is highly plausible one does not encounter reflected human beings very often. We mostly deal with rotated bipeds. So, in the case of looking at your mirror image, you just need to un-think that your mirrored self is someone else: you need to accept that the mirrored self <em>is</em> you.</p>
+<p>Funnily enough, accepting that a mirror does not reverse up and down either is a lot easier. Imagine Tie Guy bumping his head against the mirror. Mirror Guy does not then bump his feet against the glass. Therefore, a mirror reverses neither up and down nor left and right.</p>
+</section>
+<section id="why-mirrored-letters-look-weird" class="level1">
+<h1>Why mirrored letters look weird</h1>
+<p>So, what’s up with mirror writing? Clearly, <em>something</em> is going on with letters, words, and manuscripts, as Leonardo da Vinci knew all too well. Something is going on indeed, but not what you might think. In fact, the mirror has very little to do with it. I blame the opacity of the material we usually write on for our lack of immediate insight.</p>
+<p>Have a look at <a href="#fig-gamma" class="quarto-xref">Figure&nbsp;3</a>. We replace a symmetrical human with an asymmetric object resembling the Greek uppercase letter gamma (<span class="math inline">\(\Gamma\)</span>), which makes reflection easier to visualize.</p>
+<div id="fig-gamma" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Perspective line drawing of a three-dimensional gamma-shaped frame standing in front of a mirror, showing point A on the top-left and point B on the top-right remaining on the exact same respective sides in the reflection.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-gamma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Figure1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: An asymmetric object standing in front of a mirror. Points A and B are not reversed in the mirror image."><img src="Figure1.png" class="img-fluid figure-img" alt="Perspective line drawing of a three-dimensional gamma-shaped frame standing in front of a mirror, showing point A on the top-left and point B on the top-right remaining on the exact same respective sides in the reflection."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gamma-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: An asymmetric object standing in front of a mirror. Points A and B are not reversed in the mirror image.
+</figcaption>
+</figure>
+</div>
+<p>As you can see, points A and B in our original object have not swapped places in the mirrored object. If you imagine yourself standing behind the original object looking at the mirror, point A is on your left and point B is on your right. The exact same is true for the mirror reflection: point A remains on the left and point B remains on the right.</p>
+<p>Now imagine the shape of the object being printed onto a large sheet of paper, as drawn in <a href="#fig-sheet" class="quarto-xref">Figure&nbsp;4</a>.</p>
+<div id="fig-sheet" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Isometric drawing of the gamma-shaped letter attached to the front of a large opaque white rectangular sheet placed parallel to the mirror plane.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sheet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Figure2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Figure&nbsp;4: The letter object printed onto an opaque sheet of paper facing the viewer."><img src="Figure2.png" class="img-fluid figure-img" alt="Isometric drawing of the gamma-shaped letter attached to the front of a large opaque white rectangular sheet placed parallel to the mirror plane."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sheet-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: The letter object printed onto an opaque sheet of paper facing the viewer.
+</figcaption>
+</figure>
+</div>
+<p>Right now, we have written a letter on a piece of paper, but we cannot see it in the mirror because the back of the opaque sheet blocks the view. What do we naturally do? We turn the paper around to face the mirror.</p>
+<p>So, as shown in <a href="#fig-sheet-rotated" class="quarto-xref">Figure&nbsp;5</a>, we <em>rotate</em> the paper. Now look at what happened to points A and B: they have reversed positions! Why? Because <em>you rotated the paper</em> 180 degrees around its vertical axis!</p>
+<div id="fig-sheet-rotated" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Line drawing showing a curved arrow indicating a 180-degree rotation of the sheet around its vertical axis, with the letter now on the back side and points A and B laterally swapped.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sheet-rotated-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Figure3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Figure&nbsp;5: The sheet is rotated 180 degrees around its vertical axis to face the mirror. Points A and B have swapped positions as a result of the rotation."><img src="Figure3.png" class="img-fluid figure-img" alt="Line drawing showing a curved arrow indicating a 180-degree rotation of the sheet around its vertical axis, with the letter now on the back side and points A and B laterally swapped."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sheet-rotated-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: The sheet is rotated 180 degrees around its vertical axis to face the mirror. Points A and B have swapped positions as a result of the rotation.
+</figcaption>
+</figure>
+</div>
+<p>And what does the mirror do? Look at <a href="#fig-mirror-rotated" class="quarto-xref">Figure&nbsp;6</a>: the mirror simply reflects what is presented to it—namely, an already rotated letter.</p>
+<div id="fig-mirror-rotated" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Line drawing of the rotated sheet facing the mirror, showing the mirror reflection faithfully displaying the already rotated shape with point B on the left and point A on the right.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mirror-rotated-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Figure4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Figure&nbsp;6: The mirror faithfully reflects what is held up to it: a mechanically rotated letter."><img src="Figure4.png" class="img-fluid figure-img" alt="Line drawing of the rotated sheet facing the mirror, showing the mirror reflection faithfully displaying the already rotated shape with point B on the left and point A on the right."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mirror-rotated-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: The mirror faithfully reflects what is held up to it: a mechanically rotated letter.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Letters look weird in mirrors because <em>you</em> rotated them towards the mirror. It is this rotation around the vertical axis that inverts their left-right arrangement, not the mirror.</p>
+</div>
+</div>
+</div>
+<p>Because humans almost always rotate paper around the vertical axis, it creates the illusion that mirrors selectively flip left and right. Had you flipped the sheet vertically around the horizontal axis (over its top edge), the mirror reflection would appear upside down instead!</p>
+<div id="fig-comic" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Single-panel cartoon showing a child standing on his head in front of a mirror exclaiming how weird he looks, while a parent in an armchair watches a phone, with an explanatory text at the bottom printed entirely in mirror writing.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-comic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="20190302EN-KJ-Alternate-Universe-111-squared---Mirrors.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Figure&nbsp;7: Click to enlarge. Comic on the physics of the mirror universe: mirrors reflect front-to-back, they do not rotate."><img src="20190302EN-KJ-Alternate-Universe-111-squared---Mirrors.jpg" class="img-fluid figure-img" alt="Single-panel cartoon showing a child standing on his head in front of a mirror exclaiming how weird he looks, while a parent in an armchair watches a phone, with an explanatory text at the bottom printed entirely in mirror writing."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-comic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Click to enlarge. Comic on the physics of the mirror universe: mirrors reflect front-to-back, they do not rotate.
+</figcaption>
+</figure>
+</div>
+<p>Two concluding thoughts to reflect on:</p>
+<ol type="1">
+<li>The way you see yourself in the mirror (reflection) is fundamentally distinct from the way other people see you (rotation).</li>
+<li>To make text look like mirror writing, you do not even need a mirror: simply write on a transparent sheet, rotate it 180 degrees around the vertical axis, and hold it up.</li>
+</ol>
+<p>There is no spoon, and there is no magical mirror flipping left and right: it was your own rotation all along.</p>
+<div id="fig-matrix" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Film still from The Matrix showing Neo (Keanu Reeves) staring intently at a distorted, curved reflection of himself in the surface of a metal spoon.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="matrixspoonbending.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Figure&nbsp;8: The Matrix spoon bending scene: there is no spoon."><img src="matrixspoonbending.jpeg" class="img-fluid figure-img" alt="Film still from The Matrix showing Neo (Keanu Reeves) staring intently at a distorted, curved reflection of himself in the surface of a metal spoon."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-matrix-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: The Matrix spoon bending scene: there is no spoon.
+</figcaption>
+</figure>
+</div>
+<p><em>For completeness: while mirrors do not reverse left and right, nor up and down, they do invert front and back—the orthogonal axis perpendicular to the mirror surface in 3D space. Because flat paper letters have no depth extension along this normal axis, that physical inversion is not what causes text to read backwards.</em></p>
+<hr>
+<section id="image-credits-and-references" class="level3">
+<h3 class="anchored" data-anchor-id="image-credits-and-references">Image credits and references</h3>
+<ul>
+<li><em>Featured image: Macaque examining its reflection in a motorcycle mirror via Pixabay (CC0 Public Domain).</em></li>
+<li><em>Photo of Barack Obama by Pete Souza (White House, Public domain).</em></li>
+<li><em>Geometrical coordinate illustrations and editorial cartoon by KJ Runia.</em></li>
+<li><em>Film still from The Matrix (1999), Warner Bros.</em></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/opencurve\.info");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

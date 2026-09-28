@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2020-05-07">
+<meta name="description" content="How prime factorisation and roots of unity determine whether any given number of test tubes can be evenly balanced in a laboratory centrifuge">
+
+<title>Lab centrifuges and prime numbers</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../OpenCurveFavicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-fabf1179f7e22e0c8c747f2ec0e30e3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo-horizontal.png" alt="OpenCurve: A bit of maths and physics for everyone" class="navbar-logo light-content">
+    <img src="../../logo-horizontal.png" alt="OpenCurve: A bit of maths and physics for everyone" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Articles</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../mathematics.html"> 
+<span class="menu-text">Mathematics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../physics.html"> 
+<span class="menu-text">Physics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About / Privacy Policy</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-set-up" id="toc-the-set-up" class="nav-link active" data-scroll-target="#the-set-up">The set-up</a></li>
+  <li><a href="#prime-factorisation" id="toc-prime-factorisation" class="nav-link" data-scroll-target="#prime-factorisation">Prime factorisation</a></li>
+  <li><a href="#the-criterion" id="toc-the-criterion" class="nav-link" data-scroll-target="#the-criterion">The criterion</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a>
+  <ul class="collapse">
+  <li><a href="#an-8-slot-centrifuge" id="toc-an-8-slot-centrifuge" class="nav-link" data-scroll-target="#an-8-slot-centrifuge">An 8-slot centrifuge</a></li>
+  <li><a href="#a-12-slot-centrifuge" id="toc-a-12-slot-centrifuge" class="nav-link" data-scroll-target="#a-12-slot-centrifuge">A 12-slot centrifuge</a></li>
+  </ul></li>
+  <li><a href="#the-additive-shortcut" id="toc-the-additive-shortcut" class="nav-link" data-scroll-target="#the-additive-shortcut">The additive shortcut</a></li>
+  <li><a href="#final-remarks" id="toc-final-remarks" class="nav-link" data-scroll-target="#final-remarks">Final remarks</a>
+  <ul class="collapse">
+  <li><a href="#image-credits-and-references" id="toc-image-credits-and-references" class="nav-link" data-scroll-target="#image-credits-and-references">Image credits and references</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab centrifuges and prime numbers</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">mathematics</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    How prime factorisation and roots of unity determine whether any given number of test tubes can be evenly balanced in a laboratory centrifuge
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 7, 2020</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="column-screen">
+<p><img src="Lab-centrifuge.webp" class="nolightbox" alt="Gloved hands placing microcentrifuge test tubes into the rotor chamber of a benchtop laboratory centrifuge." style="width: 100%;"></p>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="author-sidebar">
+<p><a href="../../../kj_photo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../../../kj_photo.png" class="author-photo img-fluid"></a></p>
+<div class="author-name">
+<p><a href="../../en/about.html"><strong>KJ Runia, BSc (Hons) MInstP AMIMA</strong></a></p>
+</div>
+<div class="author-bio">
+<p>Holds a Bachelor of Science (Honours) degree in Mathematics and Physics from the School of Mathematics and Statistics and the School of Physical Sciences at The Open University, Walton Hall, Milton Keynes in the United Kingdom. Studies currently for an MPhys (Master of Physics). Is a Member of the Institute of Physics (IOP) and an Associate Member of the Institute of Mathematics and its Applications (IMA).</p>
+</div>
+</div>
+</div></div><div class="lead-in">
+<p>When microbiologists or molecular biologists conduct research on viruses, bacteria, fungi, or human cells, one indispensable instrument in their laboratory is the centrifuge. This device allows them to separate substances suspended within a test tube by density—enabling the purification of enveloped viruses, such as SARS-CoV-2, or the isolation of nucleic acids like DNA.</p>
+</div>
+<p>The rotor of a centrifuge spins at tens of thousands of revolutions per minute. It is critical that test tubes are placed in a balanced arrangement. If unevenly loaded, severe force imbalances can damage the rotor bearings or fling hazardous substances across the room<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p>Fortunately, there is an elegant mathematical method to determine whether any given number of test tubes can be balanced, based entirely on <strong>prime numbers</strong>. Remarkably, a complete mathematical proof for this general criterion was published relatively recently, in 2010.</p>
+<div style="width: 75%; margin: 1.5rem auto;">
+<div id="fig-rotor" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Close-up photograph of a metal centrifuge rotor spinning at high speed, creating motion blur around the central drive spindle.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rotor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="rotor-lab-centrifuge.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: A laboratory centrifuge rotor spinning at high angular velocity."><img src="rotor-lab-centrifuge.jpeg" class="img-fluid figure-img" alt="Close-up photograph of a metal centrifuge rotor spinning at high speed, creating motion blur around the central drive spindle."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rotor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A laboratory centrifuge rotor spinning at high angular velocity.
+</figcaption>
+</figure>
+</div>
+</div>
+<section id="the-set-up" class="level1">
+<h1>The set-up</h1>
+<p>We assume that all test tubes (and their contents) have identical mass. While one can calculate balance through torque and center of mass in classical mechanics, this problem can be formulated purely in terms of geometry and number theory.</p>
+<p>Suppose a centrifuge has <span class="math inline">\(n = 8\)</span> symmetrically spaced slots arranged on a circle:</p>
+<ul>
+<li><strong>1 test tube:</strong> Cannot be balanced; it will always be asymmetric.</li>
+<li><strong>2 test tubes:</strong> Easily balanced by placing them diametrically opposite one another.</li>
+<li><strong>3 test tubes:</strong> Impossible on an 8-slot rotor; any arrangement produces an off-centre net force.</li>
+<li><strong>4 test tubes:</strong> Balanced by forming a symmetric square configuration.</li>
+<li><strong>5 test tubes:</strong> Impossible, because leaving 3 empty slots is dynamically equivalent to placing 3 tubes!</li>
+<li><strong>6 test tubes:</strong> Balanced; leaving 2 empty slots is the exact complement of placing 2 tubes.</li>
+<li><strong>7 test tubes:</strong> Impossible; equivalent to leaving 1 empty slot.</li>
+<li><strong>8 test tubes:</strong> Trivial balance; all slots filled.</li>
+</ul>
+<p>Notice the complementary relationship: an arrangement of <span class="math inline">\(k\)</span> tubes is balanced if and only if the complementary arrangement of <span class="math inline">\(n - k\)</span> empty slots is also balanced (<a href="#fig-configurations" class="quarto-xref">Figure&nbsp;2</a>).</p>
+<div style="width: 85%; margin: 1.5rem auto;">
+<div id="fig-configurations" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Hand-drawn diagram of eight 8-hole circular centrifuge rotors, showing arrangements from 0 to 7 test tubes marked with green checkmarks for balanced configurations and red crosses for unbalanced ones.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-configurations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Lab-centrifuges-and-prime-numbers.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: All possible configurations for balancing test tubes in an 8-slot centrifuge rotor. Balanced arrangements are marked with green checks, unbalanced ones with red crosses."><img src="Lab-centrifuges-and-prime-numbers.jpg" class="img-fluid figure-img" alt="Hand-drawn diagram of eight 8-hole circular centrifuge rotors, showing arrangements from 0 to 7 test tubes marked with green checkmarks for balanced configurations and red crosses for unbalanced ones."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-configurations-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: All possible configurations for balancing test tubes in an 8-slot centrifuge rotor. Balanced arrangements are marked with green checks, unbalanced ones with red crosses.
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="prime-factorisation" class="level1">
+<h1>Prime factorisation</h1>
+<p>Recall that a prime number is an integer greater than 1 whose only positive divisors are 1 and itself (<span class="math inline">\(2, 3, 5, 7, 11, 13, \dots\)</span>).</p>
+<p>By the <strong>fundamental theorem of arithmetic</strong>, every integer greater than 1 can be uniquely represented as a product of prime factors. For example:</p>
+<p><span class="math display">\[12 = 2^2 \times 3,\]</span></p>
+<p><span class="math display">\[15 = 3 \times 5,\]</span></p>
+<p><span class="math display">\[16 = 2^4.\]</span></p>
+<p>Prime numbers act as the fundamental multiplicative building blocks of all integers.</p>
+</section>
+<section id="the-criterion" class="level1">
+<h1>The criterion</h1>
+<p>Suppose a centrifuge rotor has <span class="math inline">\(n\)</span> symmetrically spaced slots, and we wish to load <span class="math inline">\(k\)</span> identical test tubes (leaving <span class="math inline">\(n - k\)</span> empty slots):</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Balancing Rule:</strong> Determine the distinct prime factors of <span class="math inline">\(n\)</span>. A balanced configuration of <span class="math inline">\(k\)</span> test tubes exists if and only if <strong>both</strong> <span class="math inline">\(k\)</span> and <span class="math inline">\(n - k\)</span> can be written as a sum of these prime factors.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Mathematical proof via roots of unity
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In his 2010 paper, Gary Sivek formalised this problem by identifying the <span class="math inline">\(n\)</span> centrifuge positions with the <span class="math inline">\(n\)</span>-th roots of unity on the complex unit circle:</p>
+<p><span class="math display">\[z_m = e^{\frac{2\pi i}{n} m}, \quad m \in \{1, 2, \dots, n\}.\]</span></p>
+<p>Placing <span class="math inline">\(k\)</span> identical test tubes at positions <span class="math inline">\(S \subset \{1, \dots, n\}\)</span> corresponds to selecting <span class="math inline">\(k\)</span> roots of unity. The system is physically balanced when the centre of mass lies at the origin, meaning the vector sum of these positions vanishes:</p>
+<p><span class="math display">\[\sum_{m \in S} e^{\frac{2\pi i}{n} m} = 0.\]</span></p>
+<p>Applying theorems by Lam and Leung regarding vanishing sums of roots of unity, Sivek proved that a subset of <span class="math inline">\(k\)</span> roots sums to zero if and only if both <span class="math inline">\(k\)</span> and <span class="math inline">\(n - k\)</span> can be expressed as linear combinations of the prime factors of <span class="math inline">\(n\)</span> with non-negative integer coefficients.</p>
+<div style="width: 40%; margin: 1rem auto;">
+<div id="fig-roots" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Complex plane diagram displaying eight roots of unity arranged symmetrically along the circumference of a circle.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-roots-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="8th-root-of-unity.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: The 8th roots of unity evenly spaced along the unit circle in the complex plane."><img src="8th-root-of-unity.jpg" class="img-fluid figure-img" alt="Complex plane diagram displaying eight roots of unity arranged symmetrically along the circumference of a circle."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-roots-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: The 8th roots of unity evenly spaced along the unit circle in the complex plane.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="examples" class="level1">
+<h1>Examples</h1>
+<section id="an-8-slot-centrifuge" class="level3">
+<h3 class="anchored" data-anchor-id="an-8-slot-centrifuge">An 8-slot centrifuge</h3>
+<p>For <span class="math inline">\(n = 8\)</span>, the only prime factor is <span class="math inline">\(2\)</span>.</p>
+<ul>
+<li>Can we balance <strong>6</strong> tubes?
+<ul>
+<li>Occupied slots: <span class="math inline">\(6 = 2 + 2 + 2\)</span> (valid sum of 2s).</li>
+<li>Empty slots: <span class="math inline">\(8 - 6 = 2\)</span> (valid).</li>
+<li>Verdict: <strong>Yes</strong>, 6 test tubes can be balanced.</li>
+</ul></li>
+<li>Can we balance <strong>7</strong> tubes?
+<ul>
+<li>Empty slots: <span class="math inline">\(8 - 7 = 1\)</span>. The number 1 cannot be written as a sum of 2s.</li>
+<li>Verdict: <strong>No</strong>, 7 test tubes cannot be balanced.</li>
+</ul></li>
+</ul>
+</section>
+<section id="a-12-slot-centrifuge" class="level3">
+<h3 class="anchored" data-anchor-id="a-12-slot-centrifuge">A 12-slot centrifuge</h3>
+<p>For <span class="math inline">\(n = 12\)</span>, the prime factors are <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span>.</p>
+<p>Can we balance <strong>7</strong> test tubes in a 12-slot rotor?</p>
+<ul>
+<li>Occupied slots: <span class="math inline">\(7 = 2 + 2 + 3\)</span> (valid sum of prime factors <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span>).</li>
+<li>Empty slots: <span class="math inline">\(12 - 7 = 5 = 2 + 3\)</span> (valid sum of prime factors <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span>).</li>
+</ul>
+<p>Verdict: <strong>Yes</strong>, 7 test tubes can indeed be perfectly balanced in a 12-hole rotor! This counter-intuitive result works because a balanced 7-tube arrangement can be formed by superposing a balanced equilateral triangle (3 tubes) and two diametric pairs (<span class="math inline">\(2 + 2 = 4\)</span> tubes).</p>
+</section>
+</section>
+<section id="the-additive-shortcut" class="level1">
+<h1>The additive shortcut</h1>
+<p>Any time you can express your target number of tubes as a sum of configurations that are individually balanced, their superposition remains balanced. For example, in a 12-hole rotor, 2 tubes form a line, and 3 tubes form an equilateral triangle. Because <span class="math inline">\(7 = 2 + 2 + 3\)</span>, combining those independent symmetries yields a balanced arrangement.</p>
+</section>
+<section id="final-remarks" class="level1">
+<h1>Final remarks</h1>
+<p>Modern centrifuges feature electronic imbalance sensors, labeled rotor slots, and swinging-bucket compartments holding standardized tube racks that simplify balancing during routine laboratory work.</p>
+<p>The true elegance of this problem lies in the bridge it builds between everyday laboratory equipment and pure mathematics—connecting centrifugal dynamics to prime numbers, cyclotomic polynomials, and complex geometry.</p>
+<hr>
+<section id="image-credits-and-references" class="level3">
+<h3 class="anchored" data-anchor-id="image-credits-and-references">Image credits and references</h3>
+<ul>
+<li><em>Featured image: Centrifuge loading by Michail Tzortzatos (<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>).</em></li>
+<li><em>Spinning rotor photograph by musicalwoods (<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>).</em></li>
+<li><em>Configuration diagrams by KJ Runia.</em></li>
+<li>Sivek, G. (2010). “On vanishing sums of roots of unity”, <em>INTEGERS</em>, 10, A31, pp.&nbsp;369–378.</li>
+</ul>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Imbalance sensors are standard equipment on modern benchtop and ultracentrifuges to abort spinning in case of severe vibration.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/opencurve\.info");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

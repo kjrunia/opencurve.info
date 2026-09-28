@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2019-08-02">
+<meta name="description" content="How quantum fields, oscillating electron clouds, and vertical polarisation filter out blinding glare from roads, water, and screens">
+
+<title>How do polarised sunglasses work?</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../OpenCurveFavicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-fabf1179f7e22e0c8c747f2ec0e30e3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo-horizontal.png" alt="OpenCurve: A bit of maths and physics for everyone" class="navbar-logo light-content">
+    <img src="../../logo-horizontal.png" alt="OpenCurve: A bit of maths and physics for everyone" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Articles</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../mathematics.html"> 
+<span class="menu-text">Mathematics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../physics.html"> 
+<span class="menu-text">Physics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About / Privacy Policy</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#inside-the-glasses" id="toc-inside-the-glasses" class="nav-link active" data-scroll-target="#inside-the-glasses">Inside the glasses</a></li>
+  <li><a href="#why-are-polarised-sunglasses-vertically-polarised" id="toc-why-are-polarised-sunglasses-vertically-polarised" class="nav-link" data-scroll-target="#why-are-polarised-sunglasses-vertically-polarised">Why are polarised sunglasses vertically polarised?</a></li>
+  <li><a href="#pilots" id="toc-pilots" class="nav-link" data-scroll-target="#pilots">Pilots</a></li>
+  <li><a href="#cinema" id="toc-cinema" class="nav-link" data-scroll-target="#cinema">Cinema</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How do polarised sunglasses work?</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">physics</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    How quantum fields, oscillating electron clouds, and vertical polarisation filter out blinding glare from roads, water, and screens
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 2, 2019</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="column-screen">
+<p><img src="blue-sunglasses.webp" class="nolightbox" alt="Top-down portrait of a relaxed woman with bright turquoise hair wearing dark sunglasses while lying by the poolside." style="width: 100%;"></p>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="author-sidebar">
+<p><a href="../../../kj_photo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../../../kj_photo.png" class="author-photo img-fluid"></a></p>
+<div class="author-name">
+<p><a href="../../en/about.html"><strong>KJ Runia, BSc (Hons) MInstP AMIMA</strong></a></p>
+</div>
+<div class="author-bio">
+<p>Holds a Bachelor of Science (Honours) degree in Mathematics and Physics from the School of Mathematics and Statistics and the School of Physical Sciences at The Open University, Walton Hall, Milton Keynes in the United Kingdom. Studies currently for an MPhys (Master of Physics). Is a Member of the Institute of Physics (IOP) and an Associate Member of the Institute of Mathematics and its Applications (IMA).</p>
+</div>
+</div>
+</div></div><div class="lead-in">
+<p>According to our best understanding of the observable Universe, it is filled with an omnipresent electromagnetic field. Certain perturbations of that field correspond to what we call (electromagnetic) radiation, the visible part of which we call light or light particles, or photons. These disturbances can have specific but differing frequencies, which, when visible, we may perceive as red, yellow, green, blue or violet. Every photon has a frequency: some value is going up and down over time. It turns out that discovering what it is that is changing over time is the key to unlocking the answer to how polarised sunglasses work.</p>
+</div>
+<p>Traditionally, it’s useful to mathematically separate the electromagnetic field into two components: the magnetic and the electric subfield. For a slightly more in-depth discussion of this topic, have a look at <a href="../why-exactly-do-glass-and-liquids-refract-light/">Why, exactly, do glass and liquids refract light?</a> Geometrically, these subfields are orientated perpendicularly to one another. Have a look at <a href="#fig-em-field" class="quarto-xref">Figure&nbsp;1</a>.</p>
+<div id="fig-em-field" class="img-border quarto-float quarto-figure quarto-figure-center anchored" alt="Five-part diagram showing 3D field volume, perpendicular electric and magnetic planes, oscillating wavevectors, and multiple photon orientations.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-em-field-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="electromagnetic-field-5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1: A cartoon of the electromagnetic field. It consists of five parts (a–e) described below."><img src="electromagnetic-field-5.png" class="img-border img-fluid figure-img" alt="Five-part diagram showing 3D field volume, perpendicular electric and magnetic planes, oscillating wavevectors, and multiple photon orientations."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-em-field-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A cartoon of the electromagnetic field. It consists of five parts (a–e) described below.
+</figcaption>
+</figure>
+</div>
+<p><strong>Part a.</strong> A three-dimensional electromagnetic field (EM-field) pervades the observable Universe. Here, it is depicted as a finite block but that’s just a cartoony metaphor. In reality, it has the shape of the Universe, and it’s seemingly infinite, or, to be more precise, it’s everywhere you can possibly look.</p>
+<p><strong>Part b.</strong> As said before, it turns out to be very useful to mathematically separate the EM-field into two components: the magnetic and electric subfields, depicted here as two planes orientated perpendicularly.</p>
+<p><strong>Part c.</strong> When a photon passes through space, this is where the EM-field is disturbed. It is a local change of electric and magnetic values back and forth over time. Very important to note: there is nothing in space going up and down or left or right; it is just a cartoon depicting changing values of the respective subfields. The only thing that is actually spanning through space is the trajectory of the photon, depicted by an orange arrow.</p>
+<p><strong>Part d.</strong> For our polarised sunglasses, only the electric subfield is relevant, so we’ve left out the magnetic arrows; just the electric arrows are shown.</p>
+<p><strong>Part e.</strong> Of course, no light beam consists of merely one photon. In reality, a bundle of billions of photons are whizzing through space. The orientation of their EM-components will be at all sorts of angles.</p>
+<section id="inside-the-glasses" class="level1">
+<h1>Inside the glasses</h1>
+<div style="width: 80%; margin: 1.5rem auto;">
+<div id="fig-filter" class="img-border quarto-float quarto-figure quarto-figure-center anchored" alt="Schematic illustration of three horizontal rows of atoms with orange nuclei and diffuse electron clouds, with arrows showing oscillation occurring predominantly in the vertical direction.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-filter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="polarized-filter.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Figure&nbsp;2: A cartoon of atoms in the polarised filter of sunglasses. On average, they are lined up in a chain in a way as to allow the electron cloud to mainly move up and down, not left and right. The material is said to be vertically polarised."><img src="polarized-filter.jpg" class="img-border img-fluid figure-img" alt="Schematic illustration of three horizontal rows of atoms with orange nuclei and diffuse electron clouds, with arrows showing oscillation occurring predominantly in the vertical direction."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-filter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: A cartoon of atoms in the polarised filter of sunglasses. On average, they are lined up in a chain in a way as to allow the electron cloud to mainly move up and down, not left and right. The material is said to be vertically polarised.
+</figcaption>
+</figure>
+</div>
+</div>
+<p>The atoms of polarised sunglasses are lined up in a chain of atoms in such a way that the most wiggle room they have is in the vertical direction as depicted by <a href="#fig-filter" class="quarto-xref">Figure&nbsp;2</a>. Incoming photons transfer their energy, through the EM-field, to the wiggling electron cloud, which starts wiggling even more but only in the vertical direction. The latter will activate the EM-field with a vertically orientated electric subfield component, thereby propagating the vertically polarised parts of the incoming light beam.</p>
+<p>Photons with a horizontal polarisation, i.e.&nbsp;with a horizontally orientated electric subfield, wiggle the long chains of the sunglasses’ atoms in the horizontal direction. Their energy gets distributed over billions of atoms, horizontally, and is merely dissipated as heat: too low for light propagation. So, basically, these types of photons disappear and the sunglasses warm up a little bit.</p>
+<p>Lastly, photons with an electric subfield perturbation at an angle in between the horizontal and vertical direction will sometimes pass through, and sometimes dissipate.</p>
+</section>
+<section id="why-are-polarised-sunglasses-vertically-polarised" class="level1">
+<h1>Why are polarised sunglasses vertically polarised?</h1>
+<p>When light hits a surface, the outgoing or reflected light mostly consists of photons with the same electric orientation as that of the reflecting surface. So, roads and water mainly reflect horizontally polarised light. When you’re navigating a vehicle, you would definitely want to prevent glare from reflections off the road or water.</p>
+</section>
+<section id="pilots" class="level1">
+<h1>Pilots</h1>
+<p>Computer screens also emit polarised light. If you hold polarised sunglasses in front of one and turn them, at some point, the screen’s light will be blocked.</p>
+<div style="width: 70%; margin: 1.5rem auto;">
+<div id="fig-rotation" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Demonstration showing a pair of polarised sunglasses being rotated 90 degrees in front of a computer screen, turning completely black due to cross-polarisation.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rotation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="Polarized-sunglasses.gif" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Figure&nbsp;3: A pair of polarised sunglasses rotated by 90 degrees in front of an LCD monitor, demonstrating how cross-polarisation completely extinguishes transmitted light."><img src="Polarized-sunglasses.gif" class="img-fluid figure-img" alt="Demonstration showing a pair of polarised sunglasses being rotated 90 degrees in front of a computer screen, turning completely black due to cross-polarisation."></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rotation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: A pair of polarised sunglasses rotated by 90 degrees in front of an LCD monitor, demonstrating how cross-polarisation completely extinguishes transmitted light.
+</figcaption>
+</figure>
+</div>
+</div>
+<p>This is also why pilots <a href="https://www.faa.gov/pilots/safety/pilotsafetybrochures/media/sunglasses.pdf">don’t wear polarised sunglasses</a>: a slight turn of the head would make it impossible to quickly and reliably read vital information off their instruments. So, despite what expensive brands would like you to believe, a set of polarised sunglasses called something like “aviator sunglasses” is useless in real-life aviation.</p>
+<p>To check whether your sunglasses have genuine polarised filters, tilt them in front of a working computer screen. This way you’ll know which pair to leave at home before flying an aircraft.</p>
+</section>
+<section id="cinema" class="level1">
+<h1>Cinema</h1>
+<p>Watching a 3D film at the cinema requires a different type of polarised glasses. So, despite what many people may have told you, it’s not that one lens has been vertically polarised and the other horizontally. True, your left eye needs to receive slightly different images from your right eye, but this is achieved in a far more ingenious way.</p>
+<p>As you would want the audience to be able to watch the film despite their (sometimes involuntary) head movements, both the film projector and the 3D glasses cleverly exploit <a href="https://en.wikipedia.org/wiki/Polarized_3D_system#Circularly_polarized_glasses">circular polarisation</a>. Otherwise, the moment you were to lovingly tilt your head towards your companion’s shoulder, a simplistic left-right combination of horizontal and vertical polarisation would render any film star on the big silver screen into a vague and flat character.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/opencurve\.info");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

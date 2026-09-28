@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2020-07-12">
+<meta name="description" content="Ten essential concepts about particles, wave functions, and reality in accessible language">
+
+<title>Quantum mechanics in ten ideas for people on the move</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../OpenCurveFavicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-fabf1179f7e22e0c8c747f2ec0e30e3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../logo-horizontal.png" alt="OpenCurve A bit of maths and physics for everyone" class="navbar-logo light-content">
+    <img src="../../../logo-horizontal.png" alt="OpenCurve A bit of maths and physics for everyone" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-nederlands" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Nederlands</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-nederlands">    
+        <li>
+    <a class="dropdown-item" href="../../../nl/index.html">
+ <span class="dropdown-text">Artikelen</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../nl/over.html">
+ <span class="dropdown-text">Privacybeleid / Over ons</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-english" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">English</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-english">    
+        <li>
+    <a class="dropdown-item" href="../../../en/index.html">
+ <span class="dropdown-text">Articles</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../en/about.html">
+ <span class="dropdown-text">Privacy policy / About</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-taal--language" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Taal / Language</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-taal--language">    
+        <li>
+    <a class="dropdown-item" href="../../../nl/index.html">
+ <span class="dropdown-text">🇳🇱 Nederlands</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../en/index.html">
+ <span class="dropdown-text">🇬🇧 English</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#subatomic-particles" id="toc-subatomic-particles" class="nav-link active" data-scroll-target="#subatomic-particles">1: Subatomic particles</a></li>
+  <li><a href="#wave-functions" id="toc-wave-functions" class="nav-link" data-scroll-target="#wave-functions">2: Wave functions</a></li>
+  <li><a href="#quantum-state" id="toc-quantum-state" class="nav-link" data-scroll-target="#quantum-state">3: Quantum state</a></li>
+  <li><a href="#measurement-problem" id="toc-measurement-problem" class="nav-link" data-scroll-target="#measurement-problem">4: Measurement problem</a></li>
+  <li><a href="#schrödinger-equation" id="toc-schrödinger-equation" class="nav-link" data-scroll-target="#schrödinger-equation">5: Schrödinger equation</a></li>
+  <li><a href="#uncertainty" id="toc-uncertainty" class="nav-link" data-scroll-target="#uncertainty">6: Uncertainty</a></li>
+  <li><a href="#certainty" id="toc-certainty" class="nav-link" data-scroll-target="#certainty">7: Certainty</a></li>
+  <li><a href="#quantum-entanglement" id="toc-quantum-entanglement" class="nav-link" data-scroll-target="#quantum-entanglement">8: Quantum entanglement</a></li>
+  <li><a href="#quantum-field-theory" id="toc-quantum-field-theory" class="nav-link" data-scroll-target="#quantum-field-theory">9: Quantum Field Theory</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications">10: Applications</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Quantum mechanics in ten ideas for people on the move</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">physics</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Ten essential concepts about particles, wave functions, and reality in accessible language
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 12, 2020</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="column-screen">
+<p><img src="person-reading-child-page-open-book-717802-pxhere.com.jpg" class="nolightbox" alt="Three young women with dark curly hair sit on the ground of a paved street reading books, with colourful woven bags in front of them." style="width: 100%;"></p>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="author-sidebar">
+<p><a href="../../../kj_photo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../../../kj_photo.png" class="author-photo img-fluid"></a></p>
+<div class="author-name">
+<p><a href="../../../en/about.html"><strong>KJ Runia, BSc (Hons) MInstP AMIMA</strong></a></p>
+</div>
+<div class="author-bio">
+<p>Holds a Bachelor of Science (Honours) degree in Mathematics and Physics from the School of Mathematics and Statistics and the School of Physical Sciences at The Open University, Walton Hall, Milton Keynes. Studies currently for an MPhys (Master of Physics). Is a Member of the Institute of Physics (IOP) and an Associate Member of the Institute of Mathematics and its Applications (IMA).</p>
+</div>
+</div>
+</div></div><div class="lead-in">
+<p>The last few posts on quantum mechanics have been quite extensive and at times rather deep for those who are on the move. So, here are ten important ideas about particles and wave functions for when you’re <em>en route</em> in slightly more normal English.</p>
+</div>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Listen to this article</strong> <em>(audio edition for people on the move)</em></p>
+<audio controls="" style="width: 100%; margin-top: 0.5rem;" src="OpenCurve.info-Quantum_mechanics_in_ten_ideas_for_people_on_the_move.mp3">
+</audio>
+</div>
+</div>
+</div>
+<section id="subatomic-particles" class="level1">
+<h1>1: Subatomic particles</h1>
+<p>To describe objects in our everyday world, such as rocks, buildings, and cars, Newton’s laws suffice. To describe <strong>subatomic, elementary particles</strong>, such as electrons, protons, neutrons, and photons, however, there is a whole different type of physics: quantum mechanics.</p>
+</section>
+<section id="wave-functions" class="level1">
+<h1>2: Wave functions</h1>
+<p>The most complete description of an elementary particle is called the <a href="../this-is-not-an-atom/">wave function</a>. Actually, the word ‘particles’ seems to incorrectly refer to tiny points, balls or spheres or something, which they are absolutely not. They aren’t waves either. ‘Particles’ are wave functions with wave-like properties (emphasis on ‘like’). Upon interaction with other particles and/or measurement, they exhibit particle-like behaviour, however. The wave function contains all physically possible states a ‘particle’ can be in at the moment we measure its state. The wave function can be seen as a mathematical description of the probabilities of the states that the particle will snap into as soon as you measure it. It’s often visualised as a ‘cloud’ even though that’s not what it actually looks like. It’s just a visual metaphor for a mathematical object that actually lives in complex space as it is <a href="../complex-numbers-an-introduction/">complex valued</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Spins-EN.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="I usually just draw vague spherical thingies."><img src="Spins-EN.jpg" class="img-fluid figure-img" alt="I usually just draw vague spherical thingies."></a></p>
+<figcaption>I usually just draw vague spherical thingies.</figcaption>
+</figure>
+</div>
+</section>
+<section id="quantum-state" class="level1">
+<h1>3: Quantum state</h1>
+<p>Once measured, particles show one specific quantum state out of a whole range of possible quantum states prior measurement. <a href="../the-double-slit-experiment/">Position</a> is the most intuitive to understand example of a quantum state. Momentum is another (momentum is a measure of the amount of motion of a particle). Then there are states such as polarity, spin, and a bunch of others. The wave function encapsulates all these possible states and yields a probability-value for actually measuring a particular state. In other words, even before you measure it, the wave function allows you to calculate the chances of encountering this particular quantum state.</p>
+</section>
+<section id="measurement-problem" class="level1">
+<h1>4: Measurement problem</h1>
+<p>As long you <em>don’t</em> measure a particle, and as long as it doesn’t interact with other particles, the particle is not in a specific quantum state yet. Instead, its wave function just describes all these possible states as though they are mathematically added on top of each other. This ‘adding of quantum states’ is what is meant when physicists talk about <strong>superposition</strong>. The term is from the mathematics of waves and <strong>linear algebra</strong> in general, not quantum mechanics in particular. While the situation is often portrayed as particles being in multiple states all at once (such as being in two positions at the same time), it’s more accurate to say that <strong>the particle does not have a specific state at all</strong>. There’s just the wave function with all the probabilities of future quantum states. As soon as you perform a measurement, the particle snaps out of its wave function full of possibilities into a single possibility. <strong>In other words, what you see is not what it was. What you observe is just a sliver of its total prior existence.</strong> How this happens, nobody knows. It’s called the <strong>measurement problem</strong>. There’s a Nobel Prize waiting for you.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Hydrogen-Atom-Close-Up.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="This extraordinary experiment yielded a photo of the closest approximation of the wave function of an electron in a hydrogen atom we have to date. It was made by the Polish physicist Aneta Sylwia Stodolna et al.&nbsp;(Source: Stodolna AS et al.&nbsp;(2013) “Hydrogen Atoms Under Magnification: Direct Observation of the Nodal Structure of Stark States,” Physical Review Letters, 110(21), pp.&nbsp;213001–213001.)"><img src="Hydrogen-Atom-Close-Up.jpg" class="img-fluid figure-img" alt="This extraordinary experiment yielded a photo of the closest approximation of the wave function of an electron in a hydrogen atom we have to date. It was made by the Polish physicist Aneta Sylwia Stodolna et al.&nbsp;(Source: Stodolna AS et al.&nbsp;(2013) “Hydrogen Atoms Under Magnification: Direct Observation of the Nodal Structure of Stark States,” Physical Review Letters, 110(21), pp.&nbsp;213001–213001.)"></a></p>
+<figcaption>This extraordinary experiment yielded a photo of the closest approximation of the wave function of an electron in a hydrogen atom we have to date. It was made by the Polish physicist Aneta Sylwia Stodolna et al.&nbsp;(Source: Stodolna AS et al.&nbsp;(2013) “Hydrogen Atoms Under Magnification: Direct Observation of the Nodal Structure of Stark States,” <em>Physical Review Letters</em>, 110(21), pp.&nbsp;213001–213001.)</figcaption>
+</figure>
+</div>
+</section>
+<section id="schrödinger-equation" class="level1">
+<h1>5: Schrödinger equation</h1>
+<p>Wave functions obey the <a href="../this-is-not-an-atom/">Schrödinger equation</a>. You could say that what Newton’s second law is for objects in our everyday world, is what the Schrödinger equation is for the subatomic world. It gives us the ability to predict how the wave function evolves in time. This is a completely classical equation; it is 100% deterministic. Where the wave function captures a range of probabilities, the Schrödinger equation tells us how this range of probabilities changes over time perfectly predictably so. In other words, it doesn’t predict the exact state of a particle once measured, but it does accurately predict the probability-value of an exact state once measured at any given time.</p>
+</section>
+<section id="uncertainty" class="level1">
+<h1>6: Uncertainty</h1>
+<p>There is a fundamental informational trade-off between certain possible states such as between position and momentum, energy and time, and time and frequency. The origin for this does not lie in quantum mechanics. It’s due to the way they are related to each other. Mathematically, these variables are called <a href="https://opencurve.info/heisenbergs-uncertainty-principle/">Fourier transform pairs</a> or conjugate variables. To calculate one from the other, you have to execute a mathematical procedure called a Fourier transform. The trade-off is that Fourier transforming a variable whose range of possible values is smaller leads to the other variable having a larger range of possible values. And if a range of possible values becomes larger, then the exact outcome of measurement is less certain (the probability of a specific state after measurement becomes more uncertain). Heisenberg showed that this uncertainty principle also applies to the wave function in quantum mechanics, hence, there the principle is called <a href="https://opencurve.info/heisenbergs-uncertainty-principle/">Heisenberg’s uncertainty principle</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Morlet-wavelet-Fourier-analysis.png.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Fourier showed that if a sound is fairly well-defined in time (bottom), it has to be comprised of multiple frequencies (illustrated as multiple waves at multiple frequencies). That’s the fundamental uncertainty principle with waves."><img src="Morlet-wavelet-Fourier-analysis.png.webp" class="img-fluid figure-img" alt="Fourier showed that if a sound is fairly well-defined in time (bottom), it has to be comprised of multiple frequencies (illustrated as multiple waves at multiple frequencies). That’s the fundamental uncertainty principle with waves."></a></p>
+<figcaption>Fourier showed that if a sound is fairly well-defined in time (bottom), it has to be comprised of multiple frequencies (illustrated as multiple waves at multiple frequencies). That’s the fundamental uncertainty principle with waves.</figcaption>
+</figure>
+</div>
+</section>
+<section id="certainty" class="level1">
+<h1>7: Certainty</h1>
+<p>That same principle predicts that, while very valid at the scale of subatomic particles, <strong>this uncertainty becomes utterly meaningless at our large-scale world of everyday objects</strong>. A bowling ball whose range of possible positions is very limited (locked in a very tight enclosure with little to no leeway), will never portray any uncertainty values pertaining to its motion (momentum), for instance. By Heisenberg’s uncertainty principle, upon measurement, it might show to have the speed of <span class="math inline">\(3.283 \times 10^{-35}\text{ m/s}\)</span>. This means that after 965.9 billion years it will have travelled the distance of the width of a proton. So, no, uncertainty effects play no role in our everyday world, unless you are doing experiments with a running time of seventy times the age of our current Universe. In that case, you will have to deal with the uncertainty of the width of a proton.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> We do note that extraordinarily sensitive larger-scale equipment such as the mirrors at the <a href="https://en.wikipedia.org/wiki/LIGO">LIGO</a> and <a href="https://en.wikipedia.org/wiki/Virgo_interferometer">Virgo</a> experiments are <a href="https://www.ligo.caltech.edu/news/ligo20200701">capable</a> of measuring quantum effects, however, this isn’t really unexpected nor is it the same as saying a human body is in a quantum superposition. Measuring quantum effects is one thing, brains supposedly being in two places on Earth (‘based on principles from quantum mechanics’) is a whole other thing.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="sport-alley-recreation-basketball-leisure-lane-892903-pxhere.com_.jpg.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Missing the pins has nothing to do with practical nor theoretical quantum effects. You’re just not that good."><img src="sport-alley-recreation-basketball-leisure-lane-892903-pxhere.com_.jpg.webp" class="img-fluid figure-img" alt="Missing the pins has nothing to do with practical nor theoretical quantum effects. You’re just not that good."></a></p>
+<figcaption>Missing the pins has nothing to do with practical nor theoretical quantum effects. You’re just not that good.</figcaption>
+</figure>
+</div>
+</section>
+<section id="quantum-entanglement" class="level1">
+<h1>8: Quantum entanglement</h1>
+<p>When two or more particles can only be described by one wave function – not as separate wave functions – those particles are said to be <a href="https://opencurve.info/quantum-entanglement-non-locality-and-the-state-of-a-two-particle-system/">quantum entangled</a>, either partly or completely. A measurement performed on one particle immediately determines the measurement outcome on the other entangled particle, irrespective of the spatial distance between them. This is why this phenomenon is said to be non-local. How this happens, is unknown. This effect dissipates to zero when entangled particles interact with yet other particles. At the large scale of our everyday world, the number of particles inside an object to be interacted with is so great, quantum entanglement completely fades away. In very special conditions, however, such as in our labs, entanglement can be sustained for quite some time.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="quantum-entanglement.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="This isn’t what quantum entanglement looks like. It’s just a picture."><img src="quantum-entanglement.jpeg" class="img-fluid figure-img" alt="This isn’t what quantum entanglement looks like. It’s just a picture."></a></p>
+<figcaption>This isn’t what quantum entanglement looks like. It’s just a picture.</figcaption>
+</figure>
+</div>
+</section>
+<section id="quantum-field-theory" class="level1">
+<h1>9: Quantum Field Theory</h1>
+<p>Over the years, the mathematical and physical theory of (quantum) wave mechanics has been extended to describe quantum fields as the fundamental building blocks of our Universe. The Universe is made of quantum fields. The most complete description of fields are wave functions. This is called <a href="https://opencurve.info/why-exactly-do-glass-and-liquids-refract-light/">Quantum Field Theory (QFT)</a>. The most successful version of QFT is called the <strong>Standard Model of quantum physics</strong>. ‘Particles’ are here some kind of disturbance in their field: an electron is a disturbance in the electron field. The particle’s description is here part of the wave function of its entire field. The challenge is now to extend this quantum field theory into its next form, encapsulating something called quantum gravity. What we don’t know yet, for example, is how to have space and time in extreme regions such as black holes, naturally appear out of a quantum theory.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="EN-Fields-a.jpg.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="My very sketchy way of showing quantum fields. Proton field is not really a thing. It’s just a shortcut for several quark fields. Besides, fields aren’t two-dimensional, they’re obviously three-dimensional."><img src="EN-Fields-a.jpg.webp" class="img-fluid figure-img" alt="My very sketchy way of showing quantum fields. Proton field is not really a thing. It’s just a shortcut for several quark fields. Besides, fields aren’t two-dimensional, they’re obviously three-dimensional."></a></p>
+<figcaption>My very sketchy way of showing quantum fields. Proton field is not really a thing. It’s just a shortcut for several quark fields. Besides, fields aren’t two-dimensional, they’re obviously three-dimensional.</figcaption>
+</figure>
+</div>
+</section>
+<section id="applications" class="level1">
+<h1>10: Applications</h1>
+<p>While the famous physicist and Nobel Prize winner <a href="https://en.wikipedia.org/wiki/Richard_Feynman">Richard Feynman</a> is known for having said, “I think I can safely say that nobody understands quantum mechanics”, this is sometimes incorrectly taken to be a reason to state that, therefore, physicists don’t know what they’re talking about. Feynman alluded to the fact that there is much we don’t know about the foundations of quantum mechanics. There is still much employment in solving hard problems such as quantum gravity, the measurement problem, the strong CP problem, the interpretation of quantum mechanics, non-locality, and so forth.</p>
+<p>On the other hand, we now have WiFi, internet, touchscreens, lasers, MRI scanners, LEDs, flash memory, solid state disks, the old crunchy hard disks, transistors, and CPUs or integrated chips (ICs) in general.</p>
+<p>I think I can safely say that the fact that you’ve plucked this article out of the air to have it displayed on your (touch)screen is at least an indication of the level at which “nobody understands quantum mechanics”.</p>
+<p>Nevertheless, we’re far from done. There is still much to discover in this Universe with a bit of maths and physics.</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>When people state or think that everyday objects (our bodies, brains, tennis balls, animals) can exhibit quantum effects such as being at multiple places at the same time, I suspect this is because they have no well-defined idea how small subatomic particles really are and no inkling as to how large the everyday world is in those terms. Also, they didn’t do the calculations.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

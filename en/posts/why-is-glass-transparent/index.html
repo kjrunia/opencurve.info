@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2020-09-22">
+<meta name="description" content="A clear case of quantum apathy">
+
+<title>Why is glass transparent?</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../OpenCurveFavicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-fabf1179f7e22e0c8c747f2ec0e30e3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../logo.png" alt="OpenCurve A bit of maths and physics for everyone" class="navbar-logo light-content">
+    <img src="../../../logo.png" alt="OpenCurve A bit of maths and physics for everyone" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-nederlands" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Nederlands</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-nederlands">    
+        <li>
+    <a class="dropdown-item" href="../../../nl/index.html">
+ <span class="dropdown-text">Artikelen</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../nl/over.html">
+ <span class="dropdown-text">Privacybeleid / Over ons</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-english" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">English</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-english">    
+        <li>
+    <a class="dropdown-item" href="../../../en/index.html">
+ <span class="dropdown-text">Articles</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../en/about.html">
+ <span class="dropdown-text">Privacy policy / About</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-taal--language" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Taal / Language</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-taal--language">    
+        <li>
+    <a class="dropdown-item" href="../../../nl/index.html">
+ <span class="dropdown-text">🇳🇱 Nederlands</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../en/index.html">
+ <span class="dropdown-text">🇬🇧 English</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#molecules-atoms-elementary-particles" id="toc-molecules-atoms-elementary-particles" class="nav-link active" data-scroll-target="#molecules-atoms-elementary-particles">Molecules, atoms, elementary particles</a></li>
+  <li><a href="#light" id="toc-light" class="nav-link" data-scroll-target="#light">Light</a></li>
+  <li><a href="#light-and-energy" id="toc-light-and-energy" class="nav-link" data-scroll-target="#light-and-energy">Light and energy</a></li>
+  <li><a href="#impressionable-electrons" id="toc-impressionable-electrons" class="nav-link" data-scroll-target="#impressionable-electrons">Impressionable electrons</a></li>
+  <li><a href="#why-is-glass-transparent" id="toc-why-is-glass-transparent" class="nav-link" data-scroll-target="#why-is-glass-transparent">Why is glass transparent?</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Why is glass transparent?</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">physics</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    A clear case of quantum apathy
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 22, 2020</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="column-screen">
+<p><a href="aquarium-725798.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="aquarium-725798.jpg" class="img-fluid" style="width:100.0%"></a></p>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="author-sidebar">
+<p><a href="../../../kj_photo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="../../../kj_photo.png" class="author-photo img-fluid"></a></p>
+<div class="author-name">
+<p><a href="../../../en/about.html"><strong>KJ Runia, BSc (Hons) MInstP AMIMA</strong></a></p>
+</div>
+<div class="author-bio">
+<p>Founder &amp; author. Holds a Bachelor of Science (Honours) degree in Mathematics and Physics from the School of Mathematics and Statistics and the School of Physical Sciences at The Open University, Walton Hall, Milton Keynes. Studies currently for an MPhys (Master of Physics). Is a Member of the Institute of Physics (IOP) and an Associate Member of the Institute of Mathematics and its Applications (IMA).</p>
+</div>
+</div>
+</div></div><div class="lead-in">
+<p>Imagine transparent materials didn’t exist. What would cars look like? How would you be able to look at the cold Winter Moon from your bedroom window without getting cold yourself? Would air be opaque too? What about the lenses in our eyes? And if all materials consist of molecules, how is it that the molecules of glass are transparent while others aren’t? This last question was asked by the oldest<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> son of one of my best friends last week.</p>
+</div>
+<p>Firstly, I’ll try to give an answer as short as possible. If you’d like to know more, you can read on. Be warned, however: the article is quite possibly a bit long. It’s just that the answer to this seemingly easy question asks for quite some background knowledge. On the other hand, with a brilliant question like this one—let’s just say, you’re asking for it.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Short Answer">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Short Answer
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sometimes the composition of a molecule is such that its electrons will hardly respond to passing photons. For all intents and purposes, they will leave them be. At most, they will change their course a little. To our eyes, the material is then transparent.</p>
+<p>If electrons do react to incoming photons, they might reflect them or absorb all of their energy, making the photons disappear. Sometimes they just vibrate a little bit and make the entire atoms vibrate a little bit too (<a href="https://en.wikipedia.org/wiki/Phonon">phonon</a>), but nothing much else happens. The material just increases temperature for a minuscule amount. Sometimes the electrons vibrate so much that they’ll radiate that energy very soon after, causing new photons to be created, which then move on to the rest of the universe. To us, that material is then opaque; the photons radiated from the material end up in our eyes.</p>
+<p>So, this was the short version. If you’d like to know more, do read on!</p>
+</div>
+</div>
+<section id="molecules-atoms-elementary-particles" class="level1">
+<h1>Molecules, atoms, elementary particles</h1>
+<p>Perhaps you know this but just to be sure: all solids, liquids, and gasses consist of molecules. Here you see a photo of a bunch of so-called pentacene<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> molecules made by Canadian scientists[1]. These molecules aren’t present in glass, however, it does give an impression of what molecules can look like.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Pentacene_on_Ni111_STM-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Caterpillar-like pentacene molecules"><img src="Pentacene_on_Ni111_STM-1.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="Caterpillar-like pentacene molecules"></a></p>
+</figure>
+</div>
+<figcaption>Caterpillar-like pentacene molecules</figcaption>
+</figure>
+</div>
+<p>Every caterpillar-like thingy is a molecule. When they stick close enough together, they form a solid. If they are capable of sliding past each other, it’s a liquid. And if they’re capable of jiggling a lot more away from each other, it’s a gas.</p>
+<p>It’s possible to look more closely. Those molecules consist of atoms. Do have a look at this cool photo of one such molecule which Swiss physicists and one physicist at Utrecht University were able to snap in 2009<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="afm1-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="A pentacene molecule, consisting of five benzene rings"><img src="afm1-1.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="A pentacene molecule, consisting of five benzene rings"></a></p>
+</figure>
+</div>
+<figcaption>A pentacene molecule, consisting of five benzene rings</figcaption>
+</figure>
+</div>
+<p>You might be able to distinguish five hexagonal shapes with protrusions. At every corner and every protrusion, an atom is present. You don’t see the individual atoms – they’re too small for that. However, you can see the structure formed by the chain of atoms, thereby shaping the molecule into existence.</p>
+<p>Back to glass. The window in your bedroom is composed of different types of molecules. There are a lot of <a href="https://en.wikipedia.org/wiki/Silicon_dioxide">silicon dioxide molecules</a>, <a href="https://en.wikipedia.org/wiki/Sodium_carbonate">sodium carbonate</a> molecules, <a href="https://en.wikipedia.org/wiki/Calcium_oxide">calcium oxide</a> molecules, <a href="https://en.wikipedia.org/wiki/Magnesium_oxide">magnesium oxide</a> molecules, and some <a href="https://en.wikipedia.org/wiki/Aluminium_oxide">aluminium oxide</a> molecules. Here you see a drawing of one such silicon dioxide molecule.</p>
+<div style="width: 70%; margin: 0 auto;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Silicon-dioxide-3D-balls-1.png.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="A molecule of silicon dioxode"><img src="Silicon-dioxide-3D-balls-1.png.webp" class="img-fluid figure-img" alt="A molecule of silicon dioxode"></a></p>
+<figcaption>A molecule of silicon dioxode</figcaption>
+</figure>
+</div>
+</div>
+<p>Do they look like that for real? No, absolutely not. It’s just a <a href="https://en.wikipedia.org/wiki/Conceptual_model">conceptual model</a>. In science, a model is meant to be a tool and never an exact copy of reality. And yet, we use models as they are quite helpful for imagining what we’re working with and for doing calculations on them. You have to keep in mind, though, it’s not what it really looks like.</p>
+<p>From (the model of) the silicon dioxide molecule you can see that it is comprised of three atoms: one silicon atom (grey) and two oxygen atoms<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> (red). You may also wonder what these two little bars on each side are supposed to be. They symbolise the electrons which are shared by all the atoms amongst each other. Atoms can stick together when they share electrons with each other. In other words, it refers to how strong the atomic bond is. More bars equals a stronger bond.</p>
+<p>Every atom consists of yet smaller parts. Apart from one<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>, atoms are made up of three types of particles: electrons, protons, and neutrons. At the core of the atom are all the protons and neutrons. The electrons kind of swirl around them in a cloud-like type of existence. As electrons don’t themselves consist of smaller things, they are said to be elementary<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> particles. Here you see a model of an atom.</p>
+<div style="width: 70%; margin: 0 auto;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="atom-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="A model of an atom"><img src="atom-2.jpg" class="img-fluid figure-img" alt="A model of an atom"></a></p>
+<figcaption>A model of an atom</figcaption>
+</figure>
+</div>
+</div>
+<p>The core (or ‘nucleus’) with all the protons and neutrons is so small that it’s usually drawn as a point or a little ball. However, if you were to zoom in, you’d see a lump of protons and neutrons. Around it there is the cloud-like electron or multiple electrons. (If you’d like to know exactly why a cloud is the model for one or more electrons, you can read <a href="">This is not an atom</a>.)</p>
+<p>It’s quite possible that an electron is further removed from the nucleus than shown here. If an electron receives energy, it’ll jump further away from the nucleus. After a very short period, the electron might jump back to its old position. If it does so, its energy leaves the atom again in the form of light. One of the ways in which the electron receives energy is light.</p>
+</section>
+<section id="light" class="level1">
+<h1>Light</h1>
+<p>What is light? Is it a wave, does it consist of particles? For a long time, physicists had no idea what light was exactly. Since the seventeenth century, great debates went on between physicists supporting <a href="https://en.wikipedia.org/wiki/Isaac_Newton">Sir Isaac Newton</a> and physicists supporting <a href="https://en.wikipedia.org/wiki/Christiaan_Huygens">Christiaan Huygens</a>. I fear a little that some science teachers at high schools still think it’s a big mystery. One of my science teachers in high school told us he was still on the fence whether it’s particles or waves. Unfortunately for him, since slightly less than a hundred years ago, we know.</p>
+<div style="width: 70%; margin: 0 auto;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="IsaacNewton-ChristiaanHuygens-1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Isaac Newton (left): light = particles (tiny balls). Christiaan Huygens (right): light = waves. The correct quantum mechanical answer is: light = a disturbance in the Universe-pervading electromagnetic field. Depending on what is practical, one uses the mathematics of classical waves or the mathematics of photons (wave packets, not balls!) to work with. Physics students learn to use both approaches."><img src="IsaacNewton-ChristiaanHuygens-1.jpg" class="img-fluid figure-img" alt="Isaac Newton (left): light = particles (tiny balls). Christiaan Huygens (right): light = waves. The correct quantum mechanical answer is: light = a disturbance in the Universe-pervading electromagnetic field. Depending on what is practical, one uses the mathematics of classical waves or the mathematics of photons (wave packets, not balls!) to work with. Physics students learn to use both approaches."></a></p>
+<figcaption>Isaac Newton (left): light = particles (tiny balls). Christiaan Huygens (right): light = waves. The correct quantum mechanical answer is: light = a disturbance in the Universe-pervading electromagnetic field. Depending on what is practical, one uses the mathematics of classical waves or the mathematics of photons (wave packets, not balls!) to work with. Physics students learn to use both approaches.</figcaption>
+</figure>
+</div>
+</div>
+<p>What I’m about to tell you is not something you’ll likely learn in high school. I’m not sure why but it may have to do with textbook authors finding the mathematics too complicated. So, what you’re about to read is more or less what you’ll learn at university as a physics student, only without the mathematics.</p>
+<p>The problem with the question ‘wave or particle’ is that it suggests there’s only one choice. This is incorrect. The question should be: What is light? The answer is: a field<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>, one of the many Universe-pervading fields present, in this case the <em>electromagnetic field</em>. And to be even more precise: light is a <em>disturbance</em> of this electromagnetic field. One can describe this disturbance as either a wave or a particle, depending on what is more practical for the matter at hand.</p>
+<p>Besides, in modern physics the meaning of the word ‘particle’ differs from what you’d normally expect. In physics a particle is actually a packet, a wave packet. It’s not a pellet, it’s not a tiny ball or even a point. It’s a tiny packet of information which we mathematically describe as a tiny wave (a disturbance).</p>
+<div style="width: 70%; margin: 0 auto;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="richardfeynman-2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Richard Feynman was an important, Nobel Prize-winning physicist who made enormous contributions to quantum electrodynamics."><img src="richardfeynman-2.jpg" class="img-fluid figure-img" alt="Richard Feynman was an important, Nobel Prize-winning physicist who made enormous contributions to quantum electrodynamics."></a></p>
+<figcaption><a href="https://en.wikipedia.org/wiki/Richard_Feynman">Richard Feynman</a> was an important, Nobel Prize-winning physicist who made enormous contributions to quantum electrodynamics.</figcaption>
+</figure>
+</div>
+</div>
+<p>According to one of the best theories we have of our Universe to date, so-called quantum electrodynamics<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> (QED), the Universe is pervaded by a mostly invisible – yet sometimes visible! – electromagnetic field. In most cases, that field does nothing at all. You can’t smell it, you can’t touch it, you can’t see it.</p>
+<p>However, when the electromagnetic field is being disturbed at a specific place in the Universe – e.g.&nbsp;on the inside of the LED lamp in your lavatory – then that disturbance will propagate in all directions, from that specific spot in the Universe towards the very rest of the Universe – i.e.&nbsp;the space of your lavatory. This disturbance you can see! I’m not sure how your pets might call this disturbance, however, humans call it light.</p>
+<div style="width: 70%; margin: 0 auto;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="132_1510416.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Albert Einstein"><img src="132_1510416.jpg" class="img-fluid figure-img" alt="Albert Einstein"></a></p>
+<figcaption>Albert Einstein</figcaption>
+</figure>
+</div>
+</div>
+<p>If your eyes were able to zoom in immensely, you would see that light actually consists of billions and billions and billions of tiny disturbances. Light is a bundle of tiny disturbances in the omnipresent electromagnetic field. Those tiny disturbances used to be called ‘light quanta’ by <a href="https://en.wikipedia.org/wiki/Albert_Einstein">Albert Einstein</a> and others. However, since 1928, we call them photons<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>. In popular books and magazines and even by physicists they are called ‘particles’. Again, they’re not pellets or tiny balls or anything. The word ‘particle’ refers to them being very tiny but it doesn’t say anything about what they look like. As <em>model</em>, tiny pellets or points are sometimes used, however, it’s not what they are. Photons are, just like electrons, elementary, however.</p>
+<p>In high school and at university, to do calculations on light, the wave model of light is used rather often. The great mathematician and physicist <a href="https://en.wikipedia.org/wiki/James_Clerk_Maxwell">James Clerk Maxwell</a> was one of the founders of the mathematical framework of the wave model of light. He and others before him are responsible for us still talking about ‘light waves’ instead of photons. The classical electromagnetic theory of Maxwell works so well that it’s compulsory for physics students to study this wonderful theory. So, it’s not at all wrong to speak of <em>light</em> waves.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="James_Clerk_Maxwell.png.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="James Clerk Maxwell"><img src="James_Clerk_Maxwell.png.webp" class="img-fluid quarto-figure quarto-figure-center figure-img" alt="James Clerk Maxwell"></a></p>
+</figure>
+</div>
+<figcaption>James Clerk Maxwell</figcaption>
+</figure>
+</div>
+<p>In the twentieth century, however, physicists found that quantum electrodynamics was able to predict and describe more phenomena than Maxwell’s classical electromagnetic theory, so the first kind of replaced the latter. Put differently, Maxwell’s theory is still highly useful in industrial applications, however, with QED, you can do what Maxwell’s theory can do <em>plus a lot more</em>.</p>
+<p>This is the way it usually goes in physics. The <a href="https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation">law of universal gravitation</a> of <a href="https://en.wikipedia.org/wiki/Isaac_Newton">Sir Isaac Newton</a> works brilliantly. You can even apply it to Mars landings. However, the theory of gravity by <a href="https://en.wikipedia.org/wiki/Albert_Einstein">Albert Einstein</a>, so-called <a href="https://en.wikipedia.org/wiki/General_relativity">general relativity</a>, can do what Newton’s theory does and a lot more, more precisely. So, general relativity has kind of replaced Newton’s law of universal gravitation. And yet, the latter is compulsory in high school and at university. It’s not wrong. It’s very useful, even! However, it does have its limitations. That’s why we first learn about Newton’s gravity and only later do physics students have to learn about Einstein’s gravity. Without Einstein’s general relativity, Google Maps and GPS-systems inside cars would not have worked properly.</p>
+<p>Hence, physics students learn everything about Maxwell’s wave theory and only later do they learn about quantum electrodynamics. And without quantum electrodynamics you would not have had computer processors, there would have been no internet, no mobile phones, no touchscreens.</p>
+</section>
+<section id="light-and-energy" class="level1">
+<h1>Light and energy</h1>
+<p>The great physicist <a href="https://en.wikipedia.org/wiki/Max_Planck">Max Planck</a> came up with the idea that every photon has a specific energy level. He also showed that with every energy level comes a particular light colour. Bright blue light carries more energy than deep-dark red light. Sometimes light (photons) has (have) so much energy that it has (they have) become invisible to our human eyes. High-energy ultraviolet<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> light (UV light) is invisible to us. However, if your eyes were much more sensitive than they are now, you would see a very bright ‘more violet than violet-coloured’ light. Conversely, light can have very little energy. So little even, we won’t be able to see it anymore. Hence, infrared<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a> light is invisible to us. However, if our eyes were slightly more sensitive, we would see ‘less red than red-coloured’ light.</p>
+<div style="width: 70%; margin: 0 auto;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="Max_Planck_1933.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="This cheery looking fellow was a physicist and a genius. His name was Max Planck. A photograph from 1933."><img src="Max_Planck_1933.jpg" class="img-fluid figure-img" alt="This cheery looking fellow was a physicist and a genius. His name was Max Planck. A photograph from 1933."></a></p>
+<figcaption>This cheery looking fellow was a physicist and a genius. His name was Max Planck. A photograph from 1933.</figcaption>
+</figure>
+</div>
+</div>
+<p>WiFi and 4/5G are light too. The photons have very little energy compared to the photons in your lavatory. If our eyes had been thousands of times more sensitive than they are now, you would have seen that the antennas of the WiFi router and the mobile phones are basically lamps radiating ‘less than less than less than (thousands of times ’less than’) red-coloured’ light.</p>
+<p>The electromagnetic field pervading our Universe can thus be disturbed at various energy levels. Depending on that, light looks differently. It has varying colours or is invisible – which it is most of the time. Our eyes aren’t the best instruments to look around with. Of all possible energy levels the electromagnetic field can be at, we can only discern just a few. That energy portion is what we call visible light.</p>
+<p>Another word for disturbances of the electromagnetic field is <em>electromagnetic radiation</em>. Depending on the energy level of the radiation, we have different terms for it, such as ‘radioactive radiation’ or ‘gamma radiation’. However, all these things – the lavatory light, the WiFi, 4/5G for the mobile phone, the head lights of the car, the radio waves from the neighbour, the Bluetooth speaker in the kitchen, the x-ray images at the dentist, the microwave – are all light, are all electromagnetic radiation, are all disturbances of the one and the same electromagnetic field. <em>The only difference is the energy level of that disturbance.</em></p>
+<p>The correct order going from very little to deadly amounts of energy is the following: radio, WiFi, microwave<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a>, 4/5G &gt;&gt; infrared light (TV remote) &gt;&gt; visible light (lavatory light, club lights) &gt;&gt; UV light (take care, apply sunscreen) &gt;&gt; x-rays (only operated by professional medical workers) &gt;&gt; gamma radiation (deadly, except for <a href="https://opencurve.info/wp-content/uploads/2019/10/professor-hulk-1.jpg">Bruce Banner</a>) &gt;&gt; cosmic radiation (deadly, except for <a href="https://opencurve.info/wp-content/uploads/2019/10/captain-marvel-image-brie-larson-1.jpg">Captain Marvel</a>.</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>As most electrons inside of walls of houses won’t respond much to electromagnetic disturbances (photons) at the energy level of WiFi (very little energy), to WiFi photons, the walls are almost transparent. This is why you can receive WiFi straight through the walls. If your eyes were sensitive enough, you would be able to see the light coming from the router, straight through the walls. Those same electrons, however, <em>do</em> react to photons at the much higher energy level corresponding to visible light. This is why <em>those</em> photons <em>do not</em> fly through the wall. And this is why we find walls to be quite the opaque type objects. Nevertheless, the electrons <em>do not</em> respond again to photons at the even higher – much higher – energy levels of x-rays. This is exactly why walls <em>are</em> perfectly transparent to <a href="https://en.wikipedia.org/wiki/Superman">Superman</a>.</p>
+<p>Depending on the composition of the molecules and atoms do electrons more or less react to the presence of photons at varying energy levels. If electrons of the material do not respond to photons at the energy level corresponding to visible light, then the material is transparent to us.</p>
+</div>
+</div>
+</div>
+<p>Below you see a diagram of the full spectrum<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a> of electromagnetic radiation (click to enlarge). As you can see, only a small portion is visible to us.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="EN-Spectrum.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="A diagram (not to scale) of electromagnetic radiation, or photons, if you will. The mentioned values are the frequencies of the photons, expressed in gigahertz (GHz). The higher the frequency, the higher the energy of the photon."><img src="EN-Spectrum.jpg" class="img-fluid figure-img" alt="A diagram (not to scale) of electromagnetic radiation, or photons, if you will. The mentioned values are the frequencies of the photons, expressed in gigahertz (GHz). The higher the frequency, the higher the energy of the photon."></a></p>
+<figcaption>A diagram (not to scale) of electromagnetic radiation, or photons, if you will. The mentioned values are the frequencies of the photons, expressed in gigahertz (GHz). The higher the frequency, the higher the energy of the photon.</figcaption>
+</figure>
+</div>
+<p>GHz refers to the frequency of the photon and is a measure for the photon’s energy level. The higher the frequency, the higher the energy level. Ultraviolet radiation is where it’s starting to become dangerous to us. This is where our cells become damaged (‘DNA damage’). As long as you’re not exposed to the Sun for too long and x-ray photography is done in very short amounts of time, it’s going to be fine. But be careful. Again, gamma radiation and cosmic radiation are deadly. I understand, it doesn’t feel comfortable at all, but please, please do listen to your parents when you’re going out for a space walk. Put on that spacesuit.</p>
+</section>
+<section id="impressionable-electrons" class="level1">
+<h1>Impressionable electrons</h1>
+<p>In the previous century, physicists such as Albert Einstein discovered that electrons can be influenced by incoming photons<a href="#fn14" class="footnote-ref" id="fnref14" role="doc-noteref"><sup>14</sup></a>. It very much depends on the way the electrons are captured inside the molecules – which depends on the type of atoms – at which energy level photons they will start reacting.</p>
+<p>In the case of glass, the electrons do feel electromagnetic disturbances slightly. This is why they do start to jiggle differently just a notch. That jiggling causes changes in the part of the electromagnetic field that is inside of the glass. And these changes will influence the photons (disturbances in that same electromagnetic field) in such a way that they’ll change course slightly.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="808103800.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="There’s a bear swimming in a pool in a zoo. The pool is visible from the side through a large window. Due to refraction, the head of the bear above the surface seems to be located at a different place than the rest of its submerged body. The bear seems beheaded and yet, it lives."><img src="808103800.jpg" class="img-fluid figure-img" alt="There’s a bear swimming in a pool in a zoo. The pool is visible from the side through a large window. Due to refraction, the head of the bear above the surface seems to be located at a different place than the rest of its submerged body. The bear seems beheaded and yet, it lives."></a></p>
+<figcaption>There’s a bear swimming in a pool in a zoo. The pool is visible from the side through a large window. Due to refraction, the head of the bear above the surface seems to be located at a different place than the rest of its submerged body. The bear seems beheaded and yet, it lives.</figcaption>
+</figure>
+</div>
+<p>This is why the image behind glass can seem to be slightly warped. The same happens when light goes from air to water (as water, too, contains electrons which react to incoming photons). The electrons don’t do too much so that photons can just pass through, however, they do enough so that the photons do change course slightly. Or a lot as you can see by the water in the photo above. In my article Why, exactly, do glass and liquids refract light? we take a deep dive into this phenomenon.</p>
+</section>
+<section id="why-is-glass-transparent" class="level1">
+<h1>Why is glass transparent?</h1>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>And so, glass is transparent as the electrons in glass molecules aren’t capable of reacting very much to incoming electromagnetic disturbances (photons). Just a little. So, they do bend the original trajectory of the photons slightly.</p>
+</div>
+</div>
+</div>
+<p>There are materials containing electrons responding to all energy levels except those corresponding to blue light, for example. This means that blue light can just pass through while the rest is being absorbed. To us, this material seems to be a blue filter.</p>
+<p>It’s also possible to produce materials carrying electrons which react to all photons in the visible part of the spectrum. They do this so strongly that photons will be reflected completely. We call that a mirror.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="pexels-photo-1207875-1.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Close-up photo of primate looking in a mirror"><img src="pexels-photo-1207875-1.jpeg" class="img-fluid figure-img" alt="Close-up photo of primate looking in a mirror"></a></p>
+<figcaption>Close-up photo of primate looking in a mirror</figcaption>
+</figure>
+</div>
+<p>Note that we’re talking mostly about photons we can see. To us most glass is transparent. However, we can also produce glass which seems transparent as it lets visible light pass through, while they are much less transparent to birds at the same time.</p>
+<p>We are incapable of seeing UV light. Birds can, however. So, if glass is produced in such a way that they will let visible light pass through but not UV light, they seem less transparent to birds, preventing them to bump into it.</p>
+<p>So, the answer to the question, ‘And if all materials consist of molecules, how is it that the molecules of glass are transparent while others aren’t?’, should rather be: ‘Transparent to whom? To birds? Or to humans?’</p>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>If I’m not mistaken, thirteen at the time I’m writing this.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Dinca, L. E. <em>et al.</em> (2015) “Pentacene on Ni(111): Room-Temperature Molecular Packing and Temperature-Activated Conversion to Graphene,” <em>Nanoscale</em>, 7(7), pp.&nbsp;3263–3269. doi: <a href="https://doi.org/10.1039/C4NR07057G">10.1039/C4NR07057G</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Gross, L. <em>et al.</em> (2009) “The Chemical Structure of a Molecule Resolved by Atomic Force Microscopy,”” <em>Science</em>, 325(5944), pp.&nbsp;1110–1114. doi: <a href="https://doi.org/10.1126/science.1176210">10.1126/science.1176210</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>‘Oxygen’ and ‘oxide’ stem from the ancient-Greek words for ‘sharp’ (ὀξύς, oxús), and ‘birth’ (γένος, génos), and the Latin word for ‘acid’, which is acidus. Lastly, the word ‘di’ stems from the ancient-Greek δίς (dís), meaning ‘twice’. As the molecule consists of two oxygen atoms, the official chemical name of the molecule is thus silicon dioxide.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>the <a href="https://en.wikipedia.org/wiki/Hydrogen">hydrogen</a> atom<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>‘Elementary’ stems from the Latin word elementum, carrying a meaning like ‘first principle’. There is nothing that goes further down than what is elementary. Elements always form the basis for other things.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>In mathematics and physics, we call this a <a href="https://en.wikipedia.org/wiki/Gauge_theory">gauge field</a>. It’s quite abstract mathematics. However, no matter how abstract, it has proven to be highly applicable in practice. Mobile phones would not have existed without these abstract mathematics.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>‘Quantum’ is Latin for ‘how much’. Physicists have been using the word as a synonym for ‘particle’. Plural is quanta. ‘Dynamics’ stems from the ancient-Greek δυναμικός, dunamikós, ‘powerful’ en refers to the theory describing forces and change of forces.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>This stems from the ancient-Greek φῶς, phôs, which ironically means ‘light’.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>‘Ultra’ is Latin for ‘beyond’. So, ultraviolet means beyond violet.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>‘Infra’ is Latin for ‘below’. So, infrared is ‘below’ or ‘less than’ red.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>If you want to know whether microwave radiation is deadly or not, do give my article [Is microwave oven radiation unhealthy?] a read.<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn13"><p>‘Spectrum’ is Latin for ‘appearance’. So, if you speak of the spectrum of something, such as electromagnetism, then you’re referring to all of its appearances.<a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn14"><p>This is what he received the Nobel Prize for. You can read more about that in my article [The formula that got Albert Einstein the Nobel Prize and should stop us getting sunburn all the time].<a href="#fnref14" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

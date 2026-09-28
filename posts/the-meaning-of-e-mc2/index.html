@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2019-09-06">
+<meta name="description" content="Why mass is not converted into energy, why pure energy does not exist, and what Einstein really meant">
+
+<title>The meaning of E=mc²</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../OpenCurveFavicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-fabf1179f7e22e0c8c747f2ec0e30e3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../logo-horizontal.png" alt="OpenCurve: A bit of maths and physics for everyone" class="navbar-logo light-content">
+    <img src="../../logo-horizontal.png" alt="OpenCurve: A bit of maths and physics for everyone" class="navbar-logo dark-content">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Articles</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../mathematics.html"> 
+<span class="menu-text">Mathematics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../physics.html"> 
+<span class="menu-text">Physics</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About / Privacy Policy</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#standing-on-the-shoulders-of-giants" id="toc-standing-on-the-shoulders-of-giants" class="nav-link active" data-scroll-target="#standing-on-the-shoulders-of-giants">Standing on the shoulders of giants</a></li>
+  <li><a href="#energy-is-a-mathematical-idea" id="toc-energy-is-a-mathematical-idea" class="nav-link" data-scroll-target="#energy-is-a-mathematical-idea">Energy is a mathematical idea</a></li>
+  <li><a href="#its-not-all-about-that-mass" id="toc-its-not-all-about-that-mass" class="nav-link" data-scroll-target="#its-not-all-about-that-mass">It’s not all about that mass</a></li>
+  <li><a href="#resistance-is-crucial" id="toc-resistance-is-crucial" class="nav-link" data-scroll-target="#resistance-is-crucial">Resistance is crucial</a></li>
+  <li><a href="#the-complete-equation" id="toc-the-complete-equation" class="nav-link" data-scroll-target="#the-complete-equation">The complete equation</a></li>
+  <li><a href="#the-meaning-of-e-mc²" id="toc-the-meaning-of-e-mc²" class="nav-link" data-scroll-target="#the-meaning-of-e-mc²">The meaning of E = mc²</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a>
+  <ul class="collapse">
+  <li><a href="#image-credits" id="toc-image-credits" class="nav-link" data-scroll-target="#image-credits">Image credits</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The meaning of E=mc²</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">physics</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Why mass is not converted into energy, why pure energy does not exist, and what Einstein really meant
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 6, 2019</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="column-screen">
+<p><img src="Sun.webp" class="nolightbox" alt="Extreme ultraviolet image of the Sun showing an intense X2.0-class solar flare bursting from its limb against deep black space" style="width: 100%;"></p>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="author-sidebar">
+<p><a href="../../../kj_photo.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="../../../kj_photo.png" class="author-photo img-fluid"></a></p>
+<div class="author-name">
+<p><a href="../../en/about.html"><strong>KJ Runia, BSc (Hons) MInstP AMIMA</strong></a></p>
+</div>
+<div class="author-bio">
+<p>Holds a Bachelor of Science (Honours) degree in Mathematics and Physics from the School of Mathematics and Statistics and the School of Physical Sciences at The Open University, Walton Hall, Milton Keynes in the United Kingdom. Studies currently for an MPhys (Master of Physics). Is a Member of the Institute of Physics (IOP) and an Associate Member of the Institute of Mathematics and its Applications (IMA).</p>
+</div>
+</div>
+</div></div><div class="lead-in">
+<p>Probably the most famous equation on this planet is <span class="math inline">\(E = mc^2\)</span>. Energy equals mass times the speed of light squared.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Usually, the formula is associated with Albert Einstein. This relationship between energy, mass, and the speed of light, this equation, has a name: the mass-energy equivalence. Perhaps you’ve read or heard people explain that “Einstein taught us”, that mass is a form of energy, mass is frozen energy, mass can be converted into energy, and that, in the end, all <em>matter</em> is essentially pure energy.</p>
+</div>
+<p>The equation is, however, definitely not about all of that. At least, not in this Universe. Here, we will discuss the actual meaning of it. We think it’s time for disposing of some of the unnecessary obscurantism accompanying many popular explanations. We think the involved mathematicians and physicists of yore deserve better.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="132_1510430.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Albert Einstein (right) with Austrian-Dutch physicist Paul Ehrenfest (left) and Ehrenfest’s son in Ehrenfest’s home in Leiden, The Netherlands."><img src="132_1510430.jpg" class="img-fluid figure-img" alt="Albert Einstein (right) with Austrian-Dutch physicist Paul Ehrenfest (left) and Ehrenfest’s son in Ehrenfest’s home in Leiden, The Netherlands."></a></p>
+<figcaption>Albert Einstein (right) with Austrian-Dutch physicist Paul Ehrenfest (left) and Ehrenfest’s son in Ehrenfest’s home in Leiden, The Netherlands.</figcaption>
+</figure>
+</div>
+<section id="standing-on-the-shoulders-of-giants" class="level1">
+<h1>Standing on the shoulders of giants</h1>
+<p>Einstein wasn’t the first to write down this very relationship between mass and energy. There were many others before him who, one way or the other, explored the connection between mass, energy, and velocity. However, most hypothesised that a mechanical mass increase was exclusively due to interactions with electromagnetic fields. They called it electromagnetic self-energy of some kind, giving rise to a form of electromagnetic mass (Miller, 1981; Okun, 1989). Einstein then showed that there was no need for such a concept and was the first to derive the relation correctly.</p>
+<p>However, over the course of a few years, he published several derivations of the equation, none of which were literally written down as <span class="math inline">\(E = mc^2\)</span>. You might not recognise them if you saw them. Furthermore, the versions he did write down, weren’t universally true.</p>
+<p>Lastly, the famous equation isn’t the complete version. Usually, people only know the snazzy edition fitting on baseball caps. The full equation is valid in a more universal way and sometimes referred to by contemporary physicists as the “correct version”.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> However, this one wasn’t first formulated by Einstein but by Paul Dirac (Eisberg &amp; Resnick, 1974; Miller, 1981). We will get back to that.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="IMG_0566.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Among others, these incredible minds have all derived and used some version of the famous equation before Einstein."><img src="IMG_0566.jpg" class="img-fluid figure-img" alt="Among others, these incredible minds have all derived and used some version of the famous equation before Einstein."></a></p>
+<figcaption>Among others, these incredible minds have all derived and used some version of the famous equation before Einstein.</figcaption>
+</figure>
+</div>
+</section>
+<section id="energy-is-a-mathematical-idea" class="level1">
+<h1>Energy is a mathematical idea</h1>
+<p>We should remind ourselves that <em>energy</em> isn’t any “thing”. As we mentioned in a previous <a href="https://opencurve.info/energy-is-neither-fundamental-nor-conserved/">article</a>, it isn’t some invisible, immaterial, fluid-like “essence” which everything is made of, within and behind the façade of the tangible world. <a href="https://youtu.be/QPXsYOPex4s/">Fork</a>, no.</p>
+<p>It has always been just a number, an accounting tool, an important and practical, mathematical concept, first proposed by the 17th century German scholar Gottfried Wilhelm von Leibniz. How is it a mathematical concept? It’s the number you get when you multiply an object’s mass with its velocity squared.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> It’s a pragmatic way of keeping the books on these two things.</p>
+<p>Suppose we have a billiard table with three billiard balls. We ignore any sort of friction. Imagine this isolated system of balls changing internally: the balls constantly collide and bounce off of the edge of the table. He assumed that what doesn’t change, is their mass. What does change, are their velocities. Leibniz then noticed that if you multiply for each ball its mass with its velocity squared, and summed all three products, that sum remained constant, irrespective of how the balls were bouncing in which direction, and how fast, at each point in time (until you changed something to the system by introducing a whack by a cue stick, for example).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="IMG_0569.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="A sketch of a carom billiards table illustrating Leibniz’s conservation quantity (vis viva)."><img src="IMG_0569.jpg" class="img-fluid figure-img" alt="A sketch of a carom billiards table illustrating Leibniz’s conservation quantity (vis viva)."></a></p>
+<figcaption>A sketch of a carom billiards table illustrating Leibniz’s conservation quantity (vis viva).</figcaption>
+</figure>
+</div>
+<p>This was the early formulation of what we now fancifully call the law of conservation of energy,<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> which, by the way, is true in a small enough patch of the Universe, such as Earth or the solar system, but in the context of the entire observable Universe, for instance, <a href="https://opencurve.info/energy-is-neither-fundamental-nor-conserved/">energy is not conserved</a>. So, indeed, the law of conservation of energy is fundamental enough for us, Earthlings, and our physics experiments; however, contrary to what people usually think, in the grander scheme of the Universe, it’s not.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
+<p>For the purpose of this post, however, this is irrelevant. What is important to note, is that since then, with their propensity to invent intricate systems of categorisation, humans have made distinctions between various forms of energy. Think of potential energy (something’s high up and can fall down or wound up and unwind rapidly), thermal energy (something’s hot), chemical energy (something’s “charged”), and kinetic energy (something moves). All of these, including their mother-concept “energy”, are human constructs. Thinking of any of these nouns as referring to physically separate, physical, tangible things is, ironically, a <a href="https://en.wikipedia.org/wiki/Category_mistake">category mistake</a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="catchingslimer-825x461.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Energy isn’t an ephemeral substance. In this scene from Ghostbusters, the streams are proton beams from particle accelerators, not beams of pure energy."><img src="catchingslimer-825x461.png" class="img-fluid figure-img" alt="Energy isn’t an ephemeral substance. In this scene from Ghostbusters, the streams are proton beams from particle accelerators, not beams of pure energy."></a></p>
+<figcaption>Energy isn’t an ephemeral substance. In this scene from Ghostbusters, the streams are proton beams from particle accelerators, not beams of pure energy.</figcaption>
+</figure>
+</div>
+</section>
+<section id="its-not-all-about-that-mass" class="level1">
+<h1>It’s <a href="https://youtu.be/7PCkvCPvDXk">not</a> all about that mass</h1>
+<p>Sometimes, people misinterpreted Albert Einstein. In the old days, again, being the talented labellers that they are, humans split up the term “mass” into rest mass and relativistic mass. Rest mass is the mass when the object is at rest. Relativistic mass is the mass when the object is in motion. If then the object would start to move faster and faster, then this particular mass would become larger and larger, because, you know, that’s what he said.</p>
+<p>Well, no. He wrote in his third 1905 paper (1905a, p.&nbsp;920), <em>Zur Elektrodynamik bewegter Körper</em>, an equation for the kinetic energy of an electron, which went as follows:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="First-Emc2-perhaps.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Excerpt from Einstein’s 1905 paper showing the formula for kinetic energy"><img src="First-Emc2-perhaps.jpeg" class="img-border img-fluid figure-img" alt="Excerpt from Einstein’s 1905 paper showing the formula for kinetic energy"></a></p>
+<figcaption>Excerpt from Einstein’s 1905 paper showing the formula for kinetic energy</figcaption>
+</figure>
+</div>
+<p>While it may not look like it, you could say that this was his first expression for the relationship between (kinetic) energy, mass, and speed of light squared.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> It does require a little translation, but it’s easy. Ignore the part in the middle, focus on the letter <span class="math inline">\(W\)</span>, and the part behind the last equals sign. You should know that in modern notation, kinetic energy <span class="math inline">\(W = E_k\)</span>, rest mass <span class="math inline">\(\mu = m_0\)</span>, and speed of light <span class="math inline">\(V = c\)</span>. So, what it says is:</p>
+<p><span class="math display">\[E_k = \frac{m_0c^2}{\sqrt{1-\dfrac{v^2}{c^2}}} - m_0c^2.\]</span></p>
+<p>So, this is slowly starting to resemble our familiar <span class="math inline">\(E = mc^2\)</span>. It doesn’t state, however, that <em>mass</em> increases. It only says that when the speed of the object <span class="math inline">\(v\)</span> approaches the speed of light <span class="math inline">\(c\)</span>, the result of this whole equation is infinity – infinite energy.</p>
+<p>As the standing interpretation is that mass equals energy (mass-energy equivalence), people nevertheless concluded that if the energy of a moving object becomes infinite at the speed of light, that an object’s <em>mass</em> becomes infinite, or <em>relativistic mass</em>, to be precise (in the minds of the old folk).</p>
+<p>This, however, is something of the past – well, technically. As soon as 1940, the great Lev Landau and Evgeny Lifshitz ignored the distinction between rest mass and relativistic mass in their book <em>The Classical Theory of Fields</em>. The legendary John A. Wheeler and Edwin F. Taylor also brought an up-to-date <em>Spacetime Physics</em> to the reading table. Unfortunately, many textbooks today still mention archaic notions, terms, and notation.</p>
+<p>Contemporary professional physicists don’t speak of relativistic mass anymore. In <a href="https://opencurve.info/einsteins-special-relativity-in-under-6-999-minutes-for-people-on-the-move/">special relativity</a>, Einstein showed that observations and measurements depend on one’s frame of reference. By definition, there are at least a couple of things that do not depend on the motion of observers. Besides the spacetime interval, the laws of physics, and the speed of light, this turns out to be rest mass.</p>
+<p>An object’s rest mass is invariant, i.e.&nbsp;it doesn’t vary or change, regardless of the motion of the observer relative to the object (Taylor &amp; Wheeler, 1992, p.&nbsp;211). And, as you can see in Einstein’s equation for the kinetic energy, only rest mass is used. No mentioning of relativistic mass whatsoever. In fact, Einstein himself wrote (as cited in Okun, 1989, p.&nbsp;32):</p>
+<blockquote class="blockquote">
+<p>“It is not good to introduce the concept of mass <span class="math inline">\(M = m/(\sqrt{1-v^2/c^2})\)</span> of a body for which no clear definition can be given. It is better to introduce no other mass concept than the ‘rest mass’ <span class="math inline">\(m\)</span>. Instead of introducing <span class="math inline">\(M\)</span> it is better to mention the expression for momentum and energy of a body in motion.”</p>
+</blockquote>
+<p>Of course, <span class="math inline">\(M\)</span> is what humans would later call “relativistic mass”, which means that they did it anyway, against Einstein’s wishes.</p>
+<p>Today, however – well, at least since 1940 – professional physicists speak only of mass. We tossed out relativistic mass as, with Einstein, it’s “not good”. Furthermore, the adjective “rest” in rest mass is redundant. Mass <em>is</em> about an object at rest. If it’s in motion, we speak of the product of some proportion of mass and velocity: either momentum or energy. An object’s mass does not grow by its motion.</p>
+</section>
+<section id="resistance-is-crucial" class="level1">
+<h1>Resistance is crucial</h1>
+<p>So, what is mass then? Well, just to be clear, mass isn’t weight: the same amount of mass has different weight on different planets. We were taught this in high school. A spring scale measures weight, not mass. A balance with calibrated counter-weights – <em>cough</em> masses – is your best option during interplanetary travels. These masses should have been calibrated to the definition of a <a href="https://www.bipm.org/en/measurement-units/">kilogram</a> according to the <a href="https://en.wikipedia.org/wiki/International_Bureau_of_Weights_and_Measures">International Bureau of Weights and Measures</a>.</p>
+<p>Mass isn’t matter either. Mass and matter are different categories. The first is a property, the second is a “thing”. Elementary “particles”, things,<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> such as the electron, have a certain amount of mass. An electron gains its mass through interacting with the Higgs field, the existence of which was <a href="https://youtu.be/0Tnd8bxDYOs">proved</a> in 2012 at <a href="https://en.wikipedia.org/wiki/CERN">CERN</a>. And the amount of elementary particles does correlate with the amount of mass. However, the mass of an object isn’t defined by merely the amount of elementary particles: it’s also the motion of gluons inside protons, the motion of electrons, atoms, molecules – the kinetic, thermal, and chemical energy contained <em>within</em> the (resting) object.</p>
+<p>Einstein wrote this in his fourth paper of 1905, <em>Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig?</em> (1905b, p.&nbsp;641):</p>
+<blockquote class="blockquote">
+<p>“If a body releases the energy <span class="math inline">\(L\)</span> in the form of radiation, its mass decreases by <span class="math inline">\(L/V^2\)</span>,”</p>
+</blockquote>
+<p>where, in modern notation, <span class="math inline">\(L = E\)</span>, and <span class="math inline">\(V = c\)</span>. Also, the energy he’s talking about is not the kinetic energy (of a body in motion) but the internal energy (of a body at rest), such as thermal energy. And yes, this does mean that mass increases or decreases depending on the object’s internal energy.</p>
+<p>Two structurally identical balls of steel have different mass if one ball is hotter (more mass) than the other due to their diverging thermal energy content. Two structurally identical mobile phones have different mass if one is charged (more mass) and the other is out of juice (electrochemical energy). Note, we are talking about the whole object being at rest in its reference frame.</p>
+<p>As soon as either object starts radiating light or heat, they lose mass. The fraction <span class="math inline">\(E/c^2\)</span>, however, is very small because the speed of light is very high. And so, the extra mass gained or lost is so small that this may be a reason for people confusing mass with the amount of matter. It’s almost the same. It’s the amount of matter plus something more, its internal energy.</p>
+<p>Mass could be best described by the resistance to acceleration – a ratio between the force needed to accelerate it to the extent it’s accelerating. Mass is inertial mass, an object’s inertia (as Einstein put it in the title of his 1905b paper).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="132_1510416.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Albert Einstein"><img src="132_1510416.jpg" class="img-fluid figure-img" alt="Albert Einstein"></a></p>
+<figcaption>Albert Einstein</figcaption>
+</figure>
+</div>
+</section>
+<section id="the-complete-equation" class="level1">
+<h1>The complete equation</h1>
+<p>If you’re not into equations any longer, skip this section. If you want to know the real equation, let’s go.</p>
+<p>Einstein published several derivations. One of the more familiar was the following for the total energy:</p>
+<p><span class="math display">\[E_T = \frac{m_0c^2}{\sqrt{1-\dfrac{v^2}{c^2}}}.\]</span></p>
+<div style="width: 38%; float: right; margin: 0 0 1rem 1.5rem;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="IMG_0570.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Derivation sketch of the energy components"><img src="IMG_0570.jpg" class="img-fluid figure-img" alt="Derivation sketch of the energy components"></a></p>
+<figcaption>Derivation sketch of the energy components</figcaption>
+</figure>
+</div>
+</div>
+<p>If you happen to be fluent in algebra, then you could see how we obtain <span class="math inline">\(E = mc^2\)</span>. If not, not to worry. If an object is at rest, it has no speed, so <span class="math inline">\(v = 0\)</span>. If you fill in that number in the equation, the denominator of the big fraction becomes the value 1. And anything divided by 1 equals exactly that same anything. So, that means that what you get is <span class="math inline">\(E = m_0c^2\)</span>.</p>
+<p>Of course, since nowadays there is only one mass, which is <span class="math inline">\(m\)</span>, and since “rest” is redundant, we should really leave out the subscript 0. This also means that the famous equation <span class="math inline">\(E = mc^2\)</span> is only applicable if the object isn’t moving in our (inertial) reference frame. Moreover, it’s not applicable to phenomena without mass either, such as a photon. Hence:</p>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><span class="math inline">\(E = mc^2\)</span> is not universally true. Only in an inertial reference frame where the object isn’t moving, and only in the case of particles with mass, does this equation hold. This equation is not valid for photons and gluons.</p>
+</div>
+</div>
+</div>
+<p>The following equation, however, does hold for massless as well as massive particles, and while Einstein laid the groundwork, the genius <a href="https://en.wikipedia.org/wiki/Paul_Dirac">Paul Dirac</a> was to write this down for the first time in 1928 (Eisberg &amp; Resnick, 1974; Miller, 1981), albeit in a slightly more technical fashion than presented here. The following equation handles all objects, including light:</p>
+<p><span class="math display">\[E^2 = m^2c^4 + p^2c^2.\]</span></p>
+<p>The letter <span class="math inline">\(p\)</span> is the <a href="https://en.wikipedia.org/wiki/Momentum">momentum</a>. Suppose we want to calculate the energy of a photon. Since the photon has no mass (<span class="math inline">\(m = 0\)</span>), this equation becomes <span class="math inline">\(E = pc\)</span>, which is, indeed, the correct relation between energy and a photon. If you try to use <span class="math inline">\(E = mc^2\)</span> to calculate the energy of a photon, you get a silly answer.</p>
+<p>So, <span class="math inline">\(E = mc^2\)</span> isn’t even a universal equation because it doesn’t fly for massless particles: photons and gluons. The equation first written down by Paul Dirac does, however. And it still fits on a T-shirt.</p>
+<p>Often, though, it’s written as:</p>
+<p><span class="math display">\[E^2 = (pc)^2 + (mc^2)^2,\]</span></p>
+<p>which makes it possibly even snazzier as it shows a beautiful Pythagorean relationship triangle.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="132_1254852.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Paul Dirac"><img src="132_1254852.jpg" class="img-fluid figure-img" alt="Paul Dirac"></a></p>
+<figcaption>Paul Dirac</figcaption>
+</figure>
+</div>
+</section>
+<section id="the-meaning-of-e-mc²" class="level1">
+<h1>The meaning of E = mc²</h1>
+<p>All well and good, but, technicalities aside, <em>what does it mean?</em></p>
+<p>What it means is that <em>energy is mass</em>, proportioned by a factor of <span class="math inline">\(c^2\)</span>.</p>
+<p>What it also means is that an object’s mass is a measure of its total <em>intrinsic</em> energy (potential, thermal, chemical, electrical, even kinetic, if parts inside the object have motion) proportioned by a factor of <span class="math inline">\(1/c^2\)</span>.</p>
+<p><span class="math inline">\(E = mc^2\)</span> should actually be written <span class="math inline">\(E_0 = mc^2\)</span> as it’s about the energy of an object at rest and the subscript 0 usually denotes something at rest.</p>
+<p>However, it <em>isn’t</em> the <em>full</em> equation.</p>
+<p>What it <em>doesn’t</em> mean is that energy is matter, and, conversely, it doesn’t mean that matter is energy. <em>Mass isn’t matter</em>. This is a category mistake.</p>
+<p>It also doesn’t mean that mass can be converted into energy or vice versa. For one, mass cannot be converted as it isn’t a “thing”. Secondly, energy isn’t a “thing” either. Mass is a property, a measurable property. Energy is also a property, a <em>calculable</em> property, which can be done by measuring mass.</p>
+<p>Imagine an object had the following properties: size, colour, hardness, and energy. Suppose the equation had said <span class="math inline">\(E = \text{hardness} \times c^2\)</span>. Perhaps it’s more clear now that this doesn’t mean that hardness gets converted into energy. What it means is that you have a mathematical way of <em>calculating</em> one measure in terms of the other measure. The only thing that’s being converted here is a number, a quantity.</p>
+<p>Matter is a different beast. It’s a clump of things: particles. An object is a clump of matter and matter interactions. As CERN shows on a daily basis, matter in motion can be converted into a thousand other things in motion. If people insist on talking about things getting converted, then they could talk about converting particle A with motion <span class="math inline">\(a\)</span> and particle B with motion <span class="math inline">\(b\)</span> into particles C, D, E, F, G, <span class="math inline">\(\dots\)</span> with motions <span class="math inline">\(c, d, e, f, g, \dots\)</span></p>
+<p>So, next time someone thinks they should explain to you that <span class="math inline">\(E = mc^2\)</span> means that mass can be converted into energy or that no object can gain the speed of light because its mass would become infinite, you can just reply with: “Nah, mate, mass is an invariant property of an object, calculable through the complete equation, you know, <span class="math inline">\(E^2 = (pc)^2 + (mc^2)^2\)</span>. Although you would have to solve for <span class="math inline">\(m\)</span> and merely use the pseudo-Euclidean norm for momentum, not the whole four-vector, but that shouldn’t be a problem – it makes it easier.” Then pause, and add: “In Minkowski space, obviously.”<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
+<p>Also, pure energy = pure nonsense. If Leibniz were somehow able to hear this, he would cackle and turn over in his grave – if he could muster the energy for it. To be fair, physicists use the word energy all the time, all over the place. It’s short, sweet, and simple to use on a daily basis, which is fine, just as long as we’re all in <a href="https://youtu.be/v1W4UTuUtDw?t=32s">agreement</a> about what we mean.</p>
+<p>Energy isn’t fundamental to motion, it’s motion<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> and interactions giving rise to the construct of energy.</p>
+<p>However, if you do bump into a floating blob of pure energy down the long narrow hall upstairs of your rich aunt’s mansion, then, well, yes, that would most certainly be <a href="https://youtu.be/Fe93CLbHjxQ">something strange</a>.</p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<p>Carroll, S. (2014) <em>Spacetime and Geometry: Pearson New International Edition : an Introduction to General Relativity.</em> 1st ed.&nbsp;Pearson.</p>
+<p>Einstein, A. (1905a) ‘Zur Elektrodynamik bewegter Körper’, <em>Annalen der Physik</em>, 322(10), pp.&nbsp;891–921.</p>
+<p>Einstein, A. (1905b) ‘Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig?’, <em>Annalen der Physik</em>, 323(13), pp.&nbsp;639–641.</p>
+<p>Eisberg, R. M. and Resnick, R. (1974) <em>Quantum physics of atoms, molecules, solids, nuclei, and particles</em>. New York: Wiley.</p>
+<p>Miller, A. I. (1981) <em>Albert Einstein’s special theory of relativity: emergence (1905) and early interpretation (1905-1911)</em>. Reading, Mass.: Addison-Wesley.</p>
+<p>Okun, L. B. (1989) ‘The Concept of Mass’, <em>Physics Today</em>, 42(6), pp.&nbsp;31–36.</p>
+<p>Taylor, E. F. and Wheeler, J. A. (1992) <em>Spacetime physics: introduction to special relativity</em>. 2nd ed.&nbsp;New York: W.H. Freeman.</p>
+<hr>
+<section id="image-credits" class="level3">
+<h3 class="anchored" data-anchor-id="image-credits">Image credits</h3>
+<ul>
+<li><em>Featured image: NASA’s Solar Dynamics Observatory captured this image of an X2.0-class solar flare bursting off the lower right side of the sun on Oct.&nbsp;27, 2014. The image shows a blend of extreme ultraviolet light with wavelengths of 131 and 171 Angstroms. Credit: NASA/SDO.</em></li>
+<li><em>Einstein and Ehrenfest. [Photography]. Encyclopædia Britannica ImageQuest. Retrieved 21 Aug 2019.</em></li>
+<li><em>Oliver Heaviside (1850–1925) - Science and Society Museum / Universal Images Group. Oliver Heaviside, English physicist, c.&nbsp;1900. [Photograph]. Encyclopædia Britannica ImageQuest.</em></li>
+<li><em>Hendrik Lorentz (1853–1928) - Science and Society Museum / Universal Images Group. Hendrik Antoon Lorentz, Dutch physicist, c.&nbsp;1920. [Photograph]. Encyclopædia Britannica ImageQuest.</em></li>
+<li><em>Henri Poincaré (1854–1912) - akg-images / Universal Images Group. Henri Poincaré, Photo c.&nbsp;1890. [Photograph]. Encyclopædia Britannica ImageQuest.</em></li>
+<li><em>Joseph J. Thomson (1856–1940) - Science and Society Museum / Universal Images Group. Sir Joseph J. Thomson, English physicist. [Photography]. Encyclopædia Britannica ImageQuest.</em></li>
+<li><em>George Frederick Charles Searle FRS (1864–1954) - Royal Society. As printed in Thomson, G. (1955) ‘George Frederick Charles Searle. 1864–1954’, Biographical Memoirs of Fellows of the Royal Society, 1, p.&nbsp;247.</em></li>
+<li><em>Wilhelm Wien (1864–1928) - National Library of Congress / Science Photo Library / Universal Images Group. Wilhelm Wien, German physicist. [Photography]. Encyclopædia Britannica ImageQuest.</em></li>
+<li><em>Max Abraham (1875–1922) - Niedersächsische Staats- und Universitätsbibliothek Göttingen. Max Abraham around 1905. Public domain.</em></li>
+<li><em>Albert Einstein, Swiss-German physicist. [Photograph]. Encyclopædia Britannica ImageQuest.</em></li>
+<li><em>Paul Dirac. [Photography]. Encyclopædia Britannica ImageQuest.</em></li>
+</ul>
+
+
+</section>
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Usually, in mathematics, we leave out the multiplication sign (<span class="math inline">\(\times\)</span>).<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>cf.&nbsp;<a href="https://youtu.be/mkiCPMjpysc">MinutePhysics: The Real Meaning of E=mc²</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Which was later calibrated to <span class="math inline">\(1/2\)</span> times the mass times velocity squared.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>He called this product quantity <em>vis viva</em>, so, not even energy yet. Perhaps he was being poetic. Furthermore, Leibniz also had some fierce competition: his rival Newton had come up with a different quantity, a different way of keeping the books. He stated that the sum of the products of mass and velocity — just velocity, not velocity squared — remained constant. This is the law of conservation of momentum. Later, it was understood that the two laws were complementary, not contradictory.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Courtesy of the genius Emmy Noether (Noether’s theorem) and Albert Einstein (general relativity).<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>Incidentally, Max Abraham had published Walter Kaufmann’s work just before Einstein, showing the same equation for kinetic energy. Einstein probably wasn’t aware of this (Miller, 1981).<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>We use quotation marks in “particles” because, while it’s easier to use that term, we acknowledge it’s actually quantum field oscillators we should be talking about or, even prettier, wave functions.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Minkowski space is like Euclidean space but in four dimensions. This might be a good time to add the footnote that there is an even more fundamental equation, which is Einstein’s field equation of general relativity (Carroll, 2014), but that’s something to discuss at a later point in time.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Of quantum fields as described by wave functions.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/opencurve\.info");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
