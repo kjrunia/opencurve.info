@@ -6,6 +6,10 @@ project:
     - "**/*.mp3"
     - "**/*.m4a"
 
+render:
+  parellel: true
+  jobs: 8
+
 website:
   # title: ""
   description: "A bit of maths and physics for everyone"

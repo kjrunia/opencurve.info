@@ -9,6 +9,7 @@ listing:
     categories: "{mathematics,Mathematics}"
   sort: "date desc"
   type: grid
+  grid-columns: 2
   categories: true
   sort-ui: false
   filter-ui: false
