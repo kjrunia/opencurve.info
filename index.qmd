@@ -24,6 +24,12 @@ listing:
     sort-ui: false
     filter-ui: false
     fields: [image, date, title, description, categories]
+format:
+  html:
+    grid:
+      body-width: 800px
+      sidebar-width: 200px
+      margin-width: 260px
 ---
 
 ::: {.lead style="max-width: 820px; margin-bottom: 1.5rem;"}

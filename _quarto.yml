@@ -34,10 +34,10 @@ format:
     css: styles.css
     toc: true
     html-math-method: mathjax
-    grid: 
-      body-width: 720px
-      sidebar-width: 200px
-      margin-width: 260px
+    grid:
+      body-width: 600px       # Pas hier de breedte van de hoofdtekst aan
+      sidebar-width: 220px    # Pas hier de linker/rechter sidebar aan
+      margin-width: 300px
     lightbox: true
 
 execute: 

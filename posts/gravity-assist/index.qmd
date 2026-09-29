@@ -3,7 +3,7 @@ title: "Gravity assist"
 description: "How does a planetary push actually work?"
 date: "2021-12-26"
 categories: [physics]
-lang: en
+lang: en   # Ruimte voor margin-notities / auteurssidebar
 ---
 
 ::: {.column-screen}
