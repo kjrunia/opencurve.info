@@ -7,12 +7,12 @@ project:
     - "**/*.m4a"
 
 website:
-  # title: ""
   description: "A bit of maths and physics for everyone"
   favicon: OpenCurveFavicon.png
   navbar:
     logo: logo-horizontal.png
     logo-alt: "OpenCurve: A bit of maths and physics for everyone"
+    collapse: true
     left:
       - href: index.qmd
         text: Articles
@@ -35,8 +35,8 @@ format:
     toc: true
     html-math-method: mathjax
     grid:
-      body-width: 600px       # Pas hier de breedte van de hoofdtekst aan
-      sidebar-width: 220px    # Pas hier de linker/rechter sidebar aan
+      body-width: 600px
+      sidebar-width: 220px
       margin-width: 300px
     lightbox: true
 

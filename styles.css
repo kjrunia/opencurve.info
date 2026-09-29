@@ -29,37 +29,24 @@ h1, h2, h3, h4, h5, h6, .title {
 
 
 /* ==========================================================================
-   2. HEADER & NAVIGATIE (LOGO LINKS, MENU RECHTS UITGELIJND)
+   2. HEADER & NAVIGATIE
    ========================================================================== */
 
-/* Navbar als geheel */
+/* Navbar basis */
 .navbar {
   min-height: unset !important;
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
   background-color: #ffffff !important;
   border-bottom: 1px solid #000000;
 }
 
-/* Navbar container: alles op één rij met maximale breedteverdeling */
-.navbar .container-fluid {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* 1. Logo uiterst links */
+/* Logo styling */
 .navbar-brand-container,
 .navbar-brand {
-  flex: 0 0 auto !important;
   width: auto !important;
   height: auto !important;
   max-height: none !important;
-  margin-right: 2rem !important;
   margin-bottom: 0 !important;
   padding: 0 !important;
   display: flex !important;
@@ -73,46 +60,91 @@ h1, h2, h3, h4, h5, h6, .title {
 nav.navbar img {
   height: auto !important;
   width: auto !important;
-  max-height: 48px !important;
+  max-height: 44px !important;
   min-height: unset !important;
   max-width: 100% !important;
   display: block !important;
   margin: 0 !important;
 }
 
-/* 2. Menu-container en items helemaal naar rechts geduwd */
-.navbar-collapse {
-  flex: 1 1 auto !important;
-  width: auto !important;
-  display: flex !important;
-  justify-content: flex-end !important;
-  align-items: center !important;
-  margin: 0 !important;
+/* Desktop layout (>= 992px): Logo links, menu en search strak rechts */
+@media (min-width: 992px) {
+  .navbar .container-fluid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  .navbar-brand {
+    margin-right: 2rem !important;
+  }
+
+  .navbar-collapse {
+    flex: 1 1 auto !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+  }
+
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+    margin: 0 !important;
+  }
+
+  .navbar-nav.me-auto,
+  .navbar-nav.ms-auto {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  #quarto-search,
+  .quarto-search-trigger,
+  .navbar .search-trigger {
+    margin-left: 1.25rem !important;
+  }
 }
 
-.navbar-nav {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: 1.25rem !important;
-  margin: 0 !important;
-}
+/* Mobiele layout (< 992px): schone hamburger-indeling */
+@media (max-width: 991px) {
+  .navbar .container-fluid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
 
-.navbar-nav.me-auto,
-.navbar-nav.ms-auto {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
+  .navbar-brand img,
+  nav.navbar img {
+    max-height: 34px !important;
+    max-width: 220px !important;
+    object-fit: contain;
+  }
 
-/* 3. Zoekicoon sluit aan de rechterkant direct aan achter het menu */
-#quarto-search,
-.quarto-search-trigger,
-.navbar .search-trigger {
-  flex: 0 0 auto !important;
-  display: flex !important;
-  align-items: center !important;
-  margin: 0 0 0 1.25rem !important;
-  padding: 0 !important;
+  /* Uitgeklapt menu op mobiel */
+  .navbar-collapse {
+    width: 100% !important;
+    padding-top: 1rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  .navbar-collapse .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    align-items: flex-start !important;
+  }
+
+  #quarto-search,
+  .quarto-search-trigger,
+  .navbar .search-trigger {
+    margin-left: auto !important;
+    margin-right: 0.5rem !important;
+  }
 }
 
 
@@ -417,11 +449,6 @@ figure.img-border img {
     line-height: 0.85;
     padding-top: 3px;
     padding-right: 0.5rem;
-  }
-
-  .navbar-nav {
-    flex-wrap: wrap !important;
-    gap: 0.75rem 1rem !important;
   }
 
   /* Hero-titel op mobiel */
