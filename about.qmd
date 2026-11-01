@@ -5,7 +5,7 @@ lang: en
 
 # Who we are
 
-Te pronoun "we" is, for now, just me: Klaas Jan Runia.
+The pronoun "we" is, for now, just me: Klaas Jan Runia.
 
 I hold a BSc (Honours) in Mathematics and Physics, and I am currently pursuing an MSc in Mathematics at The Open University (UK), with a strong orientation towards theoretical physics — applied mathematics, in other words. I am a Member of the Institute of Physics (MInstP) and an Associate Member of the Institute of Mathematics and its Applications (AMIMA).
 
