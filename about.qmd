@@ -5,7 +5,7 @@ lang: en
 
 # Who we are
 
-Pronoun ‘we’ is, for now, actually just me, Klaas Jan Runia, BSc (Honours) Mathematics and Physics MInstP AMIMA, and a student for the Master of Physics (MPhys) at The Open University in Walton Hall, Milton Keynes, UK. I am a Member of the Institute of Physics (IOP) and an Associate Member of the Institute of Mathematics and its Applications (IMA), both established in the United Kingdom.
+Pronoun ‘we’ is, for now, actually just me, Klaas Jan Runia, BSc (Honours) Mathematics and Physics MInstP AMIMA, and a student for the Master of Science (MSc) in Mathematics at The Open University in Walton Hall, Milton Keynes, UK. I am a Member of the Institute of Physics (IOP) and an Associate Member of the Institute of Mathematics and its Applications (IMA), both established in the United Kingdom. My MSc in maths has a strong orientation towards theoretical physics (i.e., applied mathematics).
 
 # What personal data I collect
 
